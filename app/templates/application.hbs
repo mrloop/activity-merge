@@ -1,7 +1,12 @@
-{{page-title "TrackMerge"}}
+{{page-title 'TrackMerge'}}
 
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<div
+  class='drop-zone'
+  {{on 'drop' this.onDrop}}
+  {{on 'dragover' this.onDragOver}}
+  {{on 'dragend' this.onDragEnd}}
+>
+  <strong>Drag two or more files to merge</strong>
+</div>
 
 {{outlet}}
