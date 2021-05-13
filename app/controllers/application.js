@@ -1,6 +1,8 @@
 import Controller from '@ember/controller';
 import { action } from '@ember/object';
 import { capitalize } from '@ember/string';
+import { schedule } from '@ember/runloop';
+import { tracked } from '@glimmer/tracking';
 import sportsLibPkg from '@sports-alliance/sports-lib';
 import utilitiesPkg from '@sports-alliance/sports-lib/lib/events/utilities/event.utilities.js';
 import exporterPkg from '@sports-alliance/sports-lib/lib/events/adapters/exporters/exporter.gpx.js';
@@ -10,6 +12,14 @@ const { EventExporterGPX } = exporterPkg;
 const { EventUtilities } = utilitiesPkg;
 
 export default class ApplicationController extends Controller {
+  downloadLink;
+  @tracked objectUrl;
+  @tracked fileName;
+
+  @action setDownloadLink(element) {
+    this.downloadLink = element;
+  }
+
   @action async onDrop(event) {
     event.preventDefault();
     let { dataTransfer } = event;
@@ -18,9 +28,13 @@ export default class ApplicationController extends Controller {
     let events = await Promise.all(files.map((f) => this.fileToEvent(f)));
     let evt = EventUtilities.mergeEvents(events);
     let gpxString = await new EventExporterGPX().getAsString(evt);
-    let blob = new Blob([gpxString], { type: 'application/xml' });
-    let url = window.URL.createObjectURL(blob);
-    window.location.assign(url);
+    let blob = new Blob([gpxString], { type: 'application/gpx+xml' });
+    this.objectUrl = window.URL.createObjectURL(blob);
+    this.fileName = 'track-merge.gpx';
+    schedule('afterRender', () => {
+      this.downloadLink.click();
+      window.URL.revokeObjectURL(this.objectUrl);
+    });
   }
 
   async fileToEvent(file) {
@@ -61,7 +75,6 @@ export default class ApplicationController extends Controller {
   }
 
   @action onDragEnd(event) {
-    console.log('dragEnd');
     let { dataTransfer } = event;
     // Remove all of the drag data
     if (dataTransfer.items) {
