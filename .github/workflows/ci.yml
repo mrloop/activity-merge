@@ -1,0 +1,47 @@
+# This workflow is largely based on
+# https://github.com/buschtoens/ember-link/blob/master/.github/workflows/ci.yml
+# https://github.com/salsify/ember-css-modules/blob/master/.github/workflows/ci.yml
+
+name: CI
+
+# These trigger patterns courtesy of https://github.com/broccolijs/broccoli/pull/436
+on:
+  pull_request:
+  push:
+    # filtering branches here prevents duplicate builds from pull_request and push
+    branches:
+      - main
+
+  # early issue detection: run CI weekly on Sundays
+  schedule:
+    - cron: "0 6 * * 0"
+
+env:
+  CI: true
+
+jobs:
+  Deploy:
+    name: Test & Deploy
+    runs-on: ubuntu-16.04
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v1
+      - name: Install Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
+      - name: Lint JS
+        run: yarn lint:js
+      - name: Lint Handlebars
+        run: yarn lint:hbs
+      - name: Browser Tests
+        run: yarn test
+      - name: Production Build
+        run: yarn ember build --prod
+      - name: Deploy site
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: yarn netlify deploy --dir=dist --prod --message "Revision $(git log --pretty=%h -n1)"

@@ -1,5 +1,5 @@
-import Application from 'track-merge/app';
-import config from 'track-merge/config/environment';
+import Application from 'activity-merge/app';
+import config from 'activity-merge/config/environment';
 import * as QUnit from 'qunit';
 import { setApplication } from '@ember/test-helpers';
 import { setup } from 'qunit-dom';

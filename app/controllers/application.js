@@ -30,7 +30,7 @@ export default class ApplicationController extends Controller {
     let gpxString = await new EventExporterGPX().getAsString(evt);
     let blob = new Blob([gpxString], { type: 'application/gpx+xml' });
     this.objectUrl = window.URL.createObjectURL(blob);
-    this.fileName = 'track-merge.gpx';
+    this.fileName = 'activity-merge.gpx';
     schedule('afterRender', () => {
       this.downloadLink.click();
       window.URL.revokeObjectURL(this.objectUrl);

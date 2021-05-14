@@ -1,7 +1,10 @@
-# track-merge
+# activity-merge
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+[![CI](https://github.com/mrloop/activity-merge/actions/workflows/ci.yml/badge.svg)](https://github.com/mrloop/activity-merge/actions/workflows/ci.yml)  [![Netlify Status](https://api.netlify.com/api/v1/badges/56f52298-a710-4981-9ef1-7f0e17058cab/deploy-status)](https://app.netlify.com/sites/activity-merge/deploys)
+
+Merge activity files.
+
+https://activity-merge.netlify.app/
 
 ## Prerequisites
 
@@ -16,7 +19,7 @@ You will need the following things properly installed on your computer.
 ## Installation
 
 * `git clone <repository-url>` this repository
-* `cd track-merge`
+* `cd activity-merge`
 * `yarn install`
 
 ## Running / Development

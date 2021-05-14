@@ -2,7 +2,7 @@
 
 module.exports = function (environment) {
   let ENV = {
-    modulePrefix: 'track-merge',
+    modulePrefix: 'activity-merge',
     environment,
     rootURL: '/',
     locationType: 'auto',

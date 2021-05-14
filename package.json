@@ -1,8 +1,8 @@
 {
-  "name": "track-merge",
+  "name": "activity-merge",
   "version": "0.0.0",
   "private": true,
-  "description": "Small description for track-merge goes here",
+  "description": "Easy drag and drop activity merge",
   "repository": "",
   "license": "MIT",
   "author": "",
@@ -67,5 +67,8 @@
   },
   "ember": {
     "edition": "octane"
+  },
+  "dependencies": {
+    "netlify-cli": "^3.29.15"
   }
 }
