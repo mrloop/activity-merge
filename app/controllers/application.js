@@ -3,13 +3,9 @@ import { action } from '@ember/object';
 import { capitalize } from '@ember/string';
 import { schedule } from '@ember/runloop';
 import { tracked } from '@glimmer/tracking';
-import sportsLibPkg from '@sports-alliance/sports-lib';
-import utilitiesPkg from '@sports-alliance/sports-lib/lib/events/utilities/event.utilities.js';
-import exporterPkg from '@sports-alliance/sports-lib/lib/events/adapters/exporters/exporter.gpx.js';
-
-const { SportsLib } = sportsLibPkg;
-const { EventExporterGPX } = exporterPkg;
-const { EventUtilities } = utilitiesPkg;
+import { SportsLib } from '@sports-alliance/sports-lib';
+import { EventUtilities } from '@sports-alliance/sports-lib/lib/events/utilities/event.utilities.js';
+import { EventExporterGPX } from '@sports-alliance/sports-lib/lib/events/adapters/exporters/exporter.gpx.js';
 
 export default class ApplicationController extends Controller {
   downloadLink;
