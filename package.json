@@ -26,6 +26,9 @@
     "@ember/optional-features": "^2.0.0",
     "@ember/render-modifiers": "^1.0.2",
     "@ember/test-helpers": "^2.2.5",
+    "@embroider/compat": "^0.40.0",
+    "@embroider/core": "^0.40.0",
+    "@embroider/webpack": "^0.40.0",
     "@glimmer/component": "^1.0.4",
     "@glimmer/tracking": "^1.0.4",
     "@sports-alliance/sports-lib": "^5.4.22",
@@ -60,7 +63,8 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^2.2.1",
     "qunit": "^2.14.1",
-    "qunit-dom": "^1.6.0"
+    "qunit-dom": "^1.6.0",
+    "webpack": "^5.37.0"
   },
   "engines": {
     "node": "10.* || >= 12"
