@@ -1,0 +1,16 @@
+{
+  "_notes": "https://dockyard.com/blog/2019/06/10/improving-your-dx-on-ember-part-i-quick-wins",
+  "compilerOptions": {
+    "target": "es2018",
+    "experimentalDecorators": true,
+    "baseUrl": "."
+  },
+  "exclude": [
+    "node_modules",
+    "bower_components",
+    "tmp",
+    "vendor",
+    ".git",
+    "dist"
+  ]
+}
