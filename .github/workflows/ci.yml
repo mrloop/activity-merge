@@ -20,9 +20,9 @@ env:
   CI: true
 
 jobs:
-  Deploy:
-    name: Test & Deploy
-    runs-on: ubuntu-16.04
+  Test:
+    name: Test
+    runs-on: ubuntu-20.04
     steps:
       - name: Checkout Code
         uses: actions/checkout@v1
@@ -38,6 +38,20 @@ jobs:
         run: yarn lint:hbs
       - name: Browser Tests
         run: yarn test
+  Deploy:
+    name: Deploy
+    runs-on: ubuntu-20.04
+    needs: Test
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v1
+      - name: Install Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
       - name: Production Build
         run: yarn ember build --prod
       - name: Deploy site
