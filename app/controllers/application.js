@@ -11,6 +11,7 @@ export default class ApplicationController extends Controller {
   downloadLink;
   @tracked objectUrl;
   @tracked fileName;
+  @tracked isDragging;
 
   @action setDownloadLink(element) {
     this.downloadLink = element;
@@ -19,6 +20,11 @@ export default class ApplicationController extends Controller {
   @action async onDrop(event) {
     event.preventDefault();
     let { dataTransfer } = event;
+    await this.handleDataTransfer(dataTransfer);
+    this.isDragging = false;
+  }
+
+  async handleDataTransfer(dataTransfer) {
     let files = this.dataTransferToFiles(dataTransfer);
     files.forEach(this.logFile);
     let events = await Promise.all(files.map((f) => this.fileToEvent(f)));
@@ -68,9 +74,11 @@ export default class ApplicationController extends Controller {
 
   @action onDragOver(event) {
     event.preventDefault();
+    this.isDragging = true;
   }
 
   @action onDragEnd(event) {
+    this.isDragging = false;
     let { dataTransfer } = event;
     // Remove all of the drag data
     if (dataTransfer.items) {
@@ -82,6 +90,10 @@ export default class ApplicationController extends Controller {
       // Use DataTransfer interface to remove the drag data
       dataTransfer.clearData();
     }
+  }
+
+  @action onDragLeave() {
+    this.isDragging = false;
   }
 
   logFile(file, i) {

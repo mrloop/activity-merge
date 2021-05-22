@@ -1,17 +1,46 @@
+:root {
+
+  --dark-orange:   #fb8b24ff;
+  --green-munsell: #04a777ff;
+  --dogwood-rose:  #d90368ff;
+  --byzantium:     #820263ff;
+  --dark-purple:   #291720ff;
+}
+
 body {
+  margin: 0;
+  padding: 0;
+}
+
+.content {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  color: var(--dark-purple);
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  font-size: 2em;
+  background: var(--dark-orange);
+  transition: background 0.15s ease-in-out;
+}
+
+.content.drag-over {
+  background: var(--byzantium);
 }
 
 .drop-zone {
-  border: 5px dashed blue;
-  width: 50vw;
-  height: 50vh;
+  border: 5px dashed var(--byzantium);
+  border-radius: 50%;
+  width: min(90vw, 90vh);
+  height: min(90vw, 90vh);
   display: flex;
   align-items: center;
   justify-content: center;
   user-select: none;
+  background: white;
+  overflow: hidden;
 }
 
+.drop-zone strong {
+  margin: 2em;
+}

@@ -1,15 +1,23 @@
 {{page-title 'TrackMerge'}}
 
 <div
-  class='drop-zone'
+  class='content {{if this.isDragging 'drag-over'}}'
   {{on 'drop' this.onDrop}}
   {{on 'dragover' this.onDragOver}}
   {{on 'dragend' this.onDragEnd}}
-  data-test-drop-zone
+  {{on 'dragleave' this.onDragLeave}}
 >
-  <strong>Drag two or more files to merge</strong>
+  <div
+    class='drop-zone'
+    data-test-drop-zone
+  >
+    <strong>Drag two or more files to merge</strong>
+  </div>
 </div>
-
-<a {{did-insert this.setDownloadLink}} download={{this.fileName}} href={{this.objectUrl}}></a>
+<a
+  download={{this.fileName}}
+  href={{this.objectUrl}}
+  {{did-insert this.setDownloadLink}}
+></a>
 
 {{outlet}}
