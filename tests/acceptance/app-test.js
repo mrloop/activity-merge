@@ -11,6 +11,8 @@ module('Acceptance | app', function (hooks) {
     assert.equal(currentURL(), '/');
     assert
       .dom('[data-test-drop-zone]')
-      .hasText('Drag two or more files to merge');
+      .hasText(
+        'Select or drag files to merge. fit, gpx and tcx files accepted.'
+      );
   });
 });

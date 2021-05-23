@@ -8,24 +8,37 @@ import { EventUtilities } from '@sports-alliance/sports-lib/lib/events/utilities
 import { EventExporterGPX } from '@sports-alliance/sports-lib/lib/events/adapters/exporters/exporter.gpx.js';
 
 export default class ApplicationController extends Controller {
-  downloadLink;
+  downloadLinkElement;
+  fileInputElement;
   @tracked objectUrl;
   @tracked fileName;
   @tracked isDragging;
 
   @action setDownloadLink(element) {
-    this.downloadLink = element;
+    this.downloadLinkElement = element;
+  }
+
+  @action setFileInput(element) {
+    this.fileInputElement = element;
+  }
+
+  @action onFilesSelect() {
+    this.fileInputElement.click();
+  }
+
+  @action onFilesSelected() {
+    this.handleFiles([...this.fileInputElement.files]);
   }
 
   @action async onDrop(event) {
     event.preventDefault();
-    let { dataTransfer } = event;
-    await this.handleDataTransfer(dataTransfer);
     this.isDragging = false;
+    let { dataTransfer } = event;
+    let files = this.dataTransferToFiles(dataTransfer);
+    await this.handleFiles(files);
   }
 
-  async handleDataTransfer(dataTransfer) {
-    let files = this.dataTransferToFiles(dataTransfer);
+  async handleFiles(files) {
     files.forEach(this.logFile);
     let events = await Promise.all(files.map((f) => this.fileToEvent(f)));
     let evt = EventUtilities.mergeEvents(events);
@@ -34,7 +47,7 @@ export default class ApplicationController extends Controller {
     this.objectUrl = window.URL.createObjectURL(blob);
     this.fileName = 'activity-merge.gpx';
     schedule('afterRender', () => {
-      this.downloadLink.click();
+      this.downloadLinkElement.click();
       window.URL.revokeObjectURL(this.objectUrl);
     });
   }

@@ -7,17 +7,27 @@
   {{on 'dragend' this.onDragEnd}}
   {{on 'dragleave' this.onDragLeave}}
 >
-  <div
-    class='drop-zone'
-    data-test-drop-zone
-  >
-    <strong>Drag two or more files to merge</strong>
+  <div class='drop-zone' data-test-drop-zone>
+    <main>
+      <strong><button
+          class='select-files'
+          type='button'
+          {{on 'click' this.onFilesSelect}}
+        >Select</button> or drag files to merge.</strong>
+      <aside class='info'>fit, gpx and tcx files accepted.</aside>
+    </main>
   </div>
 </div>
+
+<label class='file-input'>Select files to merge<input
+  accept='.fit,.gpx,.tcx,application/gpx+xml,application/vnd.garmin.tcx+xml'
+  multiple
+  type='file'
+  {{on 'change' this.onFilesSelected}}
+  {{did-insert this.setFileInput}}
+/></label>
 <a
   download={{this.fileName}}
   href={{this.objectUrl}}
   {{did-insert this.setDownloadLink}}
 ></a>
-
-{{outlet}}

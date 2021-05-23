@@ -28,6 +28,23 @@ body {
   background: var(--byzantium);
 }
 
+.file-input {
+  display: none;
+}
+
+.select-files {
+  font-size: inherit;
+  border: 2px var(--byzantium) solid;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.select-files:hover {
+  color: white;
+  background-color: var(--byzantium);
+  transition: all 0.1s ease-in-out;
+}
+
 .drop-zone {
   border: 5px dashed var(--byzantium);
   border-radius: 50%;
@@ -41,6 +58,13 @@ body {
   overflow: hidden;
 }
 
-.drop-zone strong {
+main {
+  display: flex;
+  flex-direction: column;
   margin: 2em;
+}
+
+.info {
+  font-size: 1rem;
+  margin-top: 1rem;
 }
