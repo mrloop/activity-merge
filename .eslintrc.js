@@ -28,6 +28,7 @@ module.exports = {
         '.prettierrc.js',
         '.template-lintrc.js',
         'ember-cli-build.js',
+        'lib/worker-build.js',
         'testem.js',
         'blueprints/*/index.js',
         'config/**/*.js',

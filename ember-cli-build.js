@@ -1,6 +1,11 @@
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const funnel = require('broccoli-funnel');
+const path = require('path');
+const os = require('os');
+const fs = require('fs');
+const { buildWorkers } = require('./lib/worker-build');
 
 module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
@@ -19,8 +24,21 @@ module.exports = function (defaults) {
   // modules that you would like to import into your application
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
+  let buildDir = fs.mkdtempSync(
+    path.join(os.tmpdir(), 'activity-merge--workers--')
+  );
+  buildWorkers({
+    buildDir,
+    isProduction: process.env.EMBER_ENV === 'production',
+  });
+
+  const workers = funnel(buildDir, {
+    destDir: 'workers/',
+  });
+
   const { Webpack } = require('@embroider/webpack');
   return require('@embroider/compat').compatBuild(app, Webpack, {
+    extraPublicTrees: [workers],
     staticAddonTestSupportTrees: true,
     staticAddonTrees: true,
     staticHelpers: true,

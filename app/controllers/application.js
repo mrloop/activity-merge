@@ -1,11 +1,8 @@
 import Controller from '@ember/controller';
 import { action } from '@ember/object';
-import { capitalize } from '@ember/string';
 import { schedule } from '@ember/runloop';
 import { tracked } from '@glimmer/tracking';
-import { SportsLib } from '@sports-alliance/sports-lib';
-import { EventUtilities } from '@sports-alliance/sports-lib/lib/events/utilities/event.utilities.js';
-import { EventExporterGPX } from '@sports-alliance/sports-lib/lib/events/adapters/exporters/exporter.gpx.js';
+import { wrap } from 'comlink';
 
 export default class ApplicationController extends Controller {
   downloadLinkElement;
@@ -40,37 +37,15 @@ export default class ApplicationController extends Controller {
 
   async handleFiles(files) {
     files.forEach(this.logFile);
-    let events = await Promise.all(files.map((f) => this.fileToEvent(f)));
-    let evt = EventUtilities.mergeEvents(events);
-    let gpxString = await new EventExporterGPX().getAsString(evt);
-    let blob = new Blob([gpxString], { type: 'application/gpx+xml' });
+    const Merge = wrap(new Worker('workers/merge.js'));
+    const merge = await new Merge(files);
+    const blob = await merge.blob();
     this.objectUrl = window.URL.createObjectURL(blob);
     this.fileName = 'activity-merge.gpx';
     schedule('afterRender', () => {
       this.downloadLinkElement.click();
       window.URL.revokeObjectURL(this.objectUrl);
     });
-  }
-
-  async fileToEvent(file) {
-    let fnName = `fileToEvent${capitalize(file.name.split('.').pop())}`;
-    return this[fnName] && this[fnName](file);
-  }
-
-  async fileToEventFit(file) {
-    let arrayBuffer = await file.arrayBuffer();
-    return SportsLib.importFromFit(arrayBuffer);
-  }
-
-  async fileToEventGpx(file) {
-    let text = await file.text();
-    return SportsLib.importFromGPX(text);
-  }
-
-  async fileToEventTcx(file) {
-    let text = await file.text();
-    const xml = new DOMParser().parseFromString(text, 'application/xml');
-    return SportsLib.importFromTCX(xml);
   }
 
   dataTransferToFiles({ items, files }) {
