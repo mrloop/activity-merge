@@ -70,5 +70,26 @@ main {
 }
 
 .status {
-  min-height: 1rem;
+  min-height: 1.2rem;
+}
+
+.loading {
+  margin-left: 0.5rem;
+  font-weight: bold;
+  display: inline-block;
+  width: 0.4rem;
+  height: 0.4rem;
+  border: 3px solid var(--byzantium);
+  border-radius: 50%;
+  border-top-color: var(--green-munsell);;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+
+@-webkit-keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
 }

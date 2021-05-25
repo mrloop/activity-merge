@@ -42,17 +42,18 @@ export default class ApplicationController extends Controller {
   }
 
   @dropTask *mergeFiles(files) {
-    this.fileNames = files.map((f) => f.name);
-    files.forEach(this.logFile);
-    const Merge = wrap(new Worker('workers/merge.js'));
-    const merge = yield new Merge(files);
-    const blob = yield merge.blob();
-    this.objectUrl = window.URL.createObjectURL(blob);
-    this.fileName = 'activity-merge.gpx';
-    schedule('afterRender', () => {
-      this.downloadLinkElement.click();
-      window.URL.revokeObjectURL(this.objectUrl);
-    });
+    if (files.length > 1) {
+      this.fileNames = files.map((f) => f.name);
+      const Merge = wrap(new Worker('workers/merge.js'));
+      const merge = yield new Merge(files);
+      const blob = yield merge.blob();
+      this.objectUrl = window.URL.createObjectURL(blob);
+      this.fileName = 'activity-merge.gpx';
+      schedule('afterRender', () => {
+        this.downloadLinkElement.click();
+        window.URL.revokeObjectURL(this.objectUrl);
+      });
+    }
   }
 
   dataTransferToFiles({ items, files }) {
@@ -89,9 +90,5 @@ export default class ApplicationController extends Controller {
 
   @action onDragLeave() {
     this.isDragging = false;
-  }
-
-  logFile(file, i) {
-    console.log(`... file[${i}].name = ${file.name} : ${file.type}`);
   }
 }
