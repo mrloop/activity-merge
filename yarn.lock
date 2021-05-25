@@ -1849,7 +1849,7 @@
     "@handlebars/parser" "^1.1.0"
     simple-html-tokenizer "^0.5.10"
 
-"@glimmer/tracking@^1.0.4":
+"@glimmer/tracking@^1.0.2", "@glimmer/tracking@^1.0.4":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@glimmer/tracking/-/tracking-1.0.4.tgz#f1bc1412fe5e2236d0f8d502994a8f88af1bbb21"
   integrity sha512-F+oT8I55ba2puSGIzInmVrv/8QA2PcK1VD+GWgFMhF6WC97D+uZX7BFg+a3s/2N4FVBq5KHE+QxZzgazM151Yw==
@@ -7314,7 +7314,7 @@ ember-cli-get-component-path-option@^1.0.0:
   resolved "https://registry.yarnpkg.com/ember-cli-get-component-path-option/-/ember-cli-get-component-path-option-1.0.0.tgz#0d7b595559e2f9050abed804f1d8eff1b08bc771"
   integrity sha1-DXtZVVni+QUKvtgE8djv8bCLx3E=
 
-ember-cli-htmlbars@^5.7.1:
+ember-cli-htmlbars@^5.6.3, ember-cli-htmlbars@^5.7.1:
   version "5.7.1"
   resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-5.7.1.tgz#eb5b88c7d9083bc27665fb5447a9b7503b32ce4f"
   integrity sha512-9laCgL4tSy48orNoQgQKEHp93MaqAs9ZOl7or5q+8iyGGJHW6sVXIYrVv5/5O9HfV6Ts8/pW1rSoaeKyLUE+oA==
@@ -7621,6 +7621,17 @@ ember-compatibility-helpers@^1.1.1, ember-compatibility-helpers@^1.1.2, ember-co
     fs-extra "^9.1.0"
     semver "^5.4.1"
 
+ember-concurrency@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/ember-concurrency/-/ember-concurrency-2.0.3.tgz#d8ac917fdf013a277bfc7b26e417937ee0638455"
+  integrity sha512-+fOOFt32odnunDL3Du0LqMgnRzDDNKnzo1ry9ppICpvLXekJzYFwU1RniVivfJ+9nbpHMJZQUlZJAm1ZAnTExw==
+  dependencies:
+    "@glimmer/tracking" "^1.0.2"
+    ember-cli-babel "^7.22.1"
+    ember-cli-htmlbars "^5.6.3"
+    ember-compatibility-helpers "^1.2.0"
+    ember-destroyable-polyfill "^2.0.2"
+
 ember-data@~3.26.0:
   version "3.26.0"
   resolved "https://registry.yarnpkg.com/ember-data/-/ember-data-3.26.0.tgz#cc6f86e6fd38b2984472faed2146d2d5f2b32252"
@@ -7642,7 +7653,7 @@ ember-data@~3.26.0:
     ember-cli-typescript "^4.0.0"
     ember-inflector "^4.0.1"
 
-ember-destroyable-polyfill@^2.0.3:
+ember-destroyable-polyfill@^2.0.2, ember-destroyable-polyfill@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/ember-destroyable-polyfill/-/ember-destroyable-polyfill-2.0.3.tgz#1673ed66609a82268ef270a7d917ebd3647f11e1"
   integrity sha512-TovtNqCumzyAiW0/OisSkkVK93xnVF4NRU6+FN0ubpfwEOpRrmM2RqDwXI6YAChCgSHON1cz0DfQStpA1Gjuuw==

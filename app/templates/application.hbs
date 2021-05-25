@@ -15,6 +15,12 @@
           {{on 'click' this.onFilesSelect}}
         >Select</button> or drag files to merge.</strong>
       <aside class='info'>fit, gpx and tcx files accepted.</aside>
+      <div class="status">
+        {{#if this.isMerging}}
+        Merging {{this.fileNames}}
+        {{/if}}
+      </div>
+
     </main>
   </div>
 </div>

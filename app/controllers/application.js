@@ -3,6 +3,7 @@ import { action } from '@ember/object';
 import { schedule } from '@ember/runloop';
 import { tracked } from '@glimmer/tracking';
 import { wrap } from 'comlink';
+import { dropTask } from 'ember-concurrency';
 
 export default class ApplicationController extends Controller {
   downloadLinkElement;
@@ -10,6 +11,7 @@ export default class ApplicationController extends Controller {
   @tracked objectUrl;
   @tracked fileName;
   @tracked isDragging;
+  @tracked fileNames;
 
   @action setDownloadLink(element) {
     this.downloadLinkElement = element;
@@ -24,7 +26,11 @@ export default class ApplicationController extends Controller {
   }
 
   @action onFilesSelected() {
-    this.handleFiles([...this.fileInputElement.files]);
+    return this.mergeFiles.perform([...this.fileInputElement.files]);
+  }
+
+  get isMerging() {
+    return this.mergeFiles.last?.isRunning;
   }
 
   @action async onDrop(event) {
@@ -32,14 +38,15 @@ export default class ApplicationController extends Controller {
     this.isDragging = false;
     let { dataTransfer } = event;
     let files = this.dataTransferToFiles(dataTransfer);
-    await this.handleFiles(files);
+    await this.mergeFiles.perform(files);
   }
 
-  async handleFiles(files) {
+  @dropTask *mergeFiles(files) {
+    this.fileNames = files.map((f) => f.name);
     files.forEach(this.logFile);
     const Merge = wrap(new Worker('workers/merge.js'));
-    const merge = await new Merge(files);
-    const blob = await merge.blob();
+    const merge = yield new Merge(files);
+    const blob = yield merge.blob();
     this.objectUrl = window.URL.createObjectURL(blob);
     this.fileName = 'activity-merge.gpx';
     schedule('afterRender', () => {

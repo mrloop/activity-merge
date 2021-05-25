@@ -64,7 +64,11 @@ main {
   margin: 2em;
 }
 
-.info {
+.info, .status {
   font-size: 1rem;
   margin-top: 1rem;
+}
+
+.status {
+  min-height: 1rem;
 }
