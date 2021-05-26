@@ -44,8 +44,32 @@ module.exports = function (defaults) {
     staticHelpers: true,
     staticComponents: true,
     // splitAtRoutes: ['route.name'], // can also be a RegExp
-    // packagerOptions: {
-    //    webpackConfig: { }
-    // }
+    // Bug workaround https://github.com/embroider-build/embroider/issues/811#issuecomment-840180944
+    packagerOptions: {
+      webpackConfig: {
+        module: {
+          rules: [
+            {
+              test: /\/ember-concurrency\//,
+              loader: 'string-replace-loader',
+              options: {
+                multiple: [
+                  {
+                    search: '\\[yieldableSymbol\\]',
+                    flags: 'g',
+                    replace: '["__ec_yieldable__"]',
+                  },
+                  {
+                    search: '\\[cancelableSymbol\\]',
+                    flags: 'g',
+                    replace: '["__ec_cancel__"]',
+                  },
+                ],
+              },
+            },
+          ],
+        },
+      },
+    },
   });
 };

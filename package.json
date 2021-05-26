@@ -69,6 +69,7 @@
     "prettier": "^2.2.1",
     "qunit": "^2.14.1",
     "qunit-dom": "^1.6.0",
+    "string-replace-loader": "^3.0.1",
     "webpack": "^5.37.0",
     "xmldom": "^0.6.0"
   },
