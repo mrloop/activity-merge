@@ -15,6 +15,17 @@ module.exports = function (defaults) {
     'asset-cache': {
       manual: ['workers/merge.js'],
     },
+    'ember-cli-image-transformer': {
+      images: [
+        {
+          inputFilename: 'lib/images/brand-icon.png',
+          outputFileName: 'appicon-',
+          convertTo: 'png',
+          destination: 'assets/icons/',
+          sizes: [32, 192, 280, 512],
+        },
+      ],
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated
