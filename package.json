@@ -35,6 +35,7 @@
     "babel-eslint": "^10.1.0",
     "broccoli-asset-rev": "^3.0.0",
     "broccoli-funnel": "^3.0.5",
+    "broccoli-merge-trees": "^4.2.0",
     "comlink": "^4.3.1",
     "ember-auto-import": "^1.11.2",
     "ember-cli": "~3.26.1",

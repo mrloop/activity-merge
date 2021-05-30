@@ -5,7 +5,10 @@ const funnel = require('broccoli-funnel');
 const path = require('path');
 const os = require('os');
 const fs = require('fs');
+const mergeTrees = require('broccoli-merge-trees');
 const { buildWorkers } = require('./lib/worker-build');
+
+const { EMBROIDER } = process.env;
 
 module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
@@ -37,39 +40,43 @@ module.exports = function (defaults) {
   });
 
   const { Webpack } = require('@embroider/webpack');
-  return require('@embroider/compat').compatBuild(app, Webpack, {
-    extraPublicTrees: [workers],
-    staticAddonTestSupportTrees: true,
-    staticAddonTrees: true,
-    staticHelpers: true,
-    staticComponents: true,
-    // splitAtRoutes: ['route.name'], // can also be a RegExp
-    // Bug workaround https://github.com/embroider-build/embroider/issues/811#issuecomment-840180944
-    packagerOptions: {
-      webpackConfig: {
-        module: {
-          rules: [
-            {
-              test: /\/ember-concurrency\//,
-              loader: 'string-replace-loader',
-              options: {
-                multiple: [
-                  {
-                    search: '\\[yieldableSymbol\\]',
-                    flags: 'g',
-                    replace: '["__ec_yieldable__"]',
-                  },
-                  {
-                    search: '\\[cancelableSymbol\\]',
-                    flags: 'g',
-                    replace: '["__ec_cancel__"]',
-                  },
-                ],
+
+  if (EMBROIDER) {
+    return require('@embroider/compat').compatBuild(app, Webpack, {
+      extraPublicTrees: [workers],
+      staticAddonTestSupportTrees: true,
+      staticAddonTrees: true,
+      staticHelpers: true,
+      staticComponents: true,
+      // splitAtRoutes: ['route.name'], // can also be a RegExp
+      // Bug workaround https://github.com/embroider-build/embroider/issues/811#issuecomment-840180944
+      packagerOptions: {
+        webpackConfig: {
+          module: {
+            rules: [
+              {
+                test: /\/ember-concurrency\//,
+                loader: 'string-replace-loader',
+                options: {
+                  multiple: [
+                    {
+                      search: '\\[yieldableSymbol\\]',
+                      flags: 'g',
+                      replace: '["__ec_yieldable__"]',
+                    },
+                    {
+                      search: '\\[cancelableSymbol\\]',
+                      flags: 'g',
+                      replace: '["__ec_cancel__"]',
+                    },
+                  ],
+                },
               },
-            },
-          ],
+            ],
+          },
         },
       },
-    },
-  });
+    });
+  }
+  return mergeTrees([app.toTree(), workers]);
 };
