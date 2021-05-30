@@ -12,7 +12,9 @@ const { EMBROIDER } = process.env;
 
 module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
-    // Add options here
+    'asset-cache': {
+      manual: ['workers/merge.js'],
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated
