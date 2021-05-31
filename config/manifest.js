@@ -5,8 +5,8 @@ module.exports = function (/* environment, appConfig */) {
   // supported properties
 
   return {
-    name: 'activity-merge',
-    short_name: 'activity-merge',
+    name: 'Activity Merge',
+    short_name: 'Activity Merge',
     description:
       'Merge fit, gpx and tcx files. Join split activites into a single file',
     start_url: '/',
