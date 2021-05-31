@@ -32,8 +32,10 @@
   {{on 'change' this.onFilesSelected}}
   {{did-insert this.setFileInput}}
 /></label>
-<a
-  download={{this.fileName}}
-  href={{this.objectUrl}}
-  {{did-insert this.setDownloadLink}}
-></a>
+{{#if this.objectUrl}}
+  <a
+    download={{this.fileName}}
+    href={{this.objectUrl}}
+    {{did-insert this.setDownloadLink}}
+  ></a>
+{{/if}}
