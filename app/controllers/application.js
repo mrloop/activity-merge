@@ -43,6 +43,7 @@ export default class ApplicationController extends Controller {
 
   @dropTask *mergeFiles(files) {
     if (files.length > 1) {
+      window.sa_event('mergeFiles');
       this.fileNames = files.map((f) => f.name);
       const Merge = wrap(new Worker('workers/merge.js'));
       const merge = yield new Merge(files);
