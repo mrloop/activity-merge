@@ -26,6 +26,7 @@
 </div>
 
 <label class='file-input'>Select files to merge<input
+  data-test-input
   accept='.FIT,.fit,.GPX,.gpx,.TCX,.tcx,application/gpx+xml,application/vnd.garmin.tcx+xml'
   multiple
   type='file'
@@ -34,6 +35,7 @@
 /></label>
 {{#if this.objectUrl}}
   <a
+    data-test-download
     download={{this.fileName}}
     href={{this.objectUrl}}
     {{did-insert this.setDownloadLink}}
