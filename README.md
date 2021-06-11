@@ -2,9 +2,9 @@
 
 [![CI](https://github.com/mrloop/activity-merge/actions/workflows/ci.yml/badge.svg)](https://github.com/mrloop/activity-merge/actions/workflows/ci.yml)  [![Netlify Status](https://api.netlify.com/api/v1/badges/56f52298-a710-4981-9ef1-7f0e17058cab/deploy-status)](https://app.netlify.com/sites/activity-merge/deploys)
 
-Merge activity files.
+https://merge.mrloop.com/
 
-https://activity-merge.netlify.app/
+Merge activity files. If you've accidentally made two or more recordings for a single activity and want to upload them to [strava.com](https://www.strava.com/) as a single activity use this app to merge the files into a single activity.
 
 ## Prerequisites
 
@@ -49,7 +49,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+Continuous deployments via github actions to [netlify](https://www.netlify.com/).
 
 ## Further Reading / Useful Links
 
