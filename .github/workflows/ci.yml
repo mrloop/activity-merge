@@ -38,6 +38,8 @@ jobs:
         run: yarn lint:hbs
       - name: Browser Tests
         run: yarn test
+      - name: Smoke test production build
+        run: yarn smoke
   Deploy:
     name: Deploy
     runs-on: ubuntu-20.04

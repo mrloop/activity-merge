@@ -34,6 +34,7 @@ module.exports = {
         'config/**/*.js',
         'lib/*/index.js',
         'server/**/*.js',
+        'smoke.js',
       ],
       parserOptions: {
         sourceType: 'script',

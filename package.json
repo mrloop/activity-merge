@@ -20,7 +20,8 @@
     "lint:js:fix": "eslint . --fix",
     "start": "ember serve",
     "test": "npm-run-all lint test:*",
-    "test:ember": "ember test"
+    "test:ember": "ember test",
+    "smoke": "node smoke.js"
   },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
@@ -68,10 +69,12 @@
     "eslint-plugin-ember": "^10.5.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.3.1",
+    "execa": "^5.1.1",
     "loader.js": "^4.7.0",
     "netlify-cli": "^3.39.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.2.1",
+    "puppeteer": "^10.1.0",
     "qunit": "^2.16.0",
     "qunit-dom": "^1.6.0",
     "string-replace-loader": "^3.0.3",
