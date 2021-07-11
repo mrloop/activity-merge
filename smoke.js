@@ -1,39 +1,51 @@
 const puppeteer = require('puppeteer');
 const execa = require('execa');
 
-function waitForOutput(ember, target) {
-  return new Promise((resolve) => {
+function waitForOutput(serverProcess, stringToMatch) {
+  return new Promise((resolve, reject) => {
     let output = '';
     let listener = (data) => {
       output += data.toString();
-      if (output.includes(target)) {
-        ember.stdout.removeListener('data', listener);
-        ember.stderr.removeListener('data', listener);
+      if (output.includes(stringToMatch)) {
+        serverProcess.stdout.removeListener('data', listener);
+        serverProcess.stderr.removeListener('data', listener);
         resolve(output);
       }
     };
-    ember.stdout.on('data', listener);
-    ember.stderr.on('data', listener);
+    serverProcess.stdout.on('data', listener);
+    serverProcess.stderr.on('data', listener);
+    serverProcess.on('exit', (code) => {
+      if (code > 0) reject(new Error(output));
+    });
   });
 }
 
-(async () => {
-  let ember;
+async function startEmber() {
+  let port = '4321';
+  let serverProcess = execa('ember', ['s', '-prod', '--port', port]);
+  await waitForOutput(serverProcess, 'Build successful');
+  return { serverProcess, port };
+}
+
+async function test(startServerFn, testSelector) {
+  let server;
   try {
-    ember = execa('ember', ['s', '-prod', '--port', '4321']);
-    await waitForOutput(ember, 'Build successful');
+    let { serverProcess, port } = await startServerFn();
+    server = serverProcess;
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    await page.goto('http://localhost:4321');
-    await page.waitForSelector('.drop-zone');
+    await page.goto(`http://localhost:${port}`);
+    await page.waitForSelector(testSelector, { timeout: 5000 });
     await browser.close();
   } catch (error) {
     console.error(error);
     /* eslint-disable no-process-exit */
     process.exit(1);
   } finally {
-    if (ember) {
-      ember.cancel();
+    if (server) {
+      server.cancel();
     }
   }
-})();
+}
+
+test(startEmber, '.ember-application');
