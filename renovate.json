@@ -9,6 +9,10 @@
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true,
       "stabilityDays": 3
+    },
+    {
+      "matchPackageNames": ["netlify-cli"],
+      "schedule": ["after 8am on friday"]
     }
   ]
 }
