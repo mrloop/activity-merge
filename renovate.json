@@ -3,6 +3,7 @@
     "config:base",
     ":dependencyDashboard"
   ],
+  "labels": ["dependencies"],
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
