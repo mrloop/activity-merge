@@ -78,7 +78,7 @@
     "qunit": "2.16.0",
     "qunit-dom": "1.6.0",
     "string-replace-loader": "3.0.3",
-    "webpack": "5.48.0",
+    "webpack": "5.49.0",
     "xmldom": "0.6.0"
   },
   "engines": {
