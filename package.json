@@ -21,7 +21,8 @@
     "start": "ember serve",
     "test": "npm-run-all lint test:*",
     "test:ember": "ember test",
-    "smoke": "node smoke.js"
+    "smoke": "node smoke.js",
+    "staging": "node staging.js"
   },
   "devDependencies": {
     "@ember/optional-features": "2.0.0",
