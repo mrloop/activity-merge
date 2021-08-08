@@ -40,6 +40,10 @@ jobs:
         run: yarn test
       - name: Smoke test production build
         run: yarn smoke
+      - name: Deploy to staging and test deploy
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: DEBUG=true yarn staging
   Deploy:
     name: Deploy
     runs-on: ubuntu-20.04

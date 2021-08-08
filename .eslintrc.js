@@ -35,6 +35,7 @@ module.exports = {
         'lib/*/index.js',
         'server/**/*.js',
         'smoke.js',
+        'staging.js',
       ],
       parserOptions: {
         sourceType: 'script',
