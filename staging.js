@@ -31,13 +31,17 @@ async function findSite() {
 
 async function deleteSite() {
   let site = await findSite();
+  let sitename = await siteName();
   if (site) {
+    debug('Site found:', sitename);
     let { stdout } = await execa(
       'yarn',
       ['--silent', 'netlify', 'sites:delete', '--force', site.id],
       { timeout }
     );
     debug(stdout);
+  } else {
+    debug('Site not found:', sitename);
   }
 }
 
