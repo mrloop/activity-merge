@@ -19,7 +19,7 @@ async function siteName() {
     branchName = stdout;
   }
 
-  branchName = branchName.replace(/[./]/g, '_');
+  branchName = branchName.replace(/[./]/g, '-');
   return `${appName}-${branchName}`;
 }
 
