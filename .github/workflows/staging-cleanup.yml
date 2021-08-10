@@ -4,6 +4,9 @@ on:
   pull_request:
     types: [ closed ]
 
+env:
+  CI: true
+
 jobs:
   Cleanup:
     name: Cleanup
@@ -20,5 +23,7 @@ jobs:
       - name: Delete staging site
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        run: DEDUG=true DELETE_SITE=true yarn staging
+          DEBUG: true
+          DELETE_SITE: true
+        run: yarn staging
 
