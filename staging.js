@@ -11,11 +11,15 @@ function debug(data, ...args) {
 
 async function siteName() {
   let appName = 'activity-merge';
-  let { stdout: branchName } = await execa('git', ['branch', '--show-current']);
   // https://stackoverflow.com/questions/58033366/how-to-get-current-branch-within-github-actions
   // https://docs.github.com/en/actions/reference/environment-variables
-  branchName = branchName || process.env.GITHUB_HEAD_REF.split('/').pop();
-  branchName = branchName.replace(/\./g, '_');
+  let branchName = process.env.GITHUB_HEAD_REF;
+  if (!branchName) {
+    let { stdout } = await execa('git', ['branch', '--show-current']);
+    branchName = stdout;
+  }
+
+  branchName = branchName.replace(/[./]/g, '_');
   return `${appName}-${branchName}`;
 }
 
