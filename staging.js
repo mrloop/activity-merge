@@ -130,6 +130,8 @@ async function deployAndCheck() {
   console.log(json);
 }
 
+debug(process.env);
+
 if (process.env.DELETE_SITE) {
   deleteSite();
 } else {
