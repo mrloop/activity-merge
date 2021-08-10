@@ -15,6 +15,7 @@ async function siteName() {
   // https://stackoverflow.com/questions/58033366/how-to-get-current-branch-within-github-actions
   // https://docs.github.com/en/actions/reference/environment-variables
   branchName = branchName || process.env.GITHUB_HEAD_REF.split('/').pop();
+  branchName = branchName.replace(/\./g, '_');
   return `${appName}-${branchName}`;
 }
 
