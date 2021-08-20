@@ -2,7 +2,7 @@ import { EventUtilities } from '@sports-alliance/sports-lib/lib/events/utilities
 import { EventExporterGPX } from '@sports-alliance/sports-lib/lib/events/adapters/exporters/exporter.gpx.js';
 import { SportsLib } from '@sports-alliance/sports-lib';
 import { expose } from 'comlink';
-import { DOMParser } from 'xmldom';
+import { DOMParser } from '@xmldom/xmldom';
 
 const capitalize = function (str) {
   return str.replace(/^\w/, (c) => c.toUpperCase());
