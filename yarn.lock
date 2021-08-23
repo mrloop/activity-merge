@@ -3740,10 +3740,10 @@
     "@webassemblyjs/wast-parser" "1.9.0"
     "@xtuc/long" "4.2.2"
 
-"@xmldom/xmldom@0.7.1":
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/@xmldom/xmldom/-/xmldom-0.7.1.tgz#9c41efcb3dc4293728750d2e3417d4cf44fa4df2"
-  integrity sha512-EOzJBMOjJ657nmlTt5RsyEwJrMTMu0aX15pI96GmpyFPj33a9J4mkcEk0KqYGplqInQ6JsPUxv/R25jR+I5ADA==
+"@xmldom/xmldom@0.7.2":
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/@xmldom/xmldom/-/xmldom-0.7.2.tgz#d920079e66806b2626b5311955f6a7c4bed1cba8"
+  integrity sha512-t/Zqo0ewes3iq6zGqEqJNUWI27Acr3jkmSUNp6E3nl0Z2XbtqAG5XYqPNLdYonILmhcxANsIidh69tHzjXtuRg==
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
