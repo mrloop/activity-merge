@@ -33,7 +33,7 @@
     "@embroider/webpack": "0.44.2",
     "@glimmer/component": "1.0.4",
     "@glimmer/tracking": "1.0.4",
-    "@sports-alliance/sports-lib": "5.4.22",
+    "@sports-alliance/sports-lib": "5.4.24",
     "@xmldom/xmldom": "0.7.5",
     "babel-eslint": "10.1.0",
     "broccoli-asset-rev": "3.0.0",
