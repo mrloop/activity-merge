@@ -27,9 +27,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
       - name: Install Node
-        uses: actions/setup-node@v2
-        with:
-          node-version: 12
+        uses: volta-cli/action@v1
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
       - name: Lint JS
@@ -54,9 +52,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
       - name: Install Node
-        uses: actions/setup-node@v2
-        with:
-          node-version: 12
+        uses: volta-cli/action@v1
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
       - name: Production Build
