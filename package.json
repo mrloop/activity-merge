@@ -1,11 +1,11 @@
 {
   "name": "activity-merge",
   "version": "0.0.0",
-  "private": true,
+  "private": false,
   "description": "Easy drag and drop activity merge",
-  "repository": "",
+  "repository": "https://github.com/mrloop/activity-merge",
   "license": "AGPL",
-  "author": "",
+  "author": "mrloop <ewan@mrloop.com>",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -21,8 +21,8 @@
     "start": "ember serve",
     "test": "npm-run-all lint test:*",
     "test:ember": "ember test",
-    "smoke": "node smoke.js",
-    "staging": "node staging.js"
+    "smoke": "node smoke.mjs",
+    "staging": "node staging.mjs"
   },
   "devDependencies": {
     "@ember/optional-features": "2.0.0",

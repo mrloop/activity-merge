@@ -1,5 +1,5 @@
-const puppeteer = require('puppeteer');
-const execa = require('execa');
+import puppeteer from 'puppeteer';
+import execa from 'execa';
 
 let timeout = 5000;
 
