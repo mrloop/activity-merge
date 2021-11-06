@@ -11,100 +11,90 @@ function debug(data, ...args) {
   }
 }
 
-async function siteName() {
-  let appName = 'activity-merge';
-  // https://stackoverflow.com/questions/58033366/how-to-get-current-branch-within-github-actions
-  // https://docs.github.com/en/actions/reference/environment-variables
+// https://stackoverflow.com/questions/58033366/how-to-get-current-branch-within-github-actions
+// https://docs.github.com/en/actions/reference/environment-variables
+async function branchName() {
   let branchName = process.env.GITHUB_HEAD_REF;
   if (!branchName) {
     let { stdout } = await execa('git', ['branch', '--show-current']);
-    branchName = stdout;
+    branchName = stdout.trim();
   }
-
-  branchName = branchName.replace(/[./]/g, '-');
-  return `${appName}-${branchName}`;
+  return branchName.replace(/[./]/g, '-');
 }
 
-async function findSite() {
+async function revision() {
+  let { stdout: revision } = await execa('git', ['log', '--pretty=%h', '-n1']);
+  return revision.trim();
+}
+
+async function siteName() {
+  let appName = 'activity-merge';
+  return `${appName}-${await branchName()}`;
+}
+
+async function findSite(siteName) {
   let sites = await netlify.listSites();
-  let sitename = await siteName();
-  return sites.find(({ name }) => name === sitename);
+  return sites.find(({ name }) => name === siteName);
 }
 
-async function deleteSite() {
-  let site = await findSite();
-  let sitename = await siteName();
+async function deleteSite(siteName) {
+  let site = await findSite(siteName);
   if (site) {
     await netlify.deleteSite({ site_id: site.id });
+    debug('Site deleted:', site.url);
   } else {
-    debug('Site not found:', sitename);
+    debug('Site not found:', siteName);
   }
 }
 
-async function findOrCreateSite() {
-  let accountName = 'mrloop';
-  let site = await findSite();
-  let sitename = await siteName();
+async function findOrCreateSite(name) {
+  let site = await findSite(name);
   if (site) {
-    debug('Site found:', sitename);
+    debug('Site found:', name);
   } else {
-    debug('Site not found:', sitename);
-    site = await netlify.createSite({
-      body: {
-        name: sitename,
-        account_slug: accountName,
-      },
-    });
-    debug('Site created:', site);
+    debug('Site not found:', name);
+    site = await netlify.createSite({ body: { name } });
+    debug('Site created:', site.url);
   }
   return site;
 }
 
-async function deploy() {
-  try {
-    let { id } = await findOrCreateSite();
-    let { stdout: revision } = await execa('git', [
-      'log',
-      '--pretty=%h',
-      '-n1',
-    ]);
-    let message = `Revision ${revision}`;
-    debug('Deploying', message);
-    return await deploySite(netlify, id, 'dist', {
-      message,
-      filter: () => true,
-    });
-  } catch (error) {
-    console.error(error);
-    /* eslint-disable no-process-exit */
-    process.exit(1);
-  }
+async function deploy(siteName, folder) {
+  let { id } = await findOrCreateSite(siteName);
+  let message = `Revision ${await revision()}`;
+  debug('Deploying', message);
+  return await deploySite(netlify, id, folder, {
+    message,
+    filter: () => true,
+  });
 }
 
 async function checkDeploy(url, selector) {
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
+  await page.goto(url);
+  await page.waitForSelector(selector, { timeout: 10000 });
+  await browser.close();
+}
+
+async function deployAndCheck(siteName) {
+  let { deploy: d } = await deploy(siteName, 'dist');
+  await checkDeploy(d.url, '.drop-zone');
+  debug('Deployed', d.url);
+}
+
+async function run({ DELETE_SITE }) {
   try {
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
-    await page.goto(url);
-    await page.waitForSelector(selector, { timeout: 10000 });
-    await browser.close();
+    let name = await siteName();
+    if (DELETE_SITE) {
+      deleteSite(name);
+    } else {
+      deployAndCheck(name);
+    }
   } catch (error) {
     console.error(error);
-    /* eslint-disable no-process-exit */
-    process.exit(1);
+    process.exitCode = 1;
   }
 }
 
-async function deployAndCheck() {
-  let {
-    deploy: { url },
-  } = await deploy();
-  await checkDeploy(url, '.drop-zone');
-  debug('Deployed', url);
-}
-
-if (process.env.DELETE_SITE) {
-  deleteSite();
-} else {
-  deployAndCheck();
-}
+run(process.env);
