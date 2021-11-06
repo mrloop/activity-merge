@@ -1,7 +1,9 @@
 const puppeteer = require('puppeteer');
 const execa = require('execa');
+const NetlifyApi = require('netlify');
+const { deploySite } = require('netlify-cli/src/utils/deploy/deploy-site');
 
-let timeout = 5000;
+let netlify = new NetlifyApi(process.env.NETLIFY_AUTH_TOKEN);
 
 function debug(data, ...args) {
   if (process.env.DEBUG) {
@@ -24,12 +26,7 @@ async function siteName() {
 }
 
 async function findSite() {
-  let { stdout } = await execa(
-    'yarn',
-    ['--silent', 'netlify', 'sites:list', '--json'],
-    { timeout }
-  );
-  let sites = JSON.parse(stdout);
+  let sites = await netlify.listSites();
   let sitename = await siteName();
   return sites.find(({ name }) => name === sitename);
 }
@@ -38,13 +35,7 @@ async function deleteSite() {
   let site = await findSite();
   let sitename = await siteName();
   if (site) {
-    debug('Site found:', sitename);
-    let { stdout } = await execa(
-      'yarn',
-      ['--silent', 'netlify', 'sites:delete', '--force', site.id],
-      { timeout }
-    );
-    debug(stdout);
+    await netlify.deleteSite({ site_id: site.id });
   } else {
     debug('Site not found:', sitename);
   }
@@ -58,23 +49,13 @@ async function findOrCreateSite() {
     debug('Site found:', sitename);
   } else {
     debug('Site not found:', sitename);
-    let { stdout: json } = await execa(
-      'yarn',
-      [
-        '--silent',
-        'netlify',
-        'sites:create',
-        '--json',
-        '--account-slug',
-        accountName,
-        '--name',
-        sitename,
-      ],
-      { timeout }
-    );
-    debug(json);
-    site = JSON.parse(json);
-    debug('Site created');
+    site = await netlify.createSite({
+      body: {
+        name: sitename,
+        account_slug: accountName,
+      },
+    });
+    debug('Site created:', site);
   }
   return site;
 }
@@ -89,23 +70,10 @@ async function deploy() {
     ]);
     let message = `Revision ${revision}`;
     debug('Deploying', message);
-    let { stdout } = await execa(
-      'yarn',
-      [
-        '--silent',
-        'netlify',
-        'deploy',
-        '--dir=dist',
-        '--prod',
-        '--message',
-        message,
-        '--site',
-        id,
-        '--json',
-      ],
-      { timeout }
-    );
-    return stdout;
+    return await deploySite(netlify, id, 'dist', {
+      message,
+      filter: () => true,
+    });
   } catch (error) {
     console.error(error);
     /* eslint-disable no-process-exit */
@@ -128,10 +96,11 @@ async function checkDeploy(url, selector) {
 }
 
 async function deployAndCheck() {
-  let json = await deploy();
-  let { url } = JSON.parse(json);
+  let {
+    deploy: { url },
+  } = await deploy();
   await checkDeploy(url, '.drop-zone');
-  console.log(json);
+  debug('Deployed', url);
 }
 
 if (process.env.DELETE_SITE) {
