@@ -37,15 +37,14 @@ async function test(startServerFn, testSelector) {
     await page.goto(`http://localhost:${port}`);
     await page.waitForSelector(testSelector, { timeout: 5000 });
     await browser.close();
-  } catch (error) {
-    console.error(error);
-    /* eslint-disable no-process-exit */
-    process.exit(1);
   } finally {
-    if (server) {
-      server.cancel();
-    }
+    server?.cancel();
   }
 }
 
-test(startEmber, '.ember-application');
+try {
+  test(startEmber, '.ember-application');
+} catch (error) {
+  console.error(error);
+  process.exitCode = 1;
+}
