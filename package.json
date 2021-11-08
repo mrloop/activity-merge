@@ -22,7 +22,8 @@
     "test": "npm-run-all lint test:*",
     "test:ember": "ember test",
     "smoke": "node smoke.js",
-    "staging": "node staging.js"
+    "staging:deploy": "ngbd activity-merge .drop-zone",
+    "staging:delete": "ngbd activity-merge -d"
   },
   "devDependencies": {
     "@ember/optional-features": "2.0.0",
@@ -73,8 +74,7 @@
     "eslint-plugin-prettier": "4.0.0",
     "execa": "5.1.1",
     "loader.js": "4.7.0",
-    "netlify": "8.0.4",
-    "netlify-cli": "6.14.16",
+    "netlify-git-branch-deploy": "1.0.2",
     "npm-run-all": "4.1.5",
     "prettier": "2.4.1",
     "puppeteer": "11.0.0",

@@ -42,7 +42,7 @@ jobs:
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           DEBUG: true
-        run: yarn staging
+        run: yarn staging:deploy
   Deploy:
     name: Deploy
     runs-on: ubuntu-20.04
