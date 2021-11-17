@@ -1,5 +1,6 @@
-const puppeteer = require('puppeteer');
-const execa = require('execa');
+import puppeteer from 'puppeteer';
+import { execa } from 'execa';
+import process from 'process';
 
 function waitForOutput(serverProcess, stringToMatch) {
   return new Promise((resolve, reject) => {
