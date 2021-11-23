@@ -66,7 +66,7 @@
     "ember-template-lint": "3.13.0",
     "ember-test-selectors": "6.0.0",
     "ember-web-app": "5.0.1",
-    "esbuild": "0.13.14",
+    "esbuild": "0.13.15",
     "eslint": "7.32.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-ember": "10.5.7",
