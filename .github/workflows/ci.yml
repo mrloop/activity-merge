@@ -43,22 +43,31 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           DEBUG: true
         run: yarn staging:deploy
+      - run: git log --pretty=%h -n1 > dist/REVISION.txt
+      - name: Upload Build for next job
+        uses: actions/upload-artifact@v2
+        if: github.ref == 'refs/heads/main'
+        with:
+          name: prod-build
+          path: dist
+
   Deploy:
     name: Deploy
     runs-on: ubuntu-20.04
     needs: Test
     if: github.ref == 'refs/heads/main'
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v2
       - name: Install Node
         uses: volta-cli/action@v1
-      - name: Install Dependencies
-        run: yarn install --frozen-lockfile
-      - name: Production Build
-        run: yarn ember build --prod
+      - name: Install netlify-cli
+        run: yarn global add netlify-cli
+      - name: Download Build
+        uses: actions/download-artifact@v2
+        with:
+          name: prod-build
+          path: dist
       - name: Deploy site
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        run: DEBUG=netlify-git-branch:* yarn netlify deploy --dir=dist --prod --message "Revision $(git log --pretty=%h -n1)"
+        run: netlify deploy --dir=dist --prod --message "Revision $(cat dist/REVISION.txt)"
