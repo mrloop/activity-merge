@@ -61,4 +61,4 @@ jobs:
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        run: yarn netlify deploy --dir=dist --prod --message "Revision $(git log --pretty=%h -n1)"
+        run: DEBUG=netlify-git-branch:* yarn netlify deploy --dir=dist --prod --message "Revision $(git log --pretty=%h -n1)"

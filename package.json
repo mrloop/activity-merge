@@ -22,8 +22,8 @@
     "test": "npm-run-all lint test:*",
     "test:ember": "ember test",
     "smoke": "node smoke.mjs",
-    "staging:deploy": "netlify-git-branch deploy activity-merge --assert .drop-zone",
-    "staging:delete": "netlify-git-branch delete activity-merge"
+    "staging:deploy": "DEBUG=netlify-git-branch:* netlify-git-branch deploy activity-merge --assert .drop-zone",
+    "staging:delete": "DEBUG=netlify-git-branch:* netlify-git-branch delete activity-merge"
   },
   "devDependencies": {
     "@babel/eslint-parser": "7.16.5",
