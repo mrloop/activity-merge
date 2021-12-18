@@ -22,5 +22,4 @@ jobs:
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           DEBUG: true
-        run: yarn staging:delete
-
+        run: DEBUG=netlify-git-branch:* yarn staging:delete
