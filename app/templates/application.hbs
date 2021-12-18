@@ -1,6 +1,6 @@
 {{page-title 'Activity Merge'}}
 
-<div
+<section
   class='content {{if this.isDragging 'drag-over'}}'
   {{on 'drop' this.onDrop}}
   {{on 'dragover' this.onDragOver}}
@@ -23,7 +23,10 @@
 
     </main>
   </div>
-</div>
+  <footer>
+    <p>© 2021 Ewan McDougall ● <a rel="noopener noreferrer" class="source" target="_blank" href="https://github.com/mrloop/activity-merge/">source code here</a></p>
+  </footer>
+</section>
 
 <label class='file-input'>Select files to merge<input
   data-test-input
