@@ -27,7 +27,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
       - name: Install Node
-        uses: volta-cli/action@v2
+        uses: volta-cli/action@v3
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
       - name: Lint JS
@@ -58,7 +58,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
       - name: Install Node
-        uses: volta-cli/action@v2
+        uses: volta-cli/action@v3
       - name: Install netlify-cli
         run: yarn global add netlify-cli
       - name: Download Build
