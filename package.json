@@ -36,7 +36,7 @@
     "@glimmer/component": "1.1.2",
     "@glimmer/tracking": "1.1.2",
     "@sports-alliance/sports-lib": "5.4.24",
-    "@xmldom/xmldom": "0.8.2",
+    "@xmldom/xmldom": "0.8.3",
     "broccoli-asset-rev": "3.0.0",
     "broccoli-funnel": "3.0.8",
     "broccoli-merge-trees": "4.2.0",
