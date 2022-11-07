@@ -90,7 +90,7 @@
     "edition": "octane"
   },
   "volta": {
-    "node": "16.18.1",
+    "node": "18.12.1",
     "yarn": "1.22.19"
   }
 }
