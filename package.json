@@ -63,7 +63,7 @@
     "ember-service-worker-asset-cache": "0.6.4",
     "ember-service-worker-index": "0.7.2",
     "ember-source": "4.8.2",
-    "ember-template-lint": "4.18.0",
+    "ember-template-lint": "4.18.1",
     "ember-test-selectors": "6.0.0",
     "ember-web-app": "5.0.1",
     "esbuild": "0.15.14",
