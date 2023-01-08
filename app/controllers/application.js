@@ -5,6 +5,7 @@ import { tracked } from '@glimmer/tracking';
 import { wrap } from 'comlink';
 import { dropTask } from 'ember-concurrency';
 import { waitFor } from '@ember/test-waiters';
+import { service } from '@ember/service';
 
 export default class ApplicationController extends Controller {
   downloadLinkElement;
@@ -13,6 +14,8 @@ export default class ApplicationController extends Controller {
   @tracked fileName;
   @tracked isDragging;
   @tracked fileNames;
+
+  @service metrics;
 
   @action setDownloadLink(element) {
     this.downloadLinkElement = element;
@@ -46,7 +49,10 @@ export default class ApplicationController extends Controller {
   @waitFor
   *mergeFiles(files) {
     if (files.length > 1) {
-      window.sa_event?.('mergeFiles');
+      this.metrics.trackEvent({
+        name: 'mergeFiles',
+        numberOfFiles: files.length,
+      });
       this.fileNames = files.map((f) => f.name);
       const Merge = wrap(new Worker('/workers/merge.js'));
       const merge = yield new Merge(files);
