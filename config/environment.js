@@ -21,6 +21,16 @@ module.exports = function (environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     },
+
+    metricsAdapters: [
+      {
+        name: 'SimpleAnalytics',
+        environments: ['production'],
+        config: {
+          src: 'https://pi.mrloop.com/pi.js',
+        },
+      },
+    ],
   };
 
   if (environment === 'development') {
