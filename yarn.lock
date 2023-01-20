@@ -10542,13 +10542,13 @@ ember-cli-get-component-path-option@^1.0.0:
   resolved "https://registry.npmjs.org/ember-cli-get-component-path-option/-/ember-cli-get-component-path-option-1.0.0.tgz"
   integrity sha1-DXtZVVni+QUKvtgE8djv8bCLx3E=
 
-ember-cli-htmlbars@6.1.1, ember-cli-htmlbars@^6.1.1:
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-6.1.1.tgz#f5b588572a5d18ad087560122b8dabc90145173d"
-  integrity sha512-DKf2rjzIVw9zWCuFsBGJScrgf5Mz7dSg08Cq+FWFYIxnpssINUbNUoB0NHWnUJK4QqCvaExOyOmjm0kO455CPg==
+ember-cli-htmlbars@6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-6.2.0.tgz#18ec48ee1c93f9eed862a64eb24a9d14604f1dfc"
+  integrity sha512-j5EGixjGau23HrqRiW/JjoAovg5UBHfjbyN7wX5ekE90knIEqUUj1z/Mo/cTx/J2VepQ2lE6HdXW9LWQ/WdMtw==
   dependencies:
     "@ember/edition-utils" "^1.2.0"
-    babel-plugin-ember-template-compilation "^1.0.0"
+    babel-plugin-ember-template-compilation "^2.0.0"
     babel-plugin-htmlbars-inline-precompile "^5.3.0"
     broccoli-debug "^0.6.5"
     broccoli-persistent-filter "^3.1.2"
@@ -10582,6 +10582,26 @@ ember-cli-htmlbars@^5.7.1:
     semver "^7.3.4"
     silent-error "^1.1.1"
     strip-bom "^4.0.0"
+    walk-sync "^2.2.0"
+
+ember-cli-htmlbars@^6.1.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-6.1.1.tgz#f5b588572a5d18ad087560122b8dabc90145173d"
+  integrity sha512-DKf2rjzIVw9zWCuFsBGJScrgf5Mz7dSg08Cq+FWFYIxnpssINUbNUoB0NHWnUJK4QqCvaExOyOmjm0kO455CPg==
+  dependencies:
+    "@ember/edition-utils" "^1.2.0"
+    babel-plugin-ember-template-compilation "^1.0.0"
+    babel-plugin-htmlbars-inline-precompile "^5.3.0"
+    broccoli-debug "^0.6.5"
+    broccoli-persistent-filter "^3.1.2"
+    broccoli-plugin "^4.0.3"
+    ember-cli-version-checker "^5.1.2"
+    fs-tree-diff "^2.0.1"
+    hash-for-dep "^1.5.1"
+    heimdalljs-logger "^0.1.10"
+    js-string-escape "^1.0.1"
+    semver "^7.3.4"
+    silent-error "^1.1.1"
     walk-sync "^2.2.0"
 
 ember-cli-image-transformer@5.0.0:
