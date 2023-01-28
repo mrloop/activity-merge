@@ -4535,10 +4535,10 @@
     "@babel/core" "^7.14.5"
     babel-loader "8"
 
-"@embroider/compat@2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@embroider/compat/-/compat-2.1.0.tgz#a45a070fea9e3da61e206c74de4a45cff5ae5adf"
-  integrity sha512-wI6DJcYZV+Yngodz0iKjX9BpgmDSr4mLgtZoSOfILbaf5zI2ExohRIaGmOL6YHfa2TBMqOgcm7AoQXbaeFUuIQ==
+"@embroider/compat@2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@embroider/compat/-/compat-2.1.1.tgz#fda6baeede76051f3c57dc661ddf6058d6c7a64b"
+  integrity sha512-HNq5vv7NpQ1Jr+4slzmLBqsy5NDsIHilYeQiWboMrPAyHr5NHlKYWciIcmxdgPgz2kf/8D5nDiANgJznZedlyw==
   dependencies:
     "@babel/code-frame" "^7.14.5"
     "@babel/core" "^7.14.5"
@@ -4577,10 +4577,10 @@
     walk-sync "^3.0.0"
     yargs "^17.0.1"
 
-"@embroider/core@2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@embroider/core/-/core-2.1.0.tgz#ce0af8dc1ee3a4a25b670d1b6bbc6ce25001175c"
-  integrity sha512-3AQdzZ6zUQLVr4ILQyhbgGqVjk5+sb6lQyTROwuKxdSy/A4ChdswOEDMs0zDqG3UdrPUxQ+/96yqf+FymCIYaA==
+"@embroider/core@2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@embroider/core/-/core-2.1.1.tgz#6b0cf97e0474d7e996941b599378bf2007576f16"
+  integrity sha512-N4rz+r8WjHYmwprvBYC0iUT4EWNpdDjF7JLl8PEYlWbhXDEJL+Ma/aP78S7spMhIpJX9SHK7nbgNxmZAqAe34A==
   dependencies:
     "@babel/core" "^7.14.5"
     "@babel/parser" "^7.14.5"
@@ -4681,10 +4681,10 @@
     broccoli-funnel "^3.0.5"
     ember-cli-babel "^7.23.1"
 
-"@embroider/webpack@2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@embroider/webpack/-/webpack-2.1.0.tgz#d9c48af72ba91a9b1b7fedf9dbbb835291c28fae"
-  integrity sha512-M+cSVCF5xnUjSj2UTFSKtkfGMiwYbiQtRZVNMaTzJcEVSPHjY4JPI//gkFvQZIDVsXryhC7le3peRqYZJ7r4dA==
+"@embroider/webpack@2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@embroider/webpack/-/webpack-2.1.1.tgz#45d6b451bfd4c9ad54bfcc12c59cb19f9d620be9"
+  integrity sha512-1IzXXexv/QxDyk4N6kamtiTk92HszlaQZXGB+xhnRCMY4F7Hgxad4gSPvnSy/oSkbHTMWSGjCTS5e4tQcUC8Cg==
   dependencies:
     "@babel/core" "^7.14.5"
     "@embroider/babel-loader-8" "2.0.0"
