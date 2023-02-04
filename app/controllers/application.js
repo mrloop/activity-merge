@@ -1,6 +1,5 @@
 import Controller from '@ember/controller';
 import { action } from '@ember/object';
-import { schedule } from '@ember/runloop';
 import { tracked } from '@glimmer/tracking';
 import { wrap } from 'comlink';
 import { dropTask } from 'ember-concurrency';
@@ -8,29 +7,20 @@ import { waitFor } from '@ember/test-waiters';
 import { service } from '@ember/service';
 
 export default class ApplicationController extends Controller {
-  downloadLinkElement;
-  fileInputElement;
   @tracked objectUrl;
   @tracked fileName;
   @tracked isDragging;
   @tracked fileNames;
+  @tracked filesSelectClickCount = 0;
 
   @service metrics;
 
-  @action setDownloadLink(element) {
-    this.downloadLinkElement = element;
-  }
-
-  @action setFileInput(element) {
-    this.fileInputElement = element;
-  }
-
   @action onFilesSelect() {
-    this.fileInputElement.click();
+    this.filesSelectClickCount++;
   }
 
-  @action onFilesSelected() {
-    return this.mergeFiles.perform([...this.fileInputElement.files]);
+  @action onFilesSelected({ target }) {
+    return this.mergeFiles.perform([...target.files]);
   }
 
   get isMerging() {
@@ -59,12 +49,11 @@ export default class ApplicationController extends Controller {
       const blob = yield merge.blob();
       this.objectUrl = window.URL.createObjectURL(blob);
       this.fileName = `${this.fileNames[0].split('.')[0]}-activity-merge.gpx`;
-      schedule('afterRender', () => {
-        this.downloadLinkElement.click();
-
-        window.URL.revokeObjectURL(this.objectUrl);
-      });
     }
+  }
+
+  @action cleanUp() {
+    window.URL.revokeObjectURL(this.objectUrl);
   }
 
   dataTransferToFiles({ items, files }) {

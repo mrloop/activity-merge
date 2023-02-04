@@ -33,8 +33,8 @@
   accept='.FIT,.fit,.GPX,.gpx,.TCX,.tcx,application/gpx+xml,application/vnd.garmin.tcx+xml'
   multiple
   type='file'
+  {{click this.filesSelectClickCount}}
   {{on 'change' this.onFilesSelected}}
-  {{did-insert this.setFileInput}}
 /></label>
 {{#if this.objectUrl}}
   <a
@@ -42,6 +42,7 @@
     download={{this.fileName}}
     href={{this.objectUrl}}
     aria-hidden="true"
-    {{did-insert this.setDownloadLink}}
+    {{click this.fileName}}
+    {{on 'click' this.cleanUp}}
   ></a>
 {{/if}}
