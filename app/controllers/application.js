@@ -3,7 +3,7 @@ import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 import { wrap } from 'comlink';
 import { dropTask } from 'ember-concurrency';
-import { waitFor } from '@ember/test-waiters';
+import { waitForPromise } from '@ember/test-waiters';
 import { service } from '@ember/service';
 
 export default class ApplicationController extends Controller {
@@ -35,9 +35,7 @@ export default class ApplicationController extends Controller {
     await this.mergeFiles.perform(files);
   }
 
-  @dropTask
-  @waitFor
-  *mergeFiles(files) {
+  mergeFiles = dropTask(async (files) => {
     if (files.length > 1) {
       this.metrics.trackEvent({
         name: 'mergeFiles',
@@ -45,12 +43,12 @@ export default class ApplicationController extends Controller {
       });
       this.fileNames = files.map((f) => f.name);
       const Merge = wrap(new Worker('/workers/merge.js'));
-      const merge = yield new Merge(files);
-      const blob = yield merge.blob();
+      const merge = await waitForPromise(new Merge(files));
+      const blob = await waitForPromise(merge.blob());
       this.objectUrl = window.URL.createObjectURL(blob);
       this.fileName = `${this.fileNames[0].split('.')[0]}-activity-merge.gpx`;
     }
-  }
+  });
 
   @action cleanUp() {
     window.URL.revokeObjectURL(this.objectUrl);
