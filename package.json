@@ -71,7 +71,7 @@
     "esbuild": "0.17.10",
     "eslint": "8.35.0",
     "eslint-config-prettier": "8.6.0",
-    "eslint-plugin-ember": "11.4.6",
+    "eslint-plugin-ember": "11.4.7",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-prettier": "4.2.1",
     "execa": "7.0.0",
