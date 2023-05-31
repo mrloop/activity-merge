@@ -26,23 +26,22 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
-      - name: Install Node
-        uses: volta-cli/action@v4
       - name: Install Dependencies
-        run: yarn install --frozen-lockfile
+        uses: NullVoxPopuli/action-setup-pnpm@v2
       - name: Lint JS
-        run: yarn lint:js
+        run: pnpm lint:js
       - name: Lint Handlebars
-        run: yarn lint:hbs
+        run: pnpm lint:hbs
       - name: Browser Tests
-        run: yarn test
+        run: pnpm test
       - name: Smoke test production build
-        run: yarn smoke
+        run: node node_modules/puppeteer/install.js && pnpm smoke
       - name: Deploy to staging and test deploy
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           DEBUG: true
-        run: yarn staging:deploy
+          VOLTA_FEATURE_PNPM: 1
+        run: pnpm staging:deploy
       - run: git log --pretty=%h -n1 > dist/REVISION.txt
       - name: Upload Build for next job
         uses: actions/upload-artifact@v3
@@ -60,7 +59,7 @@ jobs:
       - name: Install Node
         uses: volta-cli/action@v4
       - name: Install netlify-cli
-        run: yarn global add netlify-cli
+        run: npm install -g netlify-cli
       - name: Download Build
         uses: actions/download-artifact@v3
         with:
@@ -70,4 +69,5 @@ jobs:
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          VOLTA_FEATURE_PNPM: 1
         run: netlify deploy --dir=dist --prod --message "Revision $(cat dist/REVISION.txt)"

@@ -14,12 +14,11 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
-      - name: Install Node
-        uses: volta-cli/action@v4
       - name: Install Dependencies
-        run: yarn install --frozen-lockfile
+        uses: NullVoxPopuli/action-setup-pnpm@v2
       - name: Delete staging site
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           DEBUG: true
-        run: DEBUG=netlify-git-branch:* yarn staging:delete
+          VOLTA_FEATURE_PNPM: 1
+        run: DEBUG=netlify-git-branch:* pnpm staging:delete
