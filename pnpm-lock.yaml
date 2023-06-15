@@ -66,8 +66,8 @@ devDependencies:
     specifier: 6.2.0
     version: 6.2.0
   ember-cli-image-transformer:
-    specifier: 5.0.0
-    version: 5.0.0
+    specifier: 6.0.0
+    version: 6.0.0(ember-source@4.12.0)
   ember-cli-inject-live-reload:
     specifier: 2.1.0
     version: 2.1.0
@@ -6776,6 +6776,14 @@ packages:
       color-string: 1.9.1
     dev: true
 
+  /color@4.2.3:
+    resolution: {integrity: sha512-1rXeuUUiGGrykh+CeBdu5Ie7OJwinCgQY0bc7GCRxy5xVHy+moaqkpL/jqQq0MtQOeYcrqEz4abc5f0KtU7W4A==}
+    engines: {node: '>=12.5.0'}
+    dependencies:
+      color-convert: 2.0.1
+      color-string: 1.9.1
+    dev: true
+
   /colors@1.0.3:
     resolution: {integrity: sha512-pFGrxThWcWQ2MsAz6RtgeWe4NK2kUE1WfsrvvlctdII745EW9I0yflqhe7++M5LEc7bV2c/9/5zc8sFcpL0Drw==}
     engines: {node: '>=0.1.90'}
@@ -6889,7 +6897,7 @@ packages:
     dev: true
 
   /concat-map@0.0.1:
-    resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
+    resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
     dev: true
 
   /concordance@5.0.4:
@@ -7471,18 +7479,18 @@ packages:
       mimic-response: 1.0.1
     dev: true
 
-  /decompress-response@4.2.1:
-    resolution: {integrity: sha512-jOSne2qbyE+/r8G1VU+G/82LBs2Fs4LAsTiLSHOCOMZQl2OKZ6i8i4IyHemTe+/yIXOtTcRQMzPcgyhoFlqPkw==}
-    engines: {node: '>=8'}
-    dependencies:
-      mimic-response: 2.1.0
-    dev: true
-
   /decompress-response@5.0.0:
     resolution: {integrity: sha512-TLZWWybuxWgoW7Lykv+gq9xvzOsUjQ9tF09Tj6NSTYGMTCHNXzrPnD6Hi+TgZq19PyTAGH4Ll/NIM/eTGglnMw==}
     engines: {node: '>=10'}
     dependencies:
       mimic-response: 2.1.0
+    dev: true
+
+  /decompress-response@6.0.0:
+    resolution: {integrity: sha512-aW35yZM6Bb/4oJlZncMH2LCoZtJXTRxES17vE3hoRiowU2kWHaJKFkSBDnDR+cm9J+9QhXmREyIfv0pji9ejCQ==}
+    engines: {node: '>=10'}
+    dependencies:
+      mimic-response: 3.1.0
     dev: true
 
   /decompress-tar@4.1.1:
@@ -8138,17 +8146,20 @@ packages:
       - supports-color
     dev: true
 
-  /ember-cli-image-transformer@5.0.0:
-    resolution: {integrity: sha512-/dv/7e3RC1hMky948ycM0VIV6cukha+a3TMTHdw3qXTQGfcsrZGif0G9eZDJ9Ndeapnb1Sxw0HTGO6yAIihamA==}
-    engines: {node: 12.* || 14.* || >= 16}
+  /ember-cli-image-transformer@6.0.0(ember-source@4.12.0):
+    resolution: {integrity: sha512-pedqhtfX0nHW4hl62Vz1mvumZRMd0bkSHlbHOmTtXNIoBfcVUqnunNAzZeWJxB4u7mK9OhMERH6De9a10MWfmw==}
+    engines: {node: 14.* || 16.* || >= 18}
+    peerDependencies:
+      ember-source: ^4.0.0
     dependencies:
       broccoli-caching-writer: 3.0.3
       broccoli-funnel: 3.0.8
       broccoli-merge-trees: 4.2.0
       ember-cli-babel: 7.26.11
-      ember-cli-htmlbars: 5.7.2
+      ember-cli-htmlbars: 6.2.0
+      ember-source: 4.12.0(@babel/core@7.22.1)(@glimmer/component@1.1.2)(webpack@5.86.0)
       rsvp: 4.8.5
-      sharp: 0.28.3
+      sharp: 0.32.1
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -13143,6 +13154,11 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  /mimic-response@3.1.0:
+    resolution: {integrity: sha512-z0yWI+4FDrrweS8Zmt4Ej5HdJmky15+L2e6Wgn3+iK5fWzb6T3fhNFq2+MeTRb064c6Wr4N/wv0DzQTjNzHNGQ==}
+    engines: {node: '>=10'}
+    dev: true
+
   /mini-css-extract-plugin@2.7.6(webpack@5.86.0):
     resolution: {integrity: sha512-Qk7HcgaPkGG6eD77mLvZS1nmxlao3j+9PkrT9Uc7HAE1id3F41+DdBRYRYkbyfNRGzm8/YWtzhw7nVPmwhqTQw==}
     engines: {node: '>= 12.13.0'}
@@ -13645,14 +13661,15 @@ packages:
       tslib: 2.5.2
     dev: true
 
-  /node-abi@2.30.1:
-    resolution: {integrity: sha512-/2D0wOQPgaUWzVSVgRMx+trKJRC2UG4SUc4oCJoXx9Uxjtp0Vy3/kt7zcbxHF8+Z/pK3UloLWzBISg72brfy1w==}
+  /node-abi@3.45.0:
+    resolution: {integrity: sha512-iwXuFrMAcFVi/ZoZiqq8BzAdsLw9kxDfTC0HMyjXfSL/6CSDAGD5UmR7azrAgWV1zKYq7dUUMj4owusBWKLsiQ==}
+    engines: {node: '>=10'}
     dependencies:
-      semver: 5.7.1
+      semver: 7.5.1
     dev: true
 
-  /node-addon-api@3.2.1:
-    resolution: {integrity: sha512-mmcei9JghVNDYydghQmeDX8KoAm0FAiYyIcUt/N4nhyAipB17pllZQDOJD2fotxABnt4Mdz+dKTO7eftLg4d0A==}
+  /node-addon-api@6.1.0:
+    resolution: {integrity: sha512-+eawOlIgy680F0kBzPUNFhMZGtJ1YmqM6l4+Crf4IkImjYrO/mqPwRMh352g23uIaQKFItcQ64I7KMaJxHgAVA==}
     dev: true
 
   /node-fetch@2.6.11:
@@ -14713,22 +14730,21 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
-  /prebuild-install@6.1.4:
-    resolution: {integrity: sha512-Z4vpywnK1lBg+zdPCVCsKq0xO66eEV9rWo2zrROGGiRS4JtueBOdlB1FnY8lcy7JsUud/Q3ijUxyWN26Ika0vQ==}
-    engines: {node: '>=6'}
+  /prebuild-install@7.1.1:
+    resolution: {integrity: sha512-jAXscXWMcCK8GgCoHOfIr0ODh5ai8mj63L2nWrjuAgXE6tDyYGnx4/8o/rCgU+B4JSyZBKbeZqzhtwtC3ovxjw==}
+    engines: {node: '>=10'}
     hasBin: true
     dependencies:
-      detect-libc: 1.0.3
+      detect-libc: 2.0.1
       expand-template: 2.0.3
       github-from-package: 0.0.0
       minimist: 1.2.8
       mkdirp-classic: 0.5.3
       napi-build-utils: 1.0.2
-      node-abi: 2.30.1
-      npmlog: 4.1.2
+      node-abi: 3.45.0
       pump: 3.0.0
       rc: 1.2.8
-      simple-get: 3.1.1
+      simple-get: 4.0.1
       tar-fs: 2.1.1
       tunnel-agent: 0.6.0
     dev: true
@@ -15888,17 +15904,17 @@ packages:
     resolution: {integrity: sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==}
     dev: true
 
-  /sharp@0.28.3:
-    resolution: {integrity: sha512-21GEP45Rmr7q2qcmdnjDkNP04Ooh5v0laGS5FDpojOO84D1DJwUijLiSq8XNNM6e8aGXYtoYRh3sVNdm8NodMA==}
-    engines: {node: '>=10'}
+  /sharp@0.32.1:
+    resolution: {integrity: sha512-kQTFtj7ldpUqSe8kDxoGLZc1rnMFU0AO2pqbX6pLy3b7Oj8ivJIdoKNwxHVQG2HN6XpHPJqCSM2nsma2gOXvOg==}
+    engines: {node: '>=14.15.0'}
     requiresBuild: true
     dependencies:
-      color: 3.2.1
-      detect-libc: 1.0.3
-      node-addon-api: 3.2.1
-      prebuild-install: 6.1.4
+      color: 4.2.3
+      detect-libc: 2.0.1
+      node-addon-api: 6.1.0
+      prebuild-install: 7.1.1
       semver: 7.5.1
-      simple-get: 3.1.1
+      simple-get: 4.0.1
       tar-fs: 2.1.1
       tunnel-agent: 0.6.0
     dev: true
@@ -15959,10 +15975,10 @@ packages:
     resolution: {integrity: sha512-cSFtAPtRhljv69IK0hTVZQ+OfE9nePi/rtJmw5UjHeVyVroEqJXP1sFztKUy1qU+xvz3u/sfYJLa947b7nAN2Q==}
     dev: true
 
-  /simple-get@3.1.1:
-    resolution: {integrity: sha512-CQ5LTKGfCpvE1K0n2us+kuMPbk/q0EKl82s4aheV9oXjFEz6W/Y7oQFVJuU6QG77hRT4Ghb5RURteF5vnWjupA==}
+  /simple-get@4.0.1:
+    resolution: {integrity: sha512-brv7p5WgH0jmQJr1ZDDfKDOSeWWg+OVypG99A/5vYGPqJ6pxiaHLy8nxtFjBA7oMa01ebA9gfh1uMCFqOuXxvA==}
     dependencies:
-      decompress-response: 4.2.1
+      decompress-response: 6.0.0
       once: 1.4.0
       simple-concat: 1.0.1
     dev: true
