@@ -15,8 +15,8 @@ devDependencies:
     specifier: 3.1.0
     version: 3.1.0(ember-source@4.12.2)(webpack@5.88.1)
   '@embroider/compat':
-    specifier: 3.1.0
-    version: 3.1.0(@embroider/core@3.1.0)
+    specifier: 3.1.2
+    version: 3.1.2(@embroider/core@3.1.0)
   '@embroider/core':
     specifier: 3.1.0
     version: 3.1.0
@@ -1742,8 +1742,8 @@ packages:
       - webpack
     dev: true
 
-  /@embroider/compat@3.1.0(@embroider/core@3.1.0):
-    resolution: {integrity: sha512-+ERJg3CGW+5XRl9tLZ8JWqX/ARd18XB6cHEWHUiOVAHagBNH83frpyPu+UVkftA+xiNtPSi4S1BSb2MaaXM6ww==}
+  /@embroider/compat@3.1.2(@embroider/core@3.1.0):
+    resolution: {integrity: sha512-XzmzhkZPkUY6pWW7gG339Nt64/4fPCAzp1YVkvaoRm326ELlrs7E4UArG7bZ9vXwjm23Vt6cem34dqAoYcf0jg==}
     engines: {node: 12.* || 14.* || >= 16}
     hasBin: true
     peerDependencies:
