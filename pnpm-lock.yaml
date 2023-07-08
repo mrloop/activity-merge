@@ -51,8 +51,8 @@ devDependencies:
     specifier: 2.6.3
     version: 2.6.3(webpack@5.88.1)
   ember-cli:
-    specifier: 5.0.0
-    version: 5.0.0
+    specifier: 5.1.0
+    version: 5.1.0
   ember-cli-app-version:
     specifier: 6.0.1
     version: 6.0.1(ember-source@4.12.3)
@@ -61,7 +61,7 @@ devDependencies:
     version: 7.26.11
   ember-cli-dependency-checker:
     specifier: 3.3.2
-    version: 3.3.2(ember-cli@5.0.0)
+    version: 3.3.2(ember-cli@5.1.0)
   ember-cli-htmlbars:
     specifier: 6.2.0
     version: 6.2.0
@@ -3549,6 +3549,26 @@ packages:
     resolution: {integrity: sha512-eJ2jbzjdijiL3B4PrSQaSjuF2sPEQPVCPzBvTHJD9Nz+9dw2SGH4K4xeQJ77YfTq5bRQ+bD8wT11JbeDPmxmGg==}
     dependencies:
       '@octokit/openapi-types': 12.11.0
+    dev: true
+
+  /@pnpm/constants@7.1.1:
+    resolution: {integrity: sha512-31pZqMtjwV+Vaq7MaPrT1EoDFSYwye3dp6BiHIGRJmVThCQwySRKM7hCvqqI94epNkqFAAYoWrNynWoRYosGdw==}
+    engines: {node: '>=16.14'}
+    dev: true
+
+  /@pnpm/error@5.0.2:
+    resolution: {integrity: sha512-0TEm+tWNYm+9uh6DSKyRbv8pv/6b4NL0PastLvMxIoqZbBZ5Zj1cYi332R9xsSUi31ZOsu2wpgn/bC7DA9hrjg==}
+    engines: {node: '>=16.14'}
+    dependencies:
+      '@pnpm/constants': 7.1.1
+    dev: true
+
+  /@pnpm/find-workspace-dir@6.0.2:
+    resolution: {integrity: sha512-JSrpQUFCs4vY1D5tOmj7qBb+oE2j/lO6341giEdUpvYf3FijY8CY13l8rPjfHV2y3m//utzl0An+q+qx14S6Nw==}
+    engines: {node: '>=16.14'}
+    dependencies:
+      '@pnpm/error': 5.0.2
+      find-up: 5.0.0
     dev: true
 
   /@puppeteer/browsers@1.4.3(typescript@5.0.4):
@@ -8155,14 +8175,14 @@ packages:
       - supports-color
     dev: true
 
-  /ember-cli-dependency-checker@3.3.2(ember-cli@5.0.0):
+  /ember-cli-dependency-checker@3.3.2(ember-cli@5.1.0):
     resolution: {integrity: sha512-PwkrW5oYsdPWwt+0Tojufmv/hxVETTjkrEdK7ANQB2VSnqpA5UcYubwpQM9ONuR2J8wyNDMwEHlqIrk/FYtBsQ==}
     engines: {node: '>= 6'}
     peerDependencies:
       ember-cli: ^3.2.0 || >=4.0.0
     dependencies:
       chalk: 2.4.2
-      ember-cli: 5.0.0
+      ember-cli: 5.1.0
       find-yarn-workspace-root: 1.2.1
       is-git-url: 1.0.0
       resolve: 1.22.2
@@ -8425,12 +8445,13 @@ packages:
       - supports-color
     dev: true
 
-  /ember-cli@5.0.0:
-    resolution: {integrity: sha512-poklpwf+GrDhkFRTYvYmpkSA5R0pNy4Vahxjvji5jUl82tot+J95ZY1QH1yx//QzQ7zb1XlcOnceieyd2j1Rbw==}
+  /ember-cli@5.1.0:
+    resolution: {integrity: sha512-TlnfO+V5lZqRQ7eGXt+P8q24Cu90GSXXAS/2NasaCtC1WY7eVzhfMsoNZiOw3Pe1CaB7i5fPDR8jAMsTwx8Tpg==}
     engines: {node: '>= 16'}
     hasBin: true
     dependencies:
       '@babel/core': 7.22.1(supports-color@8.1.1)
+      '@pnpm/find-workspace-dir': 6.0.2
       broccoli: 3.5.2
       broccoli-builder: 0.18.14
       broccoli-concat: 4.2.5
