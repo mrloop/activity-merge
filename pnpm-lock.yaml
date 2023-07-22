@@ -33,8 +33,8 @@ devDependencies:
     specifier: 5.4.24
     version: 5.4.24
   '@xmldom/xmldom':
-    specifier: 0.8.9
-    version: 0.8.9
+    specifier: 0.8.10
+    version: 0.8.10
   broccoli-asset-rev:
     specifier: 3.0.0
     version: 3.0.0
@@ -4317,8 +4317,8 @@ packages:
       '@xtuc/long': 4.2.2
     dev: true
 
-  /@xmldom/xmldom@0.8.9:
-    resolution: {integrity: sha512-4VSbbcMoxc4KLjb1gs96SRmi7w4h1SF+fCoiK0XaQX62buCc1G5d0DC5bJ9xJBNPDSVCmIrcl8BiYxzjrqaaJA==}
+  /@xmldom/xmldom@0.8.10:
+    resolution: {integrity: sha512-2WALfTl4xo2SkGCYRt6rDTFfk9R1czmBvUQy12gK2KuRKIpWEhcbbzy8EZXtz/jkRqHX8bFEc6FC1HjX4TUWYw==}
     engines: {node: '>=10.0.0'}
     dev: true
 
@@ -16923,7 +16923,7 @@ packages:
     engines: {node: '>= 7.*'}
     hasBin: true
     dependencies:
-      '@xmldom/xmldom': 0.8.9
+      '@xmldom/xmldom': 0.8.10
       backbone: 1.4.1
       bluebird: 3.7.2
       charm: 1.0.2
