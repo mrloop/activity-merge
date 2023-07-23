@@ -41,7 +41,7 @@ module.exports = function (defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
   let buildDir = fs.mkdtempSync(
-    path.join(os.tmpdir(), 'activity-merge--workers--')
+    path.join(os.tmpdir(), 'activity-merge--workers--'),
   );
   buildWorkers({
     buildDir,

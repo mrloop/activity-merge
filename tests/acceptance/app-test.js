@@ -21,7 +21,7 @@ module('Acceptance | app', function (hooks) {
     assert
       .dom('[data-test-drop-zone]')
       .hasText(
-        'Select or drag files to merge. fit, gpx and tcx files accepted.'
+        'Select or drag files to merge. fit, gpx and tcx files accepted.',
       );
   });
 
