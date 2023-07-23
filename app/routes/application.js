@@ -12,7 +12,7 @@ export default class ApplicationRoute extends Route {
 
     getOwner(this).register(
       'metrics-adapter:simple-analytics',
-      SimpleAnalytics
+      SimpleAnalytics,
     );
 
     this.router.on('routeDidChange', () => {
