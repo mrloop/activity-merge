@@ -165,8 +165,8 @@ devDependencies:
     specifier: 3.0.0
     version: 3.0.0
   puppeteer:
-    specifier: 20.9.0
-    version: 20.9.0(typescript@5.0.4)
+    specifier: 21.0.0
+    version: 21.0.0
   qunit:
     specifier: 2.19.4
     version: 2.19.4
@@ -2430,7 +2430,7 @@ packages:
       fs-extra: 9.1.0
       proper-lockfile: 4.1.2
       slash: 3.0.0
-      tslib: 2.5.2
+      tslib: 2.6.0
       upath: 2.0.1
     dev: true
 
@@ -3246,7 +3246,7 @@ packages:
       debug: 4.3.4(supports-color@8.1.1)
       globby: 11.1.0
       is-wsl: 2.2.0
-      tslib: 2.5.2
+      tslib: 2.6.0
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -3260,7 +3260,7 @@ packages:
       debug: 4.3.4(supports-color@8.1.1)
       globby: 11.1.0
       is-wsl: 2.2.0
-      tslib: 2.5.2
+      tslib: 2.6.0
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -3283,7 +3283,7 @@ packages:
       semver: 7.5.1
       string-width: 4.2.3
       strip-ansi: 6.0.1
-      tslib: 2.5.2
+      tslib: 2.6.0
       widest-line: 3.1.0
       wrap-ansi: 7.0.0
     transitivePeerDependencies:
@@ -3341,7 +3341,7 @@ packages:
       '@oclif/errors': 1.3.6
       '@oclif/linewrap': 1.0.0
       chalk: 4.1.2
-      tslib: 2.5.2
+      tslib: 2.6.0
     dev: true
 
   /@oclif/plugin-help@3.2.14:
@@ -3420,7 +3420,7 @@ packages:
       load-json-file: 5.3.0
       npm-run-path: 4.0.1
       semver: 7.5.1
-      tslib: 2.5.2
+      tslib: 2.6.0
       yarn: 1.22.19
     transitivePeerDependencies:
       - '@oclif/config'
@@ -3572,22 +3572,16 @@ packages:
       find-up: 5.0.0
     dev: true
 
-  /@puppeteer/browsers@1.4.6(typescript@5.0.4):
-    resolution: {integrity: sha512-x4BEjr2SjOPowNeiguzjozQbsc6h437ovD/wu+JpaenxVLm3jkgzHY2xOslMTp50HoTvQreMjiexiGQw1sqZlQ==}
+  /@puppeteer/browsers@1.5.0:
+    resolution: {integrity: sha512-za318PweGINh5LnHSph7C4xhs0tmRjCD8EPpzcKlw4nzSPhnULj+LTG3+TGefZvW1ti5gjw2JkdQvQsivBeZlg==}
     engines: {node: '>=16.3.0'}
     hasBin: true
-    peerDependencies:
-      typescript: '>= 4.7.4'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
     dependencies:
       debug: 4.3.4(supports-color@8.1.1)
       extract-zip: 2.0.1
       progress: 2.0.3
       proxy-agent: 6.3.0
       tar-fs: 3.0.4
-      typescript: 5.0.4
       unbzip2-stream: 1.4.3
       yargs: 17.7.1
     transitivePeerDependencies:
@@ -4820,7 +4814,7 @@ packages:
     resolution: {integrity: sha512-x1FCFnFifvYDDzTaLII71vG5uvDwgtmDTEVWAxrgeiR8VjMONcCXJx7E+USjDtHlwFmt9MysbqgF9b9Vjr6w+w==}
     engines: {node: '>=4'}
     dependencies:
-      tslib: 2.5.2
+      tslib: 2.6.0
     dev: true
 
   /async-disk-cache@1.3.5:
@@ -6591,13 +6585,13 @@ packages:
     engines: {node: '>=6.0'}
     dev: true
 
-  /chromium-bidi@0.4.16(devtools-protocol@0.0.1147663):
-    resolution: {integrity: sha512-7ZbXdWERxRxSwo3txsBjjmc/NLxqb1Bk30mRb0BMS4YIaiV6zvKZqL/UAH+DdqcDYayDWk2n/y8klkBDODrPvA==}
+  /chromium-bidi@0.4.20(devtools-protocol@0.0.1147663):
+    resolution: {integrity: sha512-ruHgVZFEv00mAQMz1tQjfjdG63jiPWrQPF6HLlX2ucqLqVTJoWngeBEKHaJ6n1swV/HSvgnBNbtTRIlcVyW3Fw==}
     peerDependencies:
       devtools-protocol: '*'
     dependencies:
       devtools-protocol: 0.0.1147663
-      mitt: 3.0.0
+      mitt: 3.0.1
     dev: true
 
   /ci-info@2.0.0:
@@ -6724,7 +6718,7 @@ packages:
       strip-ansi: 6.0.1
       supports-color: 8.1.1
       supports-hyperlinks: 2.3.0
-      tslib: 2.5.2
+      tslib: 2.6.0
     transitivePeerDependencies:
       - '@oclif/config'
     dev: true
@@ -6759,7 +6753,7 @@ packages:
       strip-ansi: 6.0.1
       supports-color: 8.1.1
       supports-hyperlinks: 2.3.0
-      tslib: 2.5.2
+      tslib: 2.6.0
     transitivePeerDependencies:
       - '@oclif/config'
     dev: true
@@ -7849,7 +7843,7 @@ packages:
     hasBin: true
     dependencies:
       ast-module-types: 3.0.0
-      escodegen: 2.0.0
+      escodegen: 2.1.0
       get-amd-module-type: 3.0.2
       node-source-walk: 4.3.0
     dev: true
@@ -7860,7 +7854,7 @@ packages:
     hasBin: true
     dependencies:
       ast-module-types: 4.0.0
-      escodegen: 2.0.0
+      escodegen: 2.1.0
       get-amd-module-type: 4.1.0
       node-source-walk: 5.0.2
     dev: true
@@ -8042,7 +8036,7 @@ packages:
     resolution: {integrity: sha512-Kv5nKlh6yRrdrGvxeJ2e5y2eRUpkUosIW4A2AS38zwSz27zu7ufDwQPi5Jhs3XAlGNetl3bmnGhQsMtkKJnj3w==}
     dependencies:
       no-case: 3.0.4
-      tslib: 2.5.2
+      tslib: 2.6.0
     dev: true
 
   /dot-prop@5.3.0:
@@ -12957,7 +12951,7 @@ packages:
   /lower-case@2.0.2:
     resolution: {integrity: sha512-7fm3l3NAF9WfN6W3JOmf5drwpVqX78JtoGJ3A6W0a6ZnldM41w2fV5D490psKFTpMds8TJse/eHLFFsNHHjHgg==}
     dependencies:
-      tslib: 2.5.2
+      tslib: 2.6.0
     dev: true
 
   /lowercase-keys@1.0.0:
@@ -13376,8 +13370,8 @@ packages:
       yallist: 4.0.0
     dev: true
 
-  /mitt@3.0.0:
-    resolution: {integrity: sha512-7dX2/10ITVyqh4aOSVI9gdape+t9l2/8QxHrFmUXu4EEUpdlxl6RudZUPZoc+zuY2hk1j7XxVroIVIan/pD/SQ==}
+  /mitt@3.0.1:
+    resolution: {integrity: sha512-vKivATfr97l2/QBCYAkXYDbrIWPM2IIKEl7YPhjCvKlG3kE2gm+uBo6nEXK3M5/Ffh/FLpKExzOQ3JJoJGFKBw==}
     dev: true
 
   /mixin-deep@1.3.2:
@@ -13814,7 +13808,7 @@ packages:
     resolution: {integrity: sha512-fgAN3jGAh+RoxUGZHTSOLJIqUc2wmoBwGR4tbpNAKmmovFoWq0OdRkb0VkldReO2a2iBT/OEulG9XSUc10r3zg==}
     dependencies:
       lower-case: 2.0.2
-      tslib: 2.5.2
+      tslib: 2.6.0
     dev: true
 
   /node-abi@3.45.0:
@@ -14189,7 +14183,7 @@ packages:
       '@oclif/command': 1.8.26(@oclif/config@1.18.9)(supports-color@8.1.1)
       '@oclif/config': 1.18.9(supports-color@8.1.1)
       '@oclif/errors': 1.3.6
-      tslib: 2.5.2
+      tslib: 2.6.0
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -15183,21 +15177,15 @@ packages:
       escape-goat: 2.1.1
     dev: true
 
-  /puppeteer-core@20.9.0(typescript@5.0.4):
-    resolution: {integrity: sha512-H9fYZQzMTRrkboEfPmf7m3CLDN6JvbxXA3qTtS+dFt27tR+CsFHzPsT6pzp6lYL6bJbAPaR0HaPO6uSi+F94Pg==}
+  /puppeteer-core@21.0.0:
+    resolution: {integrity: sha512-frnAOQ0pKrwxlYLziy+aB8q7cOm8Ym9Y5VqbdE7alOaOPIK3ynpYLi/1D6XJSKw3WExHmeI2z6TVO85SUxpVAQ==}
     engines: {node: '>=16.3.0'}
-    peerDependencies:
-      typescript: '>= 4.7.4'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
     dependencies:
-      '@puppeteer/browsers': 1.4.6(typescript@5.0.4)
-      chromium-bidi: 0.4.16(devtools-protocol@0.0.1147663)
+      '@puppeteer/browsers': 1.5.0
+      chromium-bidi: 0.4.20(devtools-protocol@0.0.1147663)
       cross-fetch: 4.0.0
       debug: 4.3.4(supports-color@8.1.1)
       devtools-protocol: 0.0.1147663
-      typescript: 5.0.4
       ws: 8.13.0
     transitivePeerDependencies:
       - bufferutil
@@ -15230,19 +15218,18 @@ packages:
       - utf-8-validate
     dev: true
 
-  /puppeteer@20.9.0(typescript@5.0.4):
-    resolution: {integrity: sha512-kAglT4VZ9fWEGg3oLc4/de+JcONuEJhlh3J6f5R1TLkrY/EHHIHxWXDOzXvaxQCtedmyVXBwg8M+P8YCO/wZjw==}
+  /puppeteer@21.0.0:
+    resolution: {integrity: sha512-a3rpCJuKQ7mzlwMJzKX6GhvGeg4CUn4d9+dv+riQDpY4mns32Q9OnmkfTZ3VlbDhGyrdBf1xXF1Z4y0of00WYg==}
     engines: {node: '>=16.3.0'}
     requiresBuild: true
     dependencies:
-      '@puppeteer/browsers': 1.4.6(typescript@5.0.4)
+      '@puppeteer/browsers': 1.5.0
       cosmiconfig: 8.2.0
-      puppeteer-core: 20.9.0(typescript@5.0.4)
+      puppeteer-core: 21.0.0
     transitivePeerDependencies:
       - bufferutil
       - encoding
       - supports-color
-      - typescript
       - utf-8-validate
     dev: true
 
@@ -15927,7 +15914,7 @@ packages:
   /rxjs@7.8.1:
     resolution: {integrity: sha512-AA3TVj+0A2iuIoQkWEK/tqFjBq2j+6PO6Y0zJcvzLAFhEFIO3HL0vls9hWLncZbAAbK0mar7oZ4V079I/qPMxg==}
     dependencies:
-      tslib: 2.5.2
+      tslib: 2.6.0
     dev: true
 
   /safe-buffer@5.1.2:
@@ -16274,7 +16261,7 @@ packages:
     resolution: {integrity: sha512-LAOh4z89bGQvl9pFfNF8V146i7o7/CqFPbqzYgP+yYzDIDeS9HaNFtXABamRW+AQzEVODcvE79ljJ+8a9YSdMg==}
     dependencies:
       dot-case: 3.0.4
-      tslib: 2.5.2
+      tslib: 2.6.0
     dev: true
 
   /snapdragon-node@2.1.1:
