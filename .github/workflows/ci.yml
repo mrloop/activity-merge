@@ -22,7 +22,7 @@ env:
 jobs:
   Test:
     name: Test
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
@@ -52,7 +52,7 @@ jobs:
 
   Deploy:
     name: Deploy
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     needs: Test
     if: github.ref == 'refs/heads/main'
     steps:
