@@ -63,8 +63,8 @@ devDependencies:
     specifier: 3.3.2
     version: 3.3.2(ember-cli@5.1.0)
   ember-cli-htmlbars:
-    specifier: 6.2.0
-    version: 6.2.0
+    specifier: 6.3.0
+    version: 6.3.0
   ember-cli-image-transformer:
     specifier: 6.0.0
     version: 6.0.0(ember-source@4.12.3)
@@ -1683,7 +1683,7 @@ packages:
       broccoli-funnel: 3.0.8
       ember-auto-import: 2.6.3(webpack@5.88.2)
       ember-cli-babel: 7.26.11
-      ember-cli-htmlbars: 6.2.0
+      ember-cli-htmlbars: 6.3.0
       ember-source: 4.12.3(@babel/core@7.22.1)(@glimmer/component@1.1.2)(webpack@5.88.2)
     transitivePeerDependencies:
       - '@glint/template'
@@ -8231,12 +8231,12 @@ packages:
     resolution: {integrity: sha512-k47TDwcJ2zPideBCZE8sCiShSxQSpebY2BHcX2DdipMmBox5gsfyVrbKJWIHeSTTKyEUgmBIvQkqTOozEziCZA==}
     dev: true
 
-  /ember-cli-htmlbars@6.2.0:
-    resolution: {integrity: sha512-j5EGixjGau23HrqRiW/JjoAovg5UBHfjbyN7wX5ekE90knIEqUUj1z/Mo/cTx/J2VepQ2lE6HdXW9LWQ/WdMtw==}
+  /ember-cli-htmlbars@6.3.0:
+    resolution: {integrity: sha512-N9Y80oZfcfWLsqickMfRd9YByVcTGyhYRnYQ2XVPVrp6jyUyOeRWmEAPh7ERSXpp8Ws4hr/JB9QVQrn/yZa+Ag==}
     engines: {node: 12.* || 14.* || >= 16}
     dependencies:
       '@ember/edition-utils': 1.2.0
-      babel-plugin-ember-template-compilation: 2.0.3
+      babel-plugin-ember-template-compilation: 2.1.1
       babel-plugin-htmlbars-inline-precompile: 5.3.1
       broccoli-debug: 0.6.5
       broccoli-persistent-filter: 3.1.3
@@ -8263,7 +8263,7 @@ packages:
       broccoli-funnel: 3.0.8
       broccoli-merge-trees: 4.2.0
       ember-cli-babel: 7.26.11
-      ember-cli-htmlbars: 6.2.0
+      ember-cli-htmlbars: 6.3.0
       ember-source: 4.12.3(@babel/core@7.22.1)(@glimmer/component@1.1.2)(webpack@5.88.2)
       rsvp: 4.8.5
       sharp: 0.32.1
@@ -8361,7 +8361,7 @@ packages:
       ember-cli-babel-plugin-helpers: 1.1.1
       execa: 1.0.0
       fs-extra: 7.0.1
-      resolve: 1.22.2
+      resolve: 1.22.3
       rsvp: 4.8.5
       semver: 6.3.1
       stagehand: 1.0.1
@@ -8418,7 +8418,7 @@ packages:
       debug: 4.3.4(supports-color@8.1.1)
       execa: 4.1.0
       fs-extra: 9.1.0
-      resolve: 1.22.2
+      resolve: 1.22.3
       rsvp: 4.8.5
       semver: 7.5.1
       stagehand: 1.0.1
@@ -8633,7 +8633,7 @@ packages:
       '@glimmer/tracking': 1.1.2
       ember-cli-babel: 7.26.11
       ember-cli-babel-plugin-helpers: 1.1.1
-      ember-cli-htmlbars: 6.2.0
+      ember-cli-htmlbars: 6.3.0
       ember-compatibility-helpers: 1.2.6(@babel/core@7.22.1)
       ember-source: 4.12.3(@babel/core@7.22.1)(@glimmer/component@1.1.2)(webpack@5.88.2)
     transitivePeerDependencies:
@@ -11220,7 +11220,7 @@ packages:
       heimdalljs: 0.2.6
       heimdalljs-logger: 0.1.10
       path-root: 0.1.1
-      resolve: 1.22.2
+      resolve: 1.22.3
       resolve-package-path: 1.2.7
     transitivePeerDependencies:
       - supports-color
@@ -13627,7 +13627,7 @@ packages:
       pump: 3.0.0
       raw-body: 2.5.2
       read-pkg-up: 7.0.1
-      resolve: 1.22.2
+      resolve: 1.22.3
       semver: 7.5.1
       source-map-support: 0.5.21
       static-server: 2.2.1
@@ -15626,7 +15626,7 @@ packages:
     resolution: {integrity: sha512-fVEKHGeK85bGbVFuwO9o1aU0n3vqQGrezPc51JGu9UTXpFQfWq5qCeKxyaRUSvephs+06c5j5rPq/dzHGEo8+Q==}
     dependencies:
       path-root: 0.1.1
-      resolve: 1.22.2
+      resolve: 1.22.3
     dev: true
 
   /resolve-package-path@2.0.0:
