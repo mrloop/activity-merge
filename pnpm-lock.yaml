@@ -108,8 +108,8 @@ devDependencies:
     specifier: 7.0.0
     version: 7.0.0(@ember/test-helpers@3.2.0)(ember-source@4.12.3)(qunit@2.19.4)(webpack@5.88.2)
   ember-resolver:
-    specifier: 11.0.0
-    version: 11.0.0(ember-source@4.12.3)
+    specifier: 11.0.1
+    version: 11.0.1(ember-source@4.12.3)
   ember-service-worker:
     specifier: 9.0.1
     version: 9.0.1(rollup@1.32.1)
@@ -8768,8 +8768,8 @@ packages:
       - webpack
     dev: true
 
-  /ember-resolver@11.0.0(ember-source@4.12.3):
-    resolution: {integrity: sha512-TOc685OnGEMMNEt04BukmQHOYVXnRJc+sGZij/vzWdxXRq+Wpsu1Nw2nLFo6fbMqqVLATk5oLKAQ1eKQwte2wQ==}
+  /ember-resolver@11.0.1(ember-source@4.12.3):
+    resolution: {integrity: sha512-ucBk3oM+PR+AfYoSUXeQh8cDQS1sSiEKp4Pcgbew5cFMSqPxJfqd1zyZsfQKNTuyubeGmWxBOyMVSTvX2LeCyg==}
     engines: {node: 14.* || 16.* || >= 18}
     peerDependencies:
       ember-source: ^4.8.3 || >= 5.0.0
