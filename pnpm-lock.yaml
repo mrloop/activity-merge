@@ -66,8 +66,8 @@ devDependencies:
     specifier: 6.3.0
     version: 6.3.0
   ember-cli-image-transformer:
-    specifier: 6.0.0
-    version: 6.0.0(ember-source@4.12.3)
+    specifier: 7.0.0
+    version: 7.0.0(ember-source@4.12.3)
   ember-cli-inject-live-reload:
     specifier: 2.1.0
     version: 2.1.0
@@ -8313,11 +8313,11 @@ packages:
       - supports-color
     dev: true
 
-  /ember-cli-image-transformer@6.0.0(ember-source@4.12.3):
-    resolution: {integrity: sha512-pedqhtfX0nHW4hl62Vz1mvumZRMd0bkSHlbHOmTtXNIoBfcVUqnunNAzZeWJxB4u7mK9OhMERH6De9a10MWfmw==}
-    engines: {node: 14.* || 16.* || >= 18}
+  /ember-cli-image-transformer@7.0.0(ember-source@4.12.3):
+    resolution: {integrity: sha512-rwJCPX/73bcSe7RL4Iq+cu16GGQgandbe0DGYlx1SbqDpXWghrkNm5o45FpZHvxAEbzyT0P8OphV6Clr6i/Xng==}
+    engines: {node: 16.* || >= 18}
     peerDependencies:
-      ember-source: ^4.0.0
+      ember-source: '>= 4.0.0'
     dependencies:
       broccoli-caching-writer: 3.0.3
       broccoli-funnel: 3.0.8
