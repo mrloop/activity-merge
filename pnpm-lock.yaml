@@ -80,9 +80,6 @@ devDependencies:
   ember-concurrency:
     specifier: 3.1.1
     version: 3.1.1(@babel/core@7.22.1)(ember-source@4.12.3)
-  ember-export-application-global:
-    specifier: 2.0.1
-    version: 2.0.1
   ember-fetch:
     specifier: 8.1.2
     version: 8.1.2
@@ -8699,11 +8696,6 @@ packages:
     transitivePeerDependencies:
       - '@babel/core'
       - supports-color
-    dev: true
-
-  /ember-export-application-global@2.0.1:
-    resolution: {integrity: sha512-B7wiurPgsxsSGzJuPFkpBWnaeuCu2PGpG2BjyrfA1VcL7//o+5RSnZqiCEY326y7qmxb2GoCgo0ft03KBU0rRw==}
-    engines: {node: '>= 4'}
     dev: true
 
   /ember-fetch@8.1.2:
