@@ -93,7 +93,7 @@
   },
   "volta": {
     "node": "18.17.1",
-    "pnpm": "8.7.3"
+    "pnpm": "8.7.4"
   },
   "dependencies": {}
 }
