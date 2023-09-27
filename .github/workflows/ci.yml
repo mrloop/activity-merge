@@ -35,7 +35,7 @@ jobs:
       - name: Browser Tests
         run: pnpm test
       - name: Smoke test production build
-        run: node node_modules/puppeteer/install.js && pnpm smoke
+        run: node node_modules/puppeteer/install.mjs && pnpm smoke
       - name: Deploy to staging and test deploy
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
