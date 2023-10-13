@@ -63,8 +63,8 @@ devDependencies:
     specifier: 6.0.1
     version: 6.0.1(ember-source@5.3.0)
   ember-cli-babel:
-    specifier: 8.1.0
-    version: 8.1.0(@babel/core@7.22.20)
+    specifier: 8.2.0
+    version: 8.2.0(@babel/core@7.22.20)
   ember-cli-dependency-checker:
     specifier: 3.3.2
     version: 3.3.2(ember-cli@5.3.0)
@@ -215,7 +215,7 @@ packages:
       '@ampproject/remapping': 2.2.1
       '@babel/code-frame': 7.22.13
       '@babel/generator': 7.22.3
-      '@babel/helper-compilation-targets': 7.22.1(@babel/core@7.22.1)
+      '@babel/helper-compilation-targets': 7.22.15
       '@babel/helper-module-transforms': 7.22.1
       '@babel/helpers': 7.22.3
       '@babel/parser': 7.22.4
@@ -3153,7 +3153,7 @@ packages:
       find-up: 5.0.0
       lodash: 4.17.21
       resolve: 1.22.3
-      semver: 7.5.1
+      semver: 7.5.4
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -3231,7 +3231,7 @@ packages:
       js-string-escape: 1.0.1
       lodash: 4.17.21
       resolve-package-path: 4.0.3
-      semver: 7.5.1
+      semver: 7.5.4
       typescript-memoize: 1.1.1
     dev: true
 
@@ -9099,7 +9099,7 @@ packages:
       postcss-modules-values: 4.0.0(postcss@8.4.24)
       postcss-value-parser: 4.2.0
       schema-utils: 3.3.0
-      semver: 7.5.1
+      semver: 7.5.4
       webpack: 5.88.2(esbuild@0.19.4)
     dev: true
 
@@ -9888,8 +9888,8 @@ packages:
       - supports-color
     dev: true
 
-  /ember-cli-babel@8.1.0(@babel/core@7.22.20):
-    resolution: {integrity: sha512-zudhce/GzEm2JFVjBKdsJvhnFTPZ3blYG8jK2YnrkmJp65TCMMkOM9LiKLlG9ANtiAMsljEl89YXWdsHY/xR4g==}
+  /ember-cli-babel@8.2.0(@babel/core@7.22.20):
+    resolution: {integrity: sha512-8H4+jQElCDo6tA7CamksE66NqBXWs7VNpS3a738L9pZCjg2kXIX4zoyHzkORUqCtr0Au7YsCnrlAMi1v2ALo7A==}
     engines: {node: 16.* || 18.* || >= 20}
     peerDependencies:
       '@babel/core': ^7.12.0
