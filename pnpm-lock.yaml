@@ -21,8 +21,8 @@ devDependencies:
     specifier: 3.2.1
     version: 3.2.1(ember-source@5.4.0)(webpack@5.89.0)
   '@embroider/compat':
-    specifier: 3.3.1
-    version: 3.3.1(@embroider/core@3.4.2)
+    specifier: 3.4.0
+    version: 3.4.0(@embroider/core@3.4.2)
   '@embroider/core':
     specifier: 3.4.2
     version: 3.4.2
@@ -2931,12 +2931,12 @@ packages:
       - webpack
     dev: true
 
-  /@embroider/compat@3.3.1(@embroider/core@3.4.2):
-    resolution: {integrity: sha512-0jG2GzJqfqEvsNQ8MiU6B4INYQ5UN3YDzIYgXBuT7QEVxtoEAV3yCQNtJgi/BnIjFu+i3WYqSDjByfToDlgphg==}
+  /@embroider/compat@3.4.0(@embroider/core@3.4.2):
+    resolution: {integrity: sha512-XXWgVZkm/XbiVpfV4lI6T+VZwkPm1V9lMd/nFnVNlrvUct/s8jz7EO4hHiWoIfTmC745gki5qx9KLhjXbABfCA==}
     engines: {node: 12.* || 14.* || >= 16}
     hasBin: true
     peerDependencies:
-      '@embroider/core': ^3.4.1
+      '@embroider/core': ^3.4.2
     dependencies:
       '@babel/code-frame': 7.22.13
       '@babel/core': 7.22.20(supports-color@8.1.1)
