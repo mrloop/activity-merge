@@ -44,7 +44,7 @@ jobs:
         run: pnpm staging:deploy
       - run: git log --pretty=%h -n1 > dist/REVISION.txt
       - name: Upload Build for next job
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: github.ref == 'refs/heads/main'
         with:
           name: prod-build
