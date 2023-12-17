@@ -96,8 +96,8 @@ devDependencies:
     specifier: 2.0.0-beta.2
     version: 2.0.0-beta.2
   ember-metrics-simple-analytics:
-    specifier: 0.0.2
-    version: 0.0.2
+    specifier: 1.0.0
+    version: 1.0.0
   ember-modifier:
     specifier: 4.1.0
     version: 4.1.0(ember-source@5.5.0)
@@ -2850,15 +2850,6 @@ packages:
       - supports-color
     dev: true
 
-  /@ember/string@3.0.0:
-    resolution: {integrity: sha512-T+7QYDp8ItlQseNveK2lL6OsOO5wg7aNQ/M2RpO8cGwM80oZOnr/Y35HmMfu4ejFEc+F1LPegvu7LGfeJOicWA==}
-    engines: {node: 12.* || 14.* || >= 16}
-    dependencies:
-      ember-cli-babel: 7.26.11
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /@ember/string@3.1.1:
     resolution: {integrity: sha512-UbXJ+k3QOrYN4SRPHgXCqYIJ+yWWUg1+vr0H4DhdQPTy8LJfyqwZ2tc5uqpSSnEXE+/1KopHBE5J8GDagAg5cg==}
     engines: {node: 12.* || 14.* || >= 16}
@@ -2901,17 +2892,6 @@ packages:
       - supports-color
     dev: true
 
-  /@embroider/addon-shim@1.8.4:
-    resolution: {integrity: sha512-sFhfWC0vI18KxVenmswQ/ShIvBg4juL8ubI+Q3NTSdkCTeaPQ/DIOUF6oR5DCQ8eO/TkIaw+kdG3FkTY6yNJqA==}
-    engines: {node: 12.* || 14.* || >= 16}
-    dependencies:
-      '@embroider/shared-internals': 2.5.1(supports-color@8.1.1)
-      broccoli-funnel: 3.0.8
-      semver: 7.5.4
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /@embroider/addon-shim@1.8.5:
     resolution: {integrity: sha512-pDgpdTsC9i/+5hHziygK5VIZc64OG8bupiqL0OxJp+bnINURalHMbu5B3Gikq/a0QIvMPzDFWzKxIZCBpeiHkg==}
     engines: {node: 12.* || 14.* || >= 16}
@@ -2927,7 +2907,18 @@ packages:
     resolution: {integrity: sha512-siC9kP78uucEbpDcVyxjkwa76pcs5rVzDVpWO4PDc9EAXRX+pzmUuSTLAK3GztUwx7/PWhz1BenAivqdSvSgfg==}
     engines: {node: 12.* || 14.* || >= 16}
     dependencies:
-      '@embroider/shared-internals': 2.5.0
+      '@embroider/shared-internals': 2.5.1(supports-color@8.1.1)
+      broccoli-funnel: 3.0.8
+      semver: 7.5.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /@embroider/addon-shim@1.8.7:
+    resolution: {integrity: sha512-JGOQNRj3UR0NdWEg8MsM2eqPLncEwSB1IX+rwntIj22TEKj8biqx7GDgSbeH+ZedijmCh354Hf2c5rthrdzUAw==}
+    engines: {node: 12.* || 14.* || >= 16}
+    dependencies:
+      '@embroider/shared-internals': 2.5.1(supports-color@8.1.1)
       broccoli-funnel: 3.0.8
       semver: 7.5.4
     transitivePeerDependencies:
@@ -10193,23 +10184,12 @@ packages:
       - supports-color
     dev: true
 
-  /ember-metrics-simple-analytics@0.0.2:
-    resolution: {integrity: sha512-2kMT/SjeKkNv0v3JpGF9SfONpz/G4rzB5xVwriMxVz771nCs+ycgO8elWbfy3ffACMijtFU9uhHIc5mZxDLJmg==}
+  /ember-metrics-simple-analytics@1.0.0:
+    resolution: {integrity: sha512-SEerV4egDcVVg7d+x5oh+UePs5htBs2uWesAlnNJu7TQ4lf+rrMoK5ScGUoq4Sv2R0r0k5fUxZlGUqKqErZGng==}
     dependencies:
-      '@ember/string': 3.0.0
-      '@embroider/addon-shim': 1.8.4
-      ember-metrics: 2.0.0-beta.1
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /ember-metrics@2.0.0-beta.1:
-    resolution: {integrity: sha512-PDXE9D7nFFn4X+xj4Dzlx0pPYUG4Jjl+lGtq7EGHXEgLyRi6/+j7HMC1q5cnJHnczcecw2NJQhQz6ksNbd9Ypw==}
-    engines: {node: 12.* || 14.* || >= 16}
-    dependencies:
-      broccoli-funnel: 3.0.8
-      ember-cli-babel: 7.26.11
-      ember-cli-typescript: 4.2.1
+      '@ember/string': 3.1.1
+      '@embroider/addon-shim': 1.8.7
+      ember-metrics: 2.0.0-beta.2
     transitivePeerDependencies:
       - supports-color
     dev: true
