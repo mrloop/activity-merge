@@ -15,6 +15,11 @@ module.exports = function (defaults) {
     'asset-cache': {
       manual: ['workers/merge.js'],
     },
+    babel: {
+      plugins: [
+        require.resolve('ember-concurrency/async-arrow-task-transform'),
+      ],
+    },
     'ember-cli-image-transformer': {
       images: [
         {
