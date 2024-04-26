@@ -168,8 +168,8 @@ importers:
         specifier: 3.2.5
         version: 3.2.5
       puppeteer:
-        specifier: 22.6.5
-        version: 22.6.5(typescript@3.9.10)
+        specifier: 22.7.0
+        version: 22.7.0(typescript@3.9.10)
       qunit:
         specifier: 2.20.1
         version: 2.20.1
@@ -4051,8 +4051,8 @@ packages:
     resolution: {integrity: sha512-Uc1yVutTF0RRm1YJ3g//i1Cn2vx1kwHj15cnzQP6ff5koNzQ0idc1zAC73ryaWEulA0ElRXFTq6wOqe8vUQ3MA==}
     engines: {node: ^12.20.0 || ^14.14.0 || >=16.0.0}
 
-  devtools-protocol@0.0.1262051:
-    resolution: {integrity: sha512-YJe4CT5SA8on3Spa+UDtNhEqtuV6Epwz3OZ4HQVLhlRccpZ9/PAYk0/cy/oKxFKRrZPBUPyxympQci4yWNWZ9g==}
+  devtools-protocol@0.0.1273771:
+    resolution: {integrity: sha512-QDbb27xcTVReQQW/GHJsdQqGKwYBE7re7gxehj467kKP2DKuYBUj6i2k5LRiAC66J1yZG/9gsxooz/s9pcm0Og==}
 
   devtools-protocol@0.0.937139:
     resolution: {integrity: sha512-daj+rzR3QSxsPRy5vjjthn58axO8c11j58uY0lG5vvlJk/EiOdCWOptGdkXDjtuRHr78emKq0udHCXM4trhoDQ==}
@@ -7550,8 +7550,8 @@ packages:
     resolution: {integrity: sha512-l1jNAspIBSFqbT+y+5FosojNpVpF94nlI+wDUpqP9enwOTfHx9f0gh5nB96vl+6yTpsJsypeNrwfzPrKuHB41A==}
     engines: {node: '>=8'}
 
-  puppeteer-core@22.6.5:
-    resolution: {integrity: sha512-s0/5XkAWe0/dWISiljdrybjwDCHhgN31Nu/wznOZPKeikgcJtZtbvPKBz0t802XWqfSQnQDt3L6xiAE5JLlfuw==}
+  puppeteer-core@22.7.0:
+    resolution: {integrity: sha512-9Q+L3VD7cfhXnxv6AqwTHsVb/+/uXENByhPrgvwQ49wvzQwtf1d6b7v6gpoG3tpRdwYjxoV1eHTD8tFahww09g==}
     engines: {node: '>=18'}
 
   puppeteer@12.0.0:
@@ -7559,8 +7559,8 @@ packages:
     engines: {node: '>=10.18.1'}
     deprecated: < 21.9.0 is no longer supported
 
-  puppeteer@22.6.5:
-    resolution: {integrity: sha512-YuoRKGj3MxHhUwrey7vmNvU4odGdUdNsj1ee8pfcqQlLWIXfMOXZCAXh8xdzpZESHH3tCGWp2xmPZE8E6iUEWg==}
+  puppeteer@22.7.0:
+    resolution: {integrity: sha512-s1ulKFZKW3lwWCtNu0VrRLfRaanFHxIv7F8UFYpLo8dPTZcI4wB4EAOD0sKT3SKP+1Rsjodb9WFsK78yKQ6i9Q==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -15675,9 +15675,9 @@ snapshots:
 
   chrome-trace-event@1.0.3: {}
 
-  chromium-bidi@0.5.17(devtools-protocol@0.0.1262051):
+  chromium-bidi@0.5.17(devtools-protocol@0.0.1273771):
     dependencies:
-      devtools-protocol: 0.0.1262051
+      devtools-protocol: 0.0.1273771
       mitt: 3.0.1
       urlpattern-polyfill: 10.0.0
       zod: 3.22.4
@@ -16427,7 +16427,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  devtools-protocol@0.0.1262051: {}
+  devtools-protocol@0.0.1273771: {}
 
   devtools-protocol@0.0.937139: {}
 
@@ -20971,12 +20971,12 @@ snapshots:
     dependencies:
       escape-goat: 2.1.1
 
-  puppeteer-core@22.6.5:
+  puppeteer-core@22.7.0:
     dependencies:
       '@puppeteer/browsers': 2.2.2
-      chromium-bidi: 0.5.17(devtools-protocol@0.0.1262051)
+      chromium-bidi: 0.5.17(devtools-protocol@0.0.1273771)
       debug: 4.3.4(supports-color@8.1.1)
-      devtools-protocol: 0.0.1262051
+      devtools-protocol: 0.0.1273771
       ws: 8.16.0
     transitivePeerDependencies:
       - bufferutil
@@ -21002,12 +21002,12 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  puppeteer@22.6.5(typescript@3.9.10):
+  puppeteer@22.7.0(typescript@3.9.10):
     dependencies:
       '@puppeteer/browsers': 2.2.2
       cosmiconfig: 9.0.0(typescript@3.9.10)
-      devtools-protocol: 0.0.1262051
-      puppeteer-core: 22.6.5
+      devtools-protocol: 0.0.1273771
+      puppeteer-core: 22.7.0
     transitivePeerDependencies:
       - bufferutil
       - supports-color
