@@ -24,8 +24,8 @@ importers:
         specifier: 3.3.0
         version: 3.3.0(ember-source@5.8.0(@babel/core@7.24.3)(@glimmer/component@1.1.2(@babel/core@7.24.3))(rsvp@4.8.5)(webpack@5.91.0(esbuild@0.21.1)))(webpack@5.91.0(esbuild@0.21.1))
       '@embroider/compat':
-        specifier: 3.4.9
-        version: 3.4.9(@embroider/core@3.4.9)
+        specifier: 3.5.0
+        version: 3.5.0(@embroider/core@3.4.9)
       '@embroider/core':
         specifier: 3.4.9
         version: 3.4.9
@@ -957,8 +957,8 @@ packages:
     peerDependencies:
       '@embroider/core': ^3.4.0
 
-  '@embroider/compat@3.4.9':
-    resolution: {integrity: sha512-1KuKlCx4wGxxo+GsTeS8AX6S4Ka2Ht6EKYlFsm0Ln38mQyPolIefVUeEURe9FKKaQsOdj8bdPdjJlGU1ZVF8Aw==}
+  '@embroider/compat@3.5.0':
+    resolution: {integrity: sha512-KFv4CGXiNZA9D+T89bQgmHRyJBIMq6NLzNHTTpD8lKWL0egZpaw2irzIH/1SqdktRf86Ee8pkWfqEi0W+UWXxA==}
     engines: {node: 12.* || 14.* || >= 16}
     hasBin: true
     peerDependencies:
@@ -12102,7 +12102,7 @@ snapshots:
       - supports-color
       - webpack
 
-  '@embroider/compat@3.4.9(@embroider/core@3.4.9)':
+  '@embroider/compat@3.5.0(@embroider/core@3.4.9)':
     dependencies:
       '@babel/code-frame': 7.24.2
       '@babel/core': 7.24.3
