@@ -92,7 +92,7 @@
     "edition": "octane"
   },
   "volta": {
-    "node": "20.13.0",
+    "node": "20.13.1",
     "pnpm": "9.1.0"
   },
   "dependencies": {}
