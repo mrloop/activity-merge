@@ -168,8 +168,8 @@ importers:
         specifier: 3.2.5
         version: 3.2.5
       puppeteer:
-        specifier: 22.8.1
-        version: 22.8.1(typescript@3.9.10)
+        specifier: 22.8.2
+        version: 22.8.2(typescript@3.9.10)
       qunit:
         specifier: 2.20.1
         version: 2.20.1
@@ -7552,8 +7552,8 @@ packages:
     resolution: {integrity: sha512-l1jNAspIBSFqbT+y+5FosojNpVpF94nlI+wDUpqP9enwOTfHx9f0gh5nB96vl+6yTpsJsypeNrwfzPrKuHB41A==}
     engines: {node: '>=8'}
 
-  puppeteer-core@22.8.1:
-    resolution: {integrity: sha512-m1F6ZSTw1xrJ6xD4B+HonkSNVQmMrRMaqca/ivRcZYJ6jqzOnfEh3QgO9HpNPj6heiAZ2+4IPAU3jdZaTIDnSA==}
+  puppeteer-core@22.8.2:
+    resolution: {integrity: sha512-Gg9jUdJeF+UDbYPhwD602ky1LeS+AXDksl6sludrti1b7Sv/U4ZGY1LFyejarkIBCSHiPWL9SngXKCNcdZWBgQ==}
     engines: {node: '>=18'}
 
   puppeteer@12.0.0:
@@ -7561,8 +7561,8 @@ packages:
     engines: {node: '>=10.18.1'}
     deprecated: < 22.5.0 is no longer supported
 
-  puppeteer@22.8.1:
-    resolution: {integrity: sha512-CFgPSKV+iydjO/8/hJVj251Hqp2PLcIa70j6H7sYqkwM8YJ+D3CA74Ufuj+yKtvDIntQPB/nLw4EHrHPcHOPjw==}
+  puppeteer@22.8.2:
+    resolution: {integrity: sha512-yNZmKZHhCtBAjwuzonMyzgXLYxnvR+tbpatuyMffK+zmag84xyqE2EvPEWV1FvDXwW3m+/PT4Zp4KLerWWydQQ==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -20974,7 +20974,7 @@ snapshots:
     dependencies:
       escape-goat: 2.1.1
 
-  puppeteer-core@22.8.1:
+  puppeteer-core@22.8.2:
     dependencies:
       '@puppeteer/browsers': 2.2.3
       chromium-bidi: 0.5.19(devtools-protocol@0.0.1273771)
@@ -21005,12 +21005,12 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  puppeteer@22.8.1(typescript@3.9.10):
+  puppeteer@22.8.2(typescript@3.9.10):
     dependencies:
       '@puppeteer/browsers': 2.2.3
       cosmiconfig: 9.0.0(typescript@3.9.10)
       devtools-protocol: 0.0.1273771
-      puppeteer-core: 22.8.1
+      puppeteer-core: 22.8.2
     transitivePeerDependencies:
       - bufferutil
       - supports-color
