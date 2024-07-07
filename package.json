@@ -77,7 +77,7 @@
     "execa": "8.0.1",
     "loader.js": "4.7.0",
     "netlify-git-branch": "2.0.0",
-    "npm-run-all2": "6.2.1",
+    "npm-run-all2": "6.2.2",
     "prettier": "3.3.2",
     "puppeteer": "22.12.1",
     "qunit": "2.21.0",
