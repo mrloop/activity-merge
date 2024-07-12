@@ -39,7 +39,7 @@ async function test(startServerFn, testSelector) {
     await page.waitForSelector(testSelector, { timeout: 5000 });
     await browser.close();
   } finally {
-    server?.cancel();
+    server?.kill();
   }
 }
 
