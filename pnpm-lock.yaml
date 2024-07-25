@@ -129,8 +129,8 @@ importers:
         specifier: 6.0.0
         version: 6.0.0
       ember-test-selectors:
-        specifier: 6.0.0
-        version: 6.0.0
+        specifier: 7.0.0
+        version: 7.0.0
       ember-web-app:
         specifier: 5.0.1
         version: 5.0.1
@@ -4288,9 +4288,9 @@ packages:
     engines: {node: 12.* || 14.* || >= 16.*}
     hasBin: true
 
-  ember-test-selectors@6.0.0:
-    resolution: {integrity: sha512-PgYcI9PeNvtKaF0QncxfbS68olMYM1idwuI8v/WxsjOGqUx5bmsu6V17vy/d9hX4mwmjgsBhEghrVasGSuaIgw==}
-    engines: {node: 12.* || 14.* || >= 16.*}
+  ember-test-selectors@7.0.0:
+    resolution: {integrity: sha512-gGJzzBw6CsBB9gfk9/4qw0+iOSvhlqvUe4jIZKDf4waMkgVLtnPdFUWMocfFvUnJS7IitwKB/iTgIctD4RgH7w==}
+    engines: {node: 18.* || 20.* || >= 22.*}
 
   ember-web-app@5.0.1:
     resolution: {integrity: sha512-437ue2c2dy8zwjoUohjLqs+Opb4c8bHVw6U3keKYb8F3Mk/XoFTFsgKgFHIUlb7SyBiAQD+6JsNjGXX71Kljcg==}
@@ -7485,7 +7485,7 @@ packages:
   puppeteer@12.0.0:
     resolution: {integrity: sha512-a+vLxtwuDLUIq8Vz8X5bX+YMhcQrgyfq0Jo5Wcm49EfUawgCxeCN9/rUAS3VdAAiQZ1PKiv9pGyQN8jj1ypecQ==}
     engines: {node: '>=10.18.1'}
-    deprecated: < 22.6.4 is no longer supported
+    deprecated: < 22.8.2 is no longer supported
 
   puppeteer@22.13.1:
     resolution: {integrity: sha512-PwXLDQK5u83Fm5A7TGMq+9BR7iHDJ8a3h21PSsh/E6VfhxiKYkU7+tvGZNSCap6k3pCNDd9oNteVBEctcBalmQ==}
@@ -17647,7 +17647,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  ember-test-selectors@6.0.0:
+  ember-test-selectors@7.0.0:
     dependencies:
       calculate-cache-key-for-tree: 2.0.0
       ember-cli-babel: 7.26.11
