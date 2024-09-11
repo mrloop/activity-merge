@@ -1,10 +1,9 @@
 :root {
-
-  --dark-orange:   #fb8b24ff;
+  --dark-orange: #fb8b24ff;
   --green-munsell: #04a777ff;
-  --dogwood-rose:  #d90368ff;
-  --byzantium:     #820263ff;
-  --dark-purple:   #291720ff;
+  --dogwood-rose: #d90368ff;
+  --byzantium: #820263ff;
+  --dark-purple: #291720ff;
 }
 
 body {
@@ -14,15 +13,37 @@ body {
 }
 
 .content {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   height: 100vh;
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   font-size: 2em;
   background: var(--dark-orange);
   transition: background 0.15s ease-in-out;
+}
+
+.sponsor {
+  position: absolute;
+  padding: 0.5em;
+  top: 0;
+  right: 0;
+
+  .link {
+    color: white;
+    text-decoration: none;
+    font-size: 0.3em;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.picture-wham-logo {
+  margin-top: -0.3em;
 }
 
 footer {
@@ -30,7 +51,8 @@ footer {
   color: var(--byzantium);
 }
 
-.source, .source:visited {
+.source,
+.source:visited {
   color: inherit;
   transition: color 0.05s ease-in-out;
 }
@@ -81,7 +103,8 @@ main {
   margin: 2em;
 }
 
-.info, .status {
+.info,
+.status {
   font-size: 1rem;
   margin-top: 1rem;
 }
@@ -98,15 +121,19 @@ main {
   height: 0.4rem;
   border: 3px solid var(--byzantium);
   border-radius: 50%;
-  border-top-color: var(--green-munsell);;
+  border-top-color: var(--green-munsell);
   animation: spin 1s ease-in-out infinite;
   -webkit-animation: spin 1s ease-in-out infinite;
 }
 
 @keyframes spin {
-  to { -webkit-transform: rotate(360deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
 @-webkit-keyframes spin {
-  to { -webkit-transform: rotate(360deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }
