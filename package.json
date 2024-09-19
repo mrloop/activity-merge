@@ -60,7 +60,7 @@
     "ember-modifier": "4.2.0",
     "ember-page-title": "8.2.3",
     "ember-qunit": "8.1.0",
-    "ember-resolver": "13.0.0",
+    "ember-resolver": "13.0.1",
     "ember-service-worker": "9.0.1",
     "ember-service-worker-asset-cache": "0.6.4",
     "ember-service-worker-index": "0.7.2",
