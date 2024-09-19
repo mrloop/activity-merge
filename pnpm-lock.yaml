@@ -168,8 +168,8 @@ importers:
         specifier: 3.3.3
         version: 3.3.3
       puppeteer:
-        specifier: 23.3.0
-        version: 23.3.0(typescript@3.9.10)
+        specifier: 23.3.1
+        version: 23.3.1(typescript@3.9.10)
       qunit:
         specifier: 2.22.0
         version: 2.22.0
@@ -7459,8 +7459,8 @@ packages:
     resolution: {integrity: sha512-l1jNAspIBSFqbT+y+5FosojNpVpF94nlI+wDUpqP9enwOTfHx9f0gh5nB96vl+6yTpsJsypeNrwfzPrKuHB41A==}
     engines: {node: '>=8'}
 
-  puppeteer-core@23.3.0:
-    resolution: {integrity: sha512-sB2SsVMFs4gKad5OCdv6w5vocvtEUrRl0zQqSyRPbo/cj1Ktbarmhxy02Zyb9R9HrssBcJDZbkrvBnbaesPyYg==}
+  puppeteer-core@23.3.1:
+    resolution: {integrity: sha512-m5gTpITEqqpSgAvPUI/Ch9igh5sNJV+BVVbqQMzqirRDVHDCkLGHaydEQZx2NZvSXdwCFrIV///cpSlX/uD0Sg==}
     engines: {node: '>=18'}
 
   puppeteer@12.0.0:
@@ -7468,8 +7468,8 @@ packages:
     engines: {node: '>=10.18.1'}
     deprecated: < 22.8.2 is no longer supported
 
-  puppeteer@23.3.0:
-    resolution: {integrity: sha512-e2jY8cdWSUGsrLxqGm3hIbJq/UIk1uOY8XY7SM51leXkH7shrIyE91lK90Q9byX6tte+cyL3HKqlWBEd6TjWTA==}
+  puppeteer@23.3.1:
+    resolution: {integrity: sha512-BxkuJyCv46ZKW8KEHiVMHgHEC89jKK9FffReWjbw1IfBUmNx+6JIZyqOtaJeSwyolTdVqqb5fiPiXflKeH3dKQ==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -19435,7 +19435,7 @@ snapshots:
     dependencies:
       escape-goat: 2.1.1
 
-  puppeteer-core@23.3.0:
+  puppeteer-core@23.3.1:
     dependencies:
       '@puppeteer/browsers': 2.4.0
       chromium-bidi: 0.6.5(devtools-protocol@0.0.1330662)
@@ -19467,13 +19467,13 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  puppeteer@23.3.0(typescript@3.9.10):
+  puppeteer@23.3.1(typescript@3.9.10):
     dependencies:
       '@puppeteer/browsers': 2.4.0
       chromium-bidi: 0.6.5(devtools-protocol@0.0.1330662)
       cosmiconfig: 9.0.0(typescript@3.9.10)
       devtools-protocol: 0.0.1330662
-      puppeteer-core: 23.3.0
+      puppeteer-core: 23.3.1
       typed-query-selector: 2.12.0
     transitivePeerDependencies:
       - bufferutil
