@@ -74,7 +74,7 @@
     "eslint-plugin-ember": "12.2.0",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-prettier": "5.2.1",
-    "execa": "9.3.1",
+    "execa": "9.4.0",
     "loader.js": "4.7.0",
     "netlify-git-branch": "2.0.0",
     "npm-run-all2": "6.2.3",
