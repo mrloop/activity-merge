@@ -81,7 +81,7 @@
     "prettier": "3.3.3",
     "puppeteer": "23.4.0",
     "qunit": "2.22.0",
-    "qunit-dom": "3.2.0",
+    "qunit-dom": "3.2.1",
     "string-replace-loader": "3.1.0",
     "webpack": "5.94.0"
   },
