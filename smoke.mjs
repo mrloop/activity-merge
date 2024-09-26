@@ -33,7 +33,9 @@ async function test(startServerFn, testSelector) {
   try {
     let { serverProcess, port } = await startServerFn();
     server = serverProcess;
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+      args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    });
     const page = await browser.newPage();
     await page.goto(`http://localhost:${port}`);
     await page.waitForSelector(testSelector, { timeout: 5000 });
