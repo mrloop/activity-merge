@@ -79,7 +79,7 @@
     "netlify-git-branch": "2.0.0",
     "npm-run-all2": "6.2.3",
     "prettier": "3.3.3",
-    "puppeteer": "23.4.0",
+    "puppeteer": "23.4.1",
     "qunit": "2.22.0",
     "qunit-dom": "3.2.1",
     "string-replace-loader": "3.1.0",
