@@ -168,8 +168,8 @@ importers:
         specifier: 3.3.3
         version: 3.3.3
       puppeteer:
-        specifier: 23.5.2
-        version: 23.5.2(typescript@4.9.5)
+        specifier: 23.5.3
+        version: 23.5.3(typescript@4.9.5)
       qunit:
         specifier: 2.22.0
         version: 2.22.0
@@ -7472,8 +7472,8 @@ packages:
     resolution: {integrity: sha512-l1jNAspIBSFqbT+y+5FosojNpVpF94nlI+wDUpqP9enwOTfHx9f0gh5nB96vl+6yTpsJsypeNrwfzPrKuHB41A==}
     engines: {node: '>=8'}
 
-  puppeteer-core@23.5.2:
-    resolution: {integrity: sha512-UwPAX29EID8lJmxeL7JT3Gz35D1BHn5o9ZXpBLoR24W7gtUg1dLx7OUPsUTR5Tlxf+1Yeqw9W3qP4uqWThqXgg==}
+  puppeteer-core@23.5.3:
+    resolution: {integrity: sha512-V58MZD/B3CwkYsqSEQlHKbavMJptF04fzhMdUpiCRCmUVhwZNwSGEPhaiZ1f8I3ABQUirg3VNhXVB6Z1ubHXtQ==}
     engines: {node: '>=18'}
 
   puppeteer@12.0.0:
@@ -7481,8 +7481,8 @@ packages:
     engines: {node: '>=10.18.1'}
     deprecated: < 22.8.2 is no longer supported
 
-  puppeteer@23.5.2:
-    resolution: {integrity: sha512-7OOGEIoCjGP9lQ6QHvRSBTO3VRDPvu+YGl6rLCKOfYNMp1Lqc1U+s3lS1JdyR+jee1pZ55sxf+TEKsmqOopO1A==}
+  puppeteer@23.5.3:
+    resolution: {integrity: sha512-FghmfBsr/UUpe48OiCg1gV3W4vVfQJKjQehbF07SjnQvEpWcvPTah1nykfGWdOQQ1ydJPIXcajzWN7fliCU3zw==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -18672,7 +18672,7 @@ snapshots:
     dependencies:
       escape-goat: 2.1.1
 
-  puppeteer-core@23.5.2:
+  puppeteer-core@23.5.3:
     dependencies:
       '@puppeteer/browsers': 2.4.0
       chromium-bidi: 0.8.0(devtools-protocol@0.0.1342118)
@@ -18704,13 +18704,13 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  puppeteer@23.5.2(typescript@4.9.5):
+  puppeteer@23.5.3(typescript@4.9.5):
     dependencies:
       '@puppeteer/browsers': 2.4.0
       chromium-bidi: 0.8.0(devtools-protocol@0.0.1342118)
       cosmiconfig: 9.0.0(typescript@4.9.5)
       devtools-protocol: 0.0.1342118
-      puppeteer-core: 23.5.2
+      puppeteer-core: 23.5.3
       typed-query-selector: 2.12.0
     transitivePeerDependencies:
       - bufferutil
