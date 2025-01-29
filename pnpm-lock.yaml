@@ -145,7 +145,7 @@ importers:
         version: 9.1.0(eslint@8.57.1)
       eslint-plugin-ember:
         specifier: 12.3.3
-        version: 12.3.3(@babel/core@7.24.8)(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@4.9.5))(eslint@8.57.1)
+        version: 12.3.3(@babel/core@7.24.8)(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@3.9.10))(eslint@8.57.1)
       eslint-plugin-n:
         specifier: 17.15.1
         version: 17.15.1(eslint@8.57.1)
@@ -160,7 +160,7 @@ importers:
         version: 4.7.0
       netlify-git-branch:
         specifier: 2.0.0
-        version: 2.0.0(@oclif/config@1.18.9)(@types/node@20.11.30)(typescript@4.9.5)
+        version: 2.0.0(@oclif/config@1.18.9)(@types/node@20.11.30)(typescript@3.9.10)
       npm-run-all2:
         specifier: 7.0.2
         version: 7.0.2
@@ -168,8 +168,8 @@ importers:
         specifier: 3.4.2
         version: 3.4.2
       puppeteer:
-        specifier: 23.11.1
-        version: 23.11.1(typescript@4.9.5)
+        specifier: 24.1.1
+        version: 24.1.1(typescript@3.9.10)
       qunit:
         specifier: 2.24.1
         version: 2.24.1
@@ -1788,8 +1788,8 @@ packages:
     resolution: {integrity: sha512-eGjkyHSufkHyZ66WpygWnslcRePB0U1lJg1dF3rgWqTChpregYoDyNGDzK7l9Gk+CHVgGZZS5aWp7uKKVmAAEg==}
     engines: {node: '>=18.12'}
 
-  '@puppeteer/browsers@2.6.1':
-    resolution: {integrity: sha512-aBSREisdsGH890S2rQqK82qmQYU3uFpSH8wcZWHgHzl3LfzsxAKbLNiAG9mO8v1Y0UICBeClICxPJvyr0rcuxg==}
+  '@puppeteer/browsers@2.7.0':
+    resolution: {integrity: sha512-bO61XnTuopsz9kvtfqhVbH6LTM1koxK0IlBR+yuVrM2LB7mk8+5o1w18l5zqd5cs8xlf+ntgambqRqGifMDjog==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -3111,8 +3111,8 @@ packages:
     resolution: {integrity: sha512-p3KULyQg4S7NIHixdwbGX+nFHkoBiA4YQmyWtjb8XngSKV124nJmRysgAeujbUVb15vh+RvFUfCPqU7rXk+hZg==}
     engines: {node: '>=6.0'}
 
-  chromium-bidi@0.11.0:
-    resolution: {integrity: sha512-6CJWHkNRoyZyjV9Rwv2lYONZf1Xm0IuDyNq97nwSsxxP3wf5Bwy15K5rOvVKMtJ127jJBmxFUanSAOjgFRxgrA==}
+  chromium-bidi@1.1.0:
+    resolution: {integrity: sha512-HislCEczCuamWm3+55Lig9XKmMF13K+BGKum9rwtDAzgUAHT4h5jNwhDmD4U20VoVUG8ujnv9UZ89qiIf5uF8w==}
     peerDependencies:
       devtools-protocol: '*'
 
@@ -3960,8 +3960,8 @@ packages:
     resolution: {integrity: sha512-Uc1yVutTF0RRm1YJ3g//i1Cn2vx1kwHj15cnzQP6ff5koNzQ0idc1zAC73ryaWEulA0ElRXFTq6wOqe8vUQ3MA==}
     engines: {node: ^12.20.0 || ^14.14.0 || >=16.0.0}
 
-  devtools-protocol@0.0.1367902:
-    resolution: {integrity: sha512-XxtPuC3PGakY6PD7dG66/o8KwJ/LkH2/EKe19Dcw58w53dv4/vSQEkn/SzuyhHE2q4zPgCkxQBxus3VV4ql+Pg==}
+  devtools-protocol@0.0.1380148:
+    resolution: {integrity: sha512-1CJABgqLxbYxVI+uJY/UDUHJtJ0KZTSjNYJYKqd9FRoXT33WDakDHNxRapMEgzeJ/C3rcs01+avshMnPmKQbvA==}
 
   devtools-protocol@0.0.937139:
     resolution: {integrity: sha512-daj+rzR3QSxsPRy5vjjthn58axO8c11j58uY0lG5vvlJk/EiOdCWOptGdkXDjtuRHr78emKq0udHCXM4trhoDQ==}
@@ -7552,8 +7552,8 @@ packages:
     resolution: {integrity: sha512-l1jNAspIBSFqbT+y+5FosojNpVpF94nlI+wDUpqP9enwOTfHx9f0gh5nB96vl+6yTpsJsypeNrwfzPrKuHB41A==}
     engines: {node: '>=8'}
 
-  puppeteer-core@23.11.1:
-    resolution: {integrity: sha512-3HZ2/7hdDKZvZQ7dhhITOUg4/wOrDRjyK2ZBllRB0ZCOi9u0cwq1ACHDjBB+nX+7+kltHjQvBRdeY7+W0T+7Gg==}
+  puppeteer-core@24.1.1:
+    resolution: {integrity: sha512-7FF3gq6bpIsbq3I8mfbodXh3DCzXagoz3l2eGv1cXooYU4g0P4mcHQVHuBD4iSZPXNg8WjzlP5kmRwK9UvwF0A==}
     engines: {node: '>=18'}
 
   puppeteer@12.0.0:
@@ -7561,8 +7561,8 @@ packages:
     engines: {node: '>=10.18.1'}
     deprecated: < 22.8.2 is no longer supported
 
-  puppeteer@23.11.1:
-    resolution: {integrity: sha512-53uIX3KR5en8l7Vd8n5DUv90Ae9QDQsyIthaUFVzwV6yU750RjqRznEtNMBT20VthqAdemnJN+hxVdmMHKt7Zw==}
+  puppeteer@24.1.1:
+    resolution: {integrity: sha512-fuhceZ5HZuDXVuaMIRxUuDHfCJLmK0pXh8FlzVQ0/+OApStevxZhU5kAVeYFOEqeCF5OoAyZjcWbdQK27xW/9A==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -9290,8 +9290,8 @@ packages:
     resolution: {integrity: sha512-zshzwQW7gG7hjpBlgeQP9RuyPGNxvJdzR8SUM3QhxCnLjWN2E7j3dOvpeDcQoETfHx0urRS7EtmVToql7YpU4A==}
     engines: {node: '>= 10'}
 
-  zod@3.23.8:
-    resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
+  zod@3.24.1:
+    resolution: {integrity: sha512-muH7gBL9sI1nciMZV67X5fTKKBLtwpZ5VBp1vsOQzj1MhrBZ4wlVCm3gedKZWLp0Oyel8sIGfeiz54Su+OVT+A==}
 
 snapshots:
 
@@ -10892,7 +10892,7 @@ snapshots:
 
   '@netlify/binary-info@1.0.0': {}
 
-  '@netlify/build@19.0.8(@types/node@20.11.30)(typescript@4.9.5)':
+  '@netlify/build@19.0.8(@types/node@20.11.30)(typescript@3.9.10)':
     dependencies:
       '@bugsnag/js': 7.20.2
       '@netlify/cache-utils': 3.0.1(supports-color@8.1.1)
@@ -10942,7 +10942,7 @@ snapshots:
       strip-ansi: 6.0.1
       supports-color: 8.1.1
       tmp-promise: 3.0.3
-      ts-node: 10.9.1(@types/node@20.11.30)(typescript@4.9.5)
+      ts-node: 10.9.1(@types/node@20.11.30)(typescript@3.9.10)
       update-notifier: 5.1.0
       uuid: 8.3.2
       yargs: 15.4.1
@@ -11612,7 +11612,7 @@ snapshots:
       '@pnpm/error': 6.0.3
       find-up: 5.0.0
 
-  '@puppeteer/browsers@2.6.1':
+  '@puppeteer/browsers@2.7.0':
     dependencies:
       debug: 4.4.0(supports-color@8.1.1)
       extract-zip: 2.0.1
@@ -11946,16 +11946,16 @@ snapshots:
       '@types/node': 20.11.30
     optional: true
 
-  '@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@4.9.5)':
+  '@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@3.9.10)':
     dependencies:
       '@typescript-eslint/scope-manager': 6.21.0
       '@typescript-eslint/types': 6.21.0
-      '@typescript-eslint/typescript-estree': 6.21.0(typescript@4.9.5)
+      '@typescript-eslint/typescript-estree': 6.21.0(typescript@3.9.10)
       '@typescript-eslint/visitor-keys': 6.21.0
       debug: 4.4.0(supports-color@8.1.1)
       eslint: 8.57.1
     optionalDependencies:
-      typescript: 4.9.5
+      typescript: 3.9.10
     transitivePeerDependencies:
       - supports-color
     optional: true
@@ -12001,7 +12001,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/typescript-estree@6.21.0(typescript@4.9.5)':
+  '@typescript-eslint/typescript-estree@6.21.0(typescript@3.9.10)':
     dependencies:
       '@typescript-eslint/types': 6.21.0
       '@typescript-eslint/visitor-keys': 6.21.0
@@ -12010,9 +12010,9 @@ snapshots:
       is-glob: 4.0.3
       minimatch: 9.0.3
       semver: 7.6.3
-      ts-api-utils: 1.3.0(typescript@4.9.5)
+      ts-api-utils: 1.3.0(typescript@3.9.10)
     optionalDependencies:
-      typescript: 4.9.5
+      typescript: 3.9.10
     transitivePeerDependencies:
       - supports-color
     optional: true
@@ -13401,11 +13401,11 @@ snapshots:
 
   chrome-trace-event@1.0.3: {}
 
-  chromium-bidi@0.11.0(devtools-protocol@0.0.1367902):
+  chromium-bidi@1.1.0(devtools-protocol@0.0.1380148):
     dependencies:
-      devtools-protocol: 0.0.1367902
+      devtools-protocol: 0.0.1380148
       mitt: 3.0.1
-      zod: 3.23.8
+      zod: 3.24.1
 
   ci-info@2.0.0: {}
 
@@ -13758,14 +13758,14 @@ snapshots:
       object-assign: 4.1.1
       vary: 1.1.2
 
-  cosmiconfig@9.0.0(typescript@4.9.5):
+  cosmiconfig@9.0.0(typescript@3.9.10):
     dependencies:
       env-paths: 2.2.1
       import-fresh: 3.3.0
       js-yaml: 4.1.0
       parse-json: 5.2.0
     optionalDependencies:
-      typescript: 4.9.5
+      typescript: 3.9.10
 
   cp-file@7.0.0:
     dependencies:
@@ -14184,7 +14184,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  devtools-protocol@0.0.1367902: {}
+  devtools-protocol@0.0.1380148: {}
 
   devtools-protocol@0.0.937139: {}
 
@@ -14687,7 +14687,7 @@ snapshots:
       - '@babel/core'
       - supports-color
 
-  ember-eslint-parser@0.5.6(@babel/core@7.24.8)(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@4.9.5))(eslint@8.57.1):
+  ember-eslint-parser@0.5.6(@babel/core@7.24.8)(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@3.9.10))(eslint@8.57.1):
     dependencies:
       '@babel/core': 7.24.8(supports-color@8.1.1)
       '@babel/eslint-parser': 7.26.5(@babel/core@7.24.8)(eslint@8.57.1)
@@ -14698,7 +14698,7 @@ snapshots:
       mathml-tag-names: 2.1.3
       svg-tags: 1.0.0
     optionalDependencies:
-      '@typescript-eslint/parser': 6.21.0(eslint@8.57.1)(typescript@4.9.5)
+      '@typescript-eslint/parser': 6.21.0(eslint@8.57.1)(typescript@3.9.10)
     transitivePeerDependencies:
       - eslint
 
@@ -15188,11 +15188,11 @@ snapshots:
 
   eslint-formatter-kakoune@1.0.0: {}
 
-  eslint-plugin-ember@12.3.3(@babel/core@7.24.8)(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@4.9.5))(eslint@8.57.1):
+  eslint-plugin-ember@12.3.3(@babel/core@7.24.8)(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@3.9.10))(eslint@8.57.1):
     dependencies:
       '@ember-data/rfc395-data': 0.0.4
       css-tree: 3.0.1
-      ember-eslint-parser: 0.5.6(@babel/core@7.24.8)(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@4.9.5))(eslint@8.57.1)
+      ember-eslint-parser: 0.5.6(@babel/core@7.24.8)(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@3.9.10))(eslint@8.57.1)
       ember-rfc176-data: 0.3.18
       eslint: 8.57.1
       eslint-utils: 3.0.0(eslint@8.57.1)
@@ -15202,7 +15202,7 @@ snapshots:
       requireindex: 1.2.0
       snake-case: 3.0.4
     optionalDependencies:
-      '@typescript-eslint/parser': 6.21.0(eslint@8.57.1)(typescript@4.9.5)
+      '@typescript-eslint/parser': 6.21.0(eslint@8.57.1)(typescript@3.9.10)
     transitivePeerDependencies:
       - '@babel/core'
 
@@ -17793,9 +17793,9 @@ snapshots:
 
   nested-error-stacks@2.1.1: {}
 
-  netlify-cli@8.0.3(@types/node@20.11.30)(typescript@4.9.5):
+  netlify-cli@8.0.3(@types/node@20.11.30)(typescript@3.9.10):
     dependencies:
-      '@netlify/build': 19.0.8(@types/node@20.11.30)(typescript@4.9.5)
+      '@netlify/build': 19.0.8(@types/node@20.11.30)(typescript@3.9.10)
       '@netlify/config': 16.0.7
       '@netlify/framework-info': 6.1.0
       '@netlify/local-functions-proxy': 1.1.1
@@ -17919,13 +17919,13 @@ snapshots:
       - zen-observable
       - zenObservable
 
-  netlify-git-branch@2.0.0(@oclif/config@1.18.9)(@types/node@20.11.30)(typescript@4.9.5):
+  netlify-git-branch@2.0.0(@oclif/config@1.18.9)(@types/node@20.11.30)(typescript@3.9.10):
     dependencies:
       '@oclif/core': 0.5.41(@oclif/config@1.18.9)
       '@oclif/plugin-help': 4.0.3(@oclif/config@1.18.9)
       execa: 5.1.1
       netlify: 9.0.0
-      netlify-cli: 8.0.3(@types/node@20.11.30)(typescript@4.9.5)
+      netlify-cli: 8.0.3(@types/node@20.11.30)(typescript@3.9.10)
       puppeteer: 12.0.0
     transitivePeerDependencies:
       - '@oclif/config'
@@ -18799,12 +18799,12 @@ snapshots:
     dependencies:
       escape-goat: 2.1.1
 
-  puppeteer-core@23.11.1:
+  puppeteer-core@24.1.1:
     dependencies:
-      '@puppeteer/browsers': 2.6.1
-      chromium-bidi: 0.11.0(devtools-protocol@0.0.1367902)
+      '@puppeteer/browsers': 2.7.0
+      chromium-bidi: 1.1.0(devtools-protocol@0.0.1380148)
       debug: 4.4.0(supports-color@8.1.1)
-      devtools-protocol: 0.0.1367902
+      devtools-protocol: 0.0.1380148
       typed-query-selector: 2.12.0
       ws: 8.18.0
     transitivePeerDependencies:
@@ -18831,13 +18831,13 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  puppeteer@23.11.1(typescript@4.9.5):
+  puppeteer@24.1.1(typescript@3.9.10):
     dependencies:
-      '@puppeteer/browsers': 2.6.1
-      chromium-bidi: 0.11.0(devtools-protocol@0.0.1367902)
-      cosmiconfig: 9.0.0(typescript@4.9.5)
-      devtools-protocol: 0.0.1367902
-      puppeteer-core: 23.11.1
+      '@puppeteer/browsers': 2.7.0
+      chromium-bidi: 1.1.0(devtools-protocol@0.0.1380148)
+      cosmiconfig: 9.0.0(typescript@3.9.10)
+      devtools-protocol: 0.0.1380148
+      puppeteer-core: 24.1.1
       typed-query-selector: 2.12.0
     transitivePeerDependencies:
       - bufferutil
@@ -20239,12 +20239,12 @@ snapshots:
 
   triple-beam@1.3.0: {}
 
-  ts-api-utils@1.3.0(typescript@4.9.5):
+  ts-api-utils@1.3.0(typescript@3.9.10):
     dependencies:
-      typescript: 4.9.5
+      typescript: 3.9.10
     optional: true
 
-  ts-node@10.9.1(@types/node@20.11.30)(typescript@4.9.5):
+  ts-node@10.9.1(@types/node@20.11.30)(typescript@3.9.10):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.9
@@ -20258,7 +20258,7 @@ snapshots:
       create-require: 1.1.1
       diff: 4.0.2
       make-error: 1.3.6
-      typescript: 4.9.5
+      typescript: 3.9.10
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
 
@@ -20835,4 +20835,4 @@ snapshots:
       compress-commons: 4.1.1
       readable-stream: 3.6.2
 
-  zod@3.23.8: {}
+  zod@3.24.1: {}
