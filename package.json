@@ -78,7 +78,7 @@
     "loader.js": "4.7.0",
     "netlify-git-branch": "2.0.0",
     "npm-run-all2": "7.0.2",
-    "prettier": "3.5.0",
+    "prettier": "3.5.1",
     "puppeteer": "23.11.1",
     "qunit": "2.24.1",
     "qunit-dom": "3.4.0",
