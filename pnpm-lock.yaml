@@ -96,8 +96,8 @@ importers:
         specifier: 3.0.1
         version: 3.0.1(ember-source@5.12.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.98.0(esbuild@0.25.0)))
       ember-metrics:
-        specifier: 2.0.0-beta.2
-        version: 2.0.0-beta.2
+        specifier: 2.0.0
+        version: 2.0.0(@ember/string@4.0.1)(ember-source@5.12.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.98.0(esbuild@0.25.0)))(webpack@5.98.0(esbuild@0.25.0))
       ember-metrics-simple-analytics:
         specifier: 1.0.0
         version: 1.0.0
@@ -4150,6 +4150,13 @@ packages:
 
   ember-metrics-simple-analytics@1.0.0:
     resolution: {integrity: sha512-SEerV4egDcVVg7d+x5oh+UePs5htBs2uWesAlnNJu7TQ4lf+rrMoK5ScGUoq4Sv2R0r0k5fUxZlGUqKqErZGng==}
+
+  ember-metrics@2.0.0:
+    resolution: {integrity: sha512-r62LSNiivGKdhV7UOC9H9lmmApO/zaCnVo9BStVDkHTgcdzoq6iENft/ZDsCihQt3loevCi/BXb+DLffOBjKxg==}
+    engines: {node: 18.* || 20.* || >= 22}
+    peerDependencies:
+      '@ember/string': '>= 3.0.0'
+      ember-source: '>= 3.28.0'
 
   ember-metrics@2.0.0-beta.2:
     resolution: {integrity: sha512-vKPVfY4IIO5KszCsExUkxwqUgnuiUpvacNhzudms4JKZy0zeoU5tyXscPngW8vpqcGF6q8ZbaNTxw1OIVKd+xw==}
@@ -14634,6 +14641,19 @@ snapshots:
       ember-metrics: 2.0.0-beta.2
     transitivePeerDependencies:
       - supports-color
+
+  ember-metrics@2.0.0(@ember/string@4.0.1)(ember-source@5.12.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.98.0(esbuild@0.25.0)))(webpack@5.98.0(esbuild@0.25.0)):
+    dependencies:
+      '@ember/string': 4.0.1
+      broccoli-funnel: 3.0.8
+      ember-auto-import: 2.10.0(webpack@5.98.0(esbuild@0.25.0))
+      ember-cli-babel: 7.26.11
+      ember-cli-typescript: 5.2.1
+      ember-source: 5.12.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.98.0(esbuild@0.25.0))
+    transitivePeerDependencies:
+      - '@glint/template'
+      - supports-color
+      - webpack
 
   ember-metrics@2.0.0-beta.2:
     dependencies:
