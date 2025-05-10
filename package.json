@@ -30,7 +30,7 @@
     "@babel/plugin-proposal-decorators": "^7.22.5",
     "@ember/optional-features": "2.2.0",
     "@ember/string": "4.0.1",
-    "@ember/test-helpers": "4.0.5",
+    "@ember/test-helpers": "5.2.2",
     "@embroider/compat": "3.8.4",
     "@embroider/core": "3.5.4",
     "@embroider/webpack": "4.1.0",
