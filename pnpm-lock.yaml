@@ -117,8 +117,8 @@ importers:
         specifier: 9.0.2
         version: 9.0.2
       ember-qunit:
-        specifier: 8.1.1
-        version: 8.1.1(@ember/test-helpers@5.2.2(@babel/core@7.27.1))(ember-source@6.4.0(@glimmer/component@2.0.0)(rsvp@4.8.5))(qunit@2.24.1)
+        specifier: 9.0.3
+        version: 9.0.3(@ember/test-helpers@5.2.2(@babel/core@7.27.1))(qunit@2.24.1)
       ember-resolver:
         specifier: 13.1.1
         version: 13.1.1
@@ -172,7 +172,7 @@ importers:
         version: 4.7.0
       netlify-git-branch:
         specifier: 2.0.0
-        version: 2.0.0(@oclif/config@1.18.17)(@types/node@22.15.21)(typescript@3.9.10)
+        version: 2.0.0(@oclif/config@1.18.17)(@types/node@22.15.21)(typescript@4.9.5)
       npm-run-all2:
         specifier: 7.0.2
         version: 7.0.2
@@ -184,7 +184,7 @@ importers:
         version: 2.0.5(prettier@3.5.3)
       puppeteer:
         specifier: 24.9.0
-        version: 24.9.0(typescript@3.9.10)
+        version: 24.9.0(typescript@4.9.5)
       qunit:
         specifier: 2.24.1
         version: 2.24.1
@@ -4041,10 +4041,6 @@ packages:
     resolution: {integrity: sha512-Ej77K+YhCZImotoi/CU2cfsoZaswoPlGaM5TB3LvjvPDlVPRhxUHO2RsaUVC5lsGeRLRiHCOxVtoJ6GyqexzFA==}
     engines: {node: 10.* || 12.* || >= 14}
 
-  ember-cli-test-loader@3.1.0:
-    resolution: {integrity: sha512-0aocZV9SIoOHiU3hrH3IuLR6busWhTX6UVXgd490hmJkIymmOXNH2+jJoC7Ebkeo3PiOfAdjqhb765QDlHSJOw==}
-    engines: {node: 10.* || >= 12}
-
   ember-cli-typescript-blueprint-polyfill@0.1.0:
     resolution: {integrity: sha512-g0weUTOnHmPGqVZzkQTl3Nbk9fzEdFkEXydCs5mT1qBjXh8eQ6VlmjjGD5/998UXKuA0pLSCVVMbSp/linLzGA==}
 
@@ -4123,11 +4119,10 @@ packages:
     resolution: {integrity: sha512-ACklH6hemNB6tDAiwGo4e0tFIqVrAkTNqRmlLtLABlh+GynH7xkWm9q4fyc4Ysg9R1jP8OrsKcxWRittshRatA==}
     engines: {node: 16.* || >= 18}
 
-  ember-qunit@8.1.1:
-    resolution: {integrity: sha512-nT+6s74j3BKNn+QQY/hINC3Xw3kn0NF0cU9zlgVQmCBWoyis1J24xWrY2LFOMThPmF6lHqcrUb5JwvBD4BXEXg==}
+  ember-qunit@9.0.3:
+    resolution: {integrity: sha512-t+FD5/EWAR3WvGVj1etblFJJ6CaJqddDxusNcYYFZmW7zrQpCnQ9ziwpXM5/sw1sWabkhJZgYPXCn8bDRRhOfg==}
     peerDependencies:
       '@ember/test-helpers': '>=3.0.3'
-      ember-source: '>=4.0.0'
       qunit: ^2.13.0
 
   ember-resolver@13.1.1:
@@ -10715,7 +10710,7 @@ snapshots:
 
   '@netlify/binary-info@1.0.0': {}
 
-  '@netlify/build@19.0.8(@types/node@22.15.21)(typescript@3.9.10)':
+  '@netlify/build@19.0.8(@types/node@22.15.21)(typescript@4.9.5)':
     dependencies:
       '@bugsnag/js': 7.25.0
       '@netlify/cache-utils': 3.0.1(supports-color@8.1.1)
@@ -10765,7 +10760,7 @@ snapshots:
       strip-ansi: 6.0.1
       supports-color: 8.1.1
       tmp-promise: 3.0.3
-      ts-node: 10.9.2(@types/node@22.15.21)(typescript@3.9.10)
+      ts-node: 10.9.2(@types/node@22.15.21)(typescript@4.9.5)
       update-notifier: 5.1.0
       uuid: 8.3.2
       yargs: 15.4.1
@@ -13544,14 +13539,14 @@ snapshots:
       object-assign: 4.1.1
       vary: 1.1.2
 
-  cosmiconfig@9.0.0(typescript@3.9.10):
+  cosmiconfig@9.0.0(typescript@4.9.5):
     dependencies:
       env-paths: 2.2.1
       import-fresh: 3.3.1
       js-yaml: 4.1.0
       parse-json: 5.2.0
     optionalDependencies:
-      typescript: 3.9.10
+      typescript: 4.9.5
 
   cp-file@7.0.0:
     dependencies:
@@ -14269,12 +14264,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  ember-cli-test-loader@3.1.0:
-    dependencies:
-      ember-cli-babel: 7.26.11
-    transitivePeerDependencies:
-      - supports-color
-
   ember-cli-typescript-blueprint-polyfill@0.1.0:
     dependencies:
       chalk: 4.1.2
@@ -14568,13 +14557,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  ember-qunit@8.1.1(@ember/test-helpers@5.2.2(@babel/core@7.27.1))(ember-source@6.4.0(@glimmer/component@2.0.0)(rsvp@4.8.5))(qunit@2.24.1):
+  ember-qunit@9.0.3(@ember/test-helpers@5.2.2(@babel/core@7.27.1))(qunit@2.24.1):
     dependencies:
       '@ember/test-helpers': 5.2.2(@babel/core@7.27.1)
       '@embroider/addon-shim': 1.10.0
       '@embroider/macros': 1.18.0
-      ember-cli-test-loader: 3.1.0
-      ember-source: 6.4.0(@glimmer/component@2.0.0)(rsvp@4.8.5)
       qunit: 2.24.1
       qunit-theme-ember: 1.0.0
     transitivePeerDependencies:
@@ -17575,9 +17562,9 @@ snapshots:
 
   nested-error-stacks@2.1.1: {}
 
-  netlify-cli@8.0.3(@types/node@22.15.21)(typescript@3.9.10):
+  netlify-cli@8.0.3(@types/node@22.15.21)(typescript@4.9.5):
     dependencies:
-      '@netlify/build': 19.0.8(@types/node@22.15.21)(typescript@3.9.10)
+      '@netlify/build': 19.0.8(@types/node@22.15.21)(typescript@4.9.5)
       '@netlify/config': 16.0.7
       '@netlify/framework-info': 6.1.0
       '@netlify/local-functions-proxy': 1.1.1
@@ -17701,13 +17688,13 @@ snapshots:
       - zen-observable
       - zenObservable
 
-  netlify-git-branch@2.0.0(@oclif/config@1.18.17)(@types/node@22.15.21)(typescript@3.9.10):
+  netlify-git-branch@2.0.0(@oclif/config@1.18.17)(@types/node@22.15.21)(typescript@4.9.5):
     dependencies:
       '@oclif/core': 0.5.41(@oclif/config@1.18.17)
       '@oclif/plugin-help': 4.0.3(@oclif/config@1.18.17)
       execa: 5.1.1
       netlify: 9.0.0
-      netlify-cli: 8.0.3(@types/node@22.15.21)(typescript@3.9.10)
+      netlify-cli: 8.0.3(@types/node@22.15.21)(typescript@4.9.5)
       puppeteer: 12.0.0
     transitivePeerDependencies:
       - '@oclif/config'
@@ -18624,11 +18611,11 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  puppeteer@24.9.0(typescript@3.9.10):
+  puppeteer@24.9.0(typescript@4.9.5):
     dependencies:
       '@puppeteer/browsers': 2.10.5
       chromium-bidi: 5.1.0(devtools-protocol@0.0.1439962)
-      cosmiconfig: 9.0.0(typescript@3.9.10)
+      cosmiconfig: 9.0.0(typescript@4.9.5)
       devtools-protocol: 0.0.1439962
       puppeteer-core: 24.9.0
       typed-query-selector: 2.12.0
@@ -20050,7 +20037,7 @@ snapshots:
 
   triple-beam@1.4.1: {}
 
-  ts-node@10.9.2(@types/node@22.15.21)(typescript@3.9.10):
+  ts-node@10.9.2(@types/node@22.15.21)(typescript@4.9.5):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.11
@@ -20064,7 +20051,7 @@ snapshots:
       create-require: 1.1.1
       diff: 4.0.2
       make-error: 1.3.6
-      typescript: 3.9.10
+      typescript: 4.9.5
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
 
