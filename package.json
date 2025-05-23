@@ -12,8 +12,10 @@
   },
   "scripts": {
     "build": "ember build --environment=production",
+    "format": "prettier . --cache --write",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel 'lint:!(fix)'",
-    "lint:fix": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*:fix",
+    "lint:fix": "concurrently \"npm:lint:*:fix\" --names \"fix:\" --prefixColors auto && npm run format",
+    "lint:format": "prettier . --cache --check",
     "lint:hbs": "ember-template-lint .",
     "lint:hbs:fix": "ember-template-lint . --fix",
     "lint:js": "eslint . --cache",
@@ -27,13 +29,15 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "7.27.1",
-    "@babel/plugin-proposal-decorators": "^7.22.5",
+    "@babel/plugin-proposal-decorators": "^7.27.1",
     "@ember/optional-features": "2.2.0",
     "@ember/string": "4.0.1",
     "@ember/test-helpers": "5.2.2",
     "@embroider/compat": "3.8.4",
     "@embroider/core": "3.5.4",
+    "@embroider/macros": "^1.18.0",
     "@embroider/webpack": "4.1.0",
+    "@eslint/compat": "^1.2.9",
     "@glimmer/component": "2.0.0",
     "@glimmer/tracking": "1.1.2",
     "@sports-alliance/sports-lib": "5.4.24",
@@ -43,10 +47,11 @@
     "broccoli-merge-trees": "4.2.0",
     "comlink": "4.4.2",
     "ember-auto-import": "2.10.0",
-    "ember-cli": "6.2.3",
+    "ember-cli": "6.4.0",
     "ember-cli-app-version": "7.0.0",
     "ember-cli-babel": "8.2.0",
     "ember-cli-dependency-checker": "3.3.3",
+    "ember-cli-deprecation-workflow": "^3.3.0",
     "ember-cli-htmlbars": "6.3.0",
     "ember-cli-image-transformer": "7.0.0",
     "ember-cli-inject-live-reload": "2.1.0",
@@ -64,26 +69,28 @@
     "ember-service-worker": "9.0.1",
     "ember-service-worker-asset-cache": "0.6.4",
     "ember-service-worker-index": "0.7.2",
-    "ember-source": "5.12.0",
+    "ember-source": "6.4.0",
     "ember-template-lint": "7.7.0",
     "ember-test-selectors": "7.0.0",
     "ember-web-app": "5.0.1",
     "esbuild": "0.25.4",
-    "eslint": "8.57.1",
+    "eslint": "9.25.1",
     "eslint-config-prettier": "10.1.5",
     "eslint-plugin-ember": "12.5.0",
-    "eslint-plugin-n": "17.16.2",
-    "eslint-plugin-prettier": "5.2.3",
+    "eslint-plugin-n": "17.17.0",
+    "eslint-plugin-qunit": "^8.1.2",
     "execa": "9.5.3",
+    "globals": "^16.1.0",
     "loader.js": "4.7.0",
     "netlify-git-branch": "2.0.0",
     "npm-run-all2": "7.0.2",
     "prettier": "3.5.3",
+    "prettier-plugin-ember-template-tag": "^2.0.5",
     "puppeteer": "24.9.0",
     "qunit": "2.24.1",
     "qunit-dom": "3.4.0",
     "string-replace-loader": "3.1.0",
-    "webpack": "5.98.0"
+    "webpack": "5.99.7"
   },
   "engines": {
     "node": "10.* || >= 12"
@@ -94,6 +101,5 @@
   "volta": {
     "node": "22.14.0",
     "pnpm": "9.15.9"
-  },
-  "dependencies": {}
+  }
 }
