@@ -177,8 +177,8 @@ importers:
         specifier: 2.0.0
         version: 2.0.0(@oclif/config@1.18.17)(@types/node@22.15.21)(typescript@4.9.5)
       npm-run-all2:
-        specifier: 7.0.2
-        version: 7.0.2
+        specifier: 8.0.3
+        version: 8.0.3
       prettier:
         specifier: 3.5.3
         version: 3.5.3
@@ -6479,6 +6479,10 @@ packages:
     peerDependencies:
       webpack: ^5.0.0
 
+  minimatch@10.0.1:
+    resolution: {integrity: sha512-ethXTt3SGGR+95gudmqJ1eNhRO7eGEGIgYA9vnPatK4/etz2MEVDno5GMCibdMTuBMyElzIlgxMna3K94XDIDQ==}
+    engines: {node: 20 || >=22}
+
   minimatch@3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
 
@@ -6811,9 +6815,9 @@ packages:
   npm-packlist@1.4.8:
     resolution: {integrity: sha512-5+AZgwru5IevF5ZdnFglB5wNlHG1AOOuw28WhUq8/8emhBmLv6jX5by4WJCh7lW0uSYZYS6DXqIsyZVIXRZU9A==}
 
-  npm-run-all2@7.0.2:
-    resolution: {integrity: sha512-7tXR+r9hzRNOPNTvXegM+QzCuMjzUIIq66VDunL6j60O4RrExx32XUhlrS7UK4VcdGw5/Wxzb3kfNcFix9JKDA==}
-    engines: {node: ^18.17.0 || >=20.5.0, npm: '>= 9'}
+  npm-run-all2@8.0.3:
+    resolution: {integrity: sha512-0mAycidMUMThrLt8AT3LGtOMgfLaMg6/4oUKHTKMU0jDSIsdKBsKp98H8zBFcJylQC4CtOB140UUFbOlFyE9gA==}
+    engines: {node: ^20.5.0 || >=22.0.0, npm: '>= 10'}
     hasBin: true
 
   npm-run-path@2.0.2:
@@ -17429,6 +17433,10 @@ snapshots:
       tapable: 2.2.2
       webpack: 5.99.9(esbuild@0.25.4)
 
+  minimatch@10.0.1:
+    dependencies:
+      brace-expansion: 2.0.1
+
   minimatch@3.1.2:
     dependencies:
       brace-expansion: 1.1.11
@@ -17934,12 +17942,12 @@ snapshots:
       npm-bundled: 1.1.2
       npm-normalize-package-bin: 1.0.1
 
-  npm-run-all2@7.0.2:
+  npm-run-all2@8.0.3:
     dependencies:
       ansi-styles: 6.2.1
       cross-spawn: 7.0.6
       memorystream: 0.3.1
-      minimatch: 9.0.5
+      minimatch: 10.0.1
       pidtree: 0.6.0
       read-package-json-fast: 4.0.0
       shell-quote: 1.8.2
