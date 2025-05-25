@@ -83,7 +83,7 @@
     "execa": "9.5.3",
     "globals": "^16.1.0",
     "loader.js": "4.7.0",
-    "netlify-git-branch": "2.0.0",
+    "netlify-git-branch": "3.0.0",
     "npm-run-all2": "8.0.3",
     "prettier": "3.5.3",
     "prettier-plugin-ember-template-tag": "^2.0.5",
