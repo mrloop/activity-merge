@@ -1,0 +1,7 @@
+onlyBuiltDependencies:
+  - "@netlify/esbuild"
+  - core-js
+  - esbuild
+  - netlify-cli
+  - puppeteer
+  - sharp
