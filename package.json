@@ -87,7 +87,7 @@
     "npm-run-all2": "8.0.4",
     "prettier": "3.5.3",
     "prettier-plugin-ember-template-tag": "^2.0.5",
-    "puppeteer": "24.9.0",
+    "puppeteer": "24.10.0",
     "qunit": "2.24.1",
     "qunit-dom": "3.4.0",
     "string-replace-loader": "3.1.0",
