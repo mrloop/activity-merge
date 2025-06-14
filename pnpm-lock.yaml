@@ -198,8 +198,8 @@ importers:
         specifier: 3.4.0
         version: 3.4.0
       string-replace-loader:
-        specifier: 3.1.0
-        version: 3.1.0(webpack@5.99.9(esbuild@0.25.5))
+        specifier: 3.2.0
+        version: 3.2.0(webpack@5.99.9(esbuild@0.25.5))
       webpack:
         specifier: 5.99.9
         version: 5.99.9(esbuild@0.25.5)
@@ -8243,8 +8243,9 @@ packages:
     resolution: {integrity: sha512-R3f198pcvnB+5IpnBlRkphuE9n46WyVl8I39W/ZUTZLz4nqSP/oLYUrcnJrw462Ds8he4YKMov2efsTIw1BDGQ==}
     engines: {node: '>=0.10.0'}
 
-  string-replace-loader@3.1.0:
-    resolution: {integrity: sha512-5AOMUZeX5HE/ylKDnEa/KKBqvlnFmRZudSOjVJHxhoJg9QYTwl1rECx7SLR8BBH7tfxb4Rp7EM2XVfQFxIhsbQ==}
+  string-replace-loader@3.2.0:
+    resolution: {integrity: sha512-q7+F4DC6MAKkszF3ZQEuZ3dDH25wXPxFA0maTLk3TOTAYPLDgwqCeCKIvOd8xJhYYYl+EXusYRCyKIJliT/olg==}
+    engines: {node: '>=4'}
     peerDependencies:
       webpack: ^5
 
@@ -19897,10 +19898,9 @@ snapshots:
 
   strict-uri-encode@1.1.0: {}
 
-  string-replace-loader@3.1.0(webpack@5.99.9(esbuild@0.25.5)):
+  string-replace-loader@3.2.0(webpack@5.99.9(esbuild@0.25.5)):
     dependencies:
-      loader-utils: 2.0.4
-      schema-utils: 3.3.0
+      schema-utils: 4.3.2
       webpack: 5.99.9(esbuild@0.25.5)
 
   string-similarity@4.0.4: {}
