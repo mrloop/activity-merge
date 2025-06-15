@@ -162,8 +162,8 @@ importers:
         specifier: 12.5.0
         version: 12.5.0(@babel/core@7.27.1)(eslint@9.28.0)
       eslint-plugin-n:
-        specifier: 17.19.0
-        version: 17.19.0(eslint@9.28.0)(typescript@4.9.5)
+        specifier: 17.20.0
+        version: 17.20.0(eslint@9.28.0)(typescript@4.9.5)
       eslint-plugin-qunit:
         specifier: ^8.1.2
         version: 8.1.2(eslint@9.28.0)
@@ -4413,8 +4413,8 @@ packages:
     peerDependencies:
       eslint: '>=8'
 
-  eslint-plugin-n@17.19.0:
-    resolution: {integrity: sha512-qxn1NaDHtizbhVAPpbMT8wWFaLtPnwhfN/e+chdu2i6Vgzmo/tGM62tcJ1Hf7J5Ie4dhse3DOPMmDxduzfifzw==}
+  eslint-plugin-n@17.20.0:
+    resolution: {integrity: sha512-IRSoatgB/NQJZG5EeTbv/iAx1byOGdbbyhQrNvWdCfTnmPxUT0ao9/eGOeG7ljD8wJBsxwE8f6tES5Db0FRKEw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=8.23.0'
@@ -15399,7 +15399,7 @@ snapshots:
       eslint: 9.28.0
       eslint-compat-utils: 0.5.1(eslint@9.28.0)
 
-  eslint-plugin-n@17.19.0(eslint@9.28.0)(typescript@4.9.5):
+  eslint-plugin-n@17.20.0(eslint@9.28.0)(typescript@4.9.5):
     dependencies:
       '@eslint-community/eslint-utils': 4.7.0(eslint@9.28.0)
       '@typescript-eslint/utils': 8.33.1(eslint@9.28.0)(typescript@4.9.5)
