@@ -33,8 +33,8 @@ importers:
         specifier: ^1.18.0
         version: 1.18.0
       '@embroider/webpack':
-        specifier: 4.1.0
-        version: 4.1.0(@embroider/core@4.1.0)(webpack@5.99.9(esbuild@0.25.5))
+        specifier: 4.1.1
+        version: 4.1.1(@embroider/core@4.1.0)(webpack@5.99.9(esbuild@0.25.5))
       '@eslint/compat':
         specifier: ^1.2.9
         version: 1.3.0(eslint@9.29.0)
@@ -876,11 +876,11 @@ packages:
     resolution: {integrity: sha512-JGOQNRj3UR0NdWEg8MsM2eqPLncEwSB1IX+rwntIj22TEKj8biqx7GDgSbeH+ZedijmCh354Hf2c5rthrdzUAw==}
     engines: {node: 12.* || 14.* || >= 16}
 
-  '@embroider/babel-loader-9@3.1.1':
-    resolution: {integrity: sha512-8mIDRXvwntYIQc2JFVvGXEppHUJRhw+6aEzHtbCZDr4oOKw55IyY+RHzas3JILRq64owLA+Ox0yu6nkwL1ApRQ==}
+  '@embroider/babel-loader-9@3.1.2':
+    resolution: {integrity: sha512-x2K0QpG+S3h6a0gY8tWtiUFEQAMUk6NdWqtT+4eyoZ1YCYcWXVPhRx3FXS5FsHXk/lmrMd2hc7XPgYk6kYoKuQ==}
     engines: {node: 12.* || 14.* || >= 16}
     peerDependencies:
-      '@embroider/core': ^3.4.0
+      '@embroider/core': ^3.5.7
 
   '@embroider/compat@4.1.0':
     resolution: {integrity: sha512-7pqXS+uK/ovhVfFBqmPzeMfdbLI4f/LCOhjdghYJGBxb40IG49BuXgjBQr2cOofU0/ItbQISZd0Ksl0JU4Eu5w==}
@@ -892,11 +892,11 @@ packages:
     resolution: {integrity: sha512-boX+qHg2O24l9braMOC0RQHCwV+dLoQVqRZcvevKxETAPO9HK8mo2pgR/w7bdB9yfFbBjucxs8x4uEIgfRKWJw==}
     engines: {node: 12.* || 14.* || >= 16}
 
-  '@embroider/hbs-loader@3.0.3':
-    resolution: {integrity: sha512-sI2K3/III1WGGxS+aIf8uW5tgcNiE7APNhThn2ZTwqU47fK20Uz8TJZhst0GfNZFsCsmuQMRUikRJvQU8naSWA==}
+  '@embroider/hbs-loader@3.0.4':
+    resolution: {integrity: sha512-k7ZWqOzZGQHyCciaPs87K5/nlaFOtXbLaRhjrBpSZJafXxbu21tYQWDjsQG5sfNhmX+izjQeZ/7fcimpG08edg==}
     engines: {node: 12.* || 14.* || >= 16}
     peerDependencies:
-      '@embroider/core': ^3.4.0
+      '@embroider/core': ^3.5.7
       webpack: ^5
 
   '@embroider/macros@1.18.0':
@@ -915,15 +915,19 @@ packages:
     resolution: {integrity: sha512-8untWEvGy6av/oYibqZWMz/yB+LHsKxEOoUZiLvcpFwWj2Sipc0DcXeTJQZQZ++otNkLCWyDrDhOLrOkgjOPSg==}
     engines: {node: 12.* || 14.* || >= 16}
 
+  '@embroider/shared-internals@2.9.1':
+    resolution: {integrity: sha512-8PJBsa37GD++SAfHf8rcJzlwDwuAQCBo0fr+eGxg9l8XhBXsTnE/7706dM4OqWew9XNqRXn39wfIGHZoBpjNMw==}
+    engines: {node: 12.* || 14.* || >= 16}
+
   '@embroider/shared-internals@3.0.0':
     resolution: {integrity: sha512-5J5ipUMCAinQS38WW7wedruq5Z4VnHvNo+ZgOduw0PtI9w0CQWx7/HE+98PBDW8jclikeF+aHwF317vc1hwuzg==}
     engines: {node: 12.* || 14.* || >= 16}
 
-  '@embroider/webpack@4.1.0':
-    resolution: {integrity: sha512-sdxOUSP/7VmG/7PHb77IRyaBcu8771ABrcbqOo+5gvbhFMurq+73jAwxCWyKcKJRY8IedR8d8XENSs2hEMIgQQ==}
+  '@embroider/webpack@4.1.1':
+    resolution: {integrity: sha512-L/Og9W9BhHo0RhRsxJjfDMIBZQvuAP9kcUw7ysG+yfblCmRpQarWu+3IyKEBpPt0B2BKfnJY1fW6WtyPKCov3Q==}
     engines: {node: 12.* || 14.* || >= 16}
     peerDependencies:
-      '@embroider/core': ^3.5.2
+      '@embroider/core': ^3.5.7
       webpack: ^5.0.0
 
   '@esbuild/aix-ppc64@0.25.5':
@@ -10518,7 +10522,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@embroider/babel-loader-9@3.1.1(@embroider/core@4.1.0)(supports-color@8.1.1)(webpack@5.99.9(esbuild@0.25.5))':
+  '@embroider/babel-loader-9@3.1.2(@embroider/core@4.1.0)(supports-color@8.1.1)(webpack@5.99.9(esbuild@0.25.5))':
     dependencies:
       '@babel/core': 7.27.1(supports-color@8.1.1)
       '@embroider/core': 4.1.0
@@ -10620,7 +10624,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@embroider/hbs-loader@3.0.3(@embroider/core@4.1.0)(webpack@5.99.9(esbuild@0.25.5))':
+  '@embroider/hbs-loader@3.0.4(@embroider/core@4.1.0)(webpack@5.99.9(esbuild@0.25.5))':
     dependencies:
       '@embroider/core': 4.1.0
       webpack: 5.99.9(esbuild@0.25.5)
@@ -10660,7 +10664,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@embroider/shared-internals@2.9.0(supports-color@8.1.1)':
+  '@embroider/shared-internals@2.9.1(supports-color@8.1.1)':
     dependencies:
       babel-import-util: 2.1.1
       debug: 4.4.1(supports-color@8.1.1)
@@ -10695,14 +10699,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@embroider/webpack@4.1.0(@embroider/core@4.1.0)(webpack@5.99.9(esbuild@0.25.5))':
+  '@embroider/webpack@4.1.1(@embroider/core@4.1.0)(webpack@5.99.9(esbuild@0.25.5))':
     dependencies:
       '@babel/core': 7.27.1(supports-color@8.1.1)
       '@babel/preset-env': 7.27.2(@babel/core@7.27.1)(supports-color@8.1.1)
-      '@embroider/babel-loader-9': 3.1.1(@embroider/core@4.1.0)(supports-color@8.1.1)(webpack@5.99.9(esbuild@0.25.5))
+      '@embroider/babel-loader-9': 3.1.2(@embroider/core@4.1.0)(supports-color@8.1.1)(webpack@5.99.9(esbuild@0.25.5))
       '@embroider/core': 4.1.0
-      '@embroider/hbs-loader': 3.0.3(@embroider/core@4.1.0)(webpack@5.99.9(esbuild@0.25.5))
-      '@embroider/shared-internals': 2.9.0(supports-color@8.1.1)
+      '@embroider/hbs-loader': 3.0.4(@embroider/core@4.1.0)(webpack@5.99.9(esbuild@0.25.5))
+      '@embroider/shared-internals': 2.9.1(supports-color@8.1.1)
       '@types/supports-color': 8.1.3
       assert-never: 1.4.0
       babel-loader: 8.4.1(@babel/core@7.27.1)(webpack@5.99.9(esbuild@0.25.5))
@@ -12312,7 +12316,7 @@ snapshots:
   '@vercel/nft@0.21.0':
     dependencies:
       '@mapbox/node-pre-gyp': 1.0.11(supports-color@9.4.0)
-      acorn: 8.14.1
+      acorn: 8.15.0
       async-sema: 3.1.1
       bindings: 1.5.0
       estree-walker: 2.0.2
@@ -12330,7 +12334,7 @@ snapshots:
     dependencies:
       '@mapbox/node-pre-gyp': 1.0.11(supports-color@9.4.0)
       '@rollup/pluginutils': 4.2.1
-      acorn: 8.14.1
+      acorn: 8.15.0
       async-sema: 3.1.1
       bindings: 1.5.0
       estree-walker: 2.0.2
@@ -12455,7 +12459,7 @@ snapshots:
 
   acorn-walk@8.3.4:
     dependencies:
-      acorn: 8.14.1
+      acorn: 8.15.0
 
   acorn@5.7.4: {}
 
@@ -20211,7 +20215,7 @@ snapshots:
 
   terser@4.8.1:
     dependencies:
-      acorn: 8.14.1
+      acorn: 8.15.0
       commander: 2.20.3
       source-map: 0.6.1
       source-map-support: 0.5.21
@@ -20219,7 +20223,7 @@ snapshots:
   terser@5.39.2:
     dependencies:
       '@jridgewell/source-map': 0.3.6
-      acorn: 8.14.1
+      acorn: 8.15.0
       commander: 2.20.3
       source-map-support: 0.5.21
 
@@ -20493,7 +20497,7 @@ snapshots:
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
       '@types/node': 16.18.126
-      acorn: 8.14.1
+      acorn: 8.15.0
       acorn-walk: 8.3.4
       arg: 4.1.3
       create-require: 1.1.1
