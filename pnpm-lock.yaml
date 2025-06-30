@@ -166,7 +166,7 @@ importers:
         version: 17.20.0(eslint@9.29.0)(typescript@4.9.5)
       eslint-plugin-qunit:
         specifier: ^8.1.2
-        version: 8.1.2(eslint@9.29.0)
+        version: 8.2.2(eslint@9.29.0)
       execa:
         specifier: 9.6.0
         version: 9.6.0
@@ -4428,8 +4428,8 @@ packages:
     peerDependencies:
       eslint: '>=8.23.0'
 
-  eslint-plugin-qunit@8.1.2:
-    resolution: {integrity: sha512-2gDQdHlQW8GVXD7YYkO8vbm9Ldc60JeGMuQN5QlD48OeZ8znBvvoHWZZMeXjvoDPReGaLEvyuWrDtrI8bDbcqw==}
+  eslint-plugin-qunit@8.2.2:
+    resolution: {integrity: sha512-C56SpGPyUOgXWaTiQbwKaDQHEF7MbKUmWtKkIybK5vL3Dqk+4U3ng0wARIUxsk2YNPFzPvlQcMMP6jlQz2NlvQ==}
     engines: {node: ^16.0.0 || ^18.0.0 || >=20.0.0}
 
   eslint-scope@5.1.1:
@@ -4457,10 +4457,6 @@ packages:
   eslint-visitor-keys@3.4.3:
     resolution: {integrity: sha512-wpc+LXeiyiisxPlEkUzU6svyS1frIO3Mgxj1fdy7Pm8Ygzguax2N3Fa/D/ag1WqbOprdI+uY6wMUl8/a2G+iag==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-
-  eslint-visitor-keys@4.2.0:
-    resolution: {integrity: sha512-UyLnSehNt62FFhSwjZlHmeokpRK59rcz29j+F1/aDgbkbRTk7wIc9XzdoasMUbRNKDM0qQt/+BJ4BrpFeABemw==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   eslint-visitor-keys@4.2.1:
     resolution: {integrity: sha512-Uhdk5sfqcee/9H/rCOJikYz67o0a2Tw2hGRPOG2Y1R2dg7brRe1uG0yaNQDHu+TO/uQPF/5eCapvYSmHUjt7JQ==}
@@ -12328,7 +12324,7 @@ snapshots:
   '@typescript-eslint/visitor-keys@8.33.1':
     dependencies:
       '@typescript-eslint/types': 8.33.1
-      eslint-visitor-keys: 4.2.0
+      eslint-visitor-keys: 4.2.1
 
   '@vercel/nft@0.21.0':
     dependencies:
@@ -15448,7 +15444,7 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-qunit@8.1.2(eslint@9.29.0):
+  eslint-plugin-qunit@8.2.2(eslint@9.29.0):
     dependencies:
       eslint-utils: 3.0.0(eslint@9.29.0)
       requireindex: 1.2.0
@@ -15478,8 +15474,6 @@ snapshots:
   eslint-visitor-keys@2.1.0: {}
 
   eslint-visitor-keys@3.4.3: {}
-
-  eslint-visitor-keys@4.2.0: {}
 
   eslint-visitor-keys@4.2.1: {}
 
