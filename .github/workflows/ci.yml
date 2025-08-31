@@ -41,8 +41,10 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           DEBUG: true
           VOLTA_FEATURE_PNPM: 1
-          PUPPETEER_CACHE_DIR: /home/runner/.cache/puppeteer
-        run: npx puppeteer browsers install chrome@121.0.6167.85 && pnpm staging:deploy
+        run: |
+          npx puppeteer browsers install chrome@121.0.6167.85
+          cd node_modules/netlify-git-branch && npx puppeteer browsers install chrome@121.0.6167.85 && cd ../..
+          pnpm staging:deploy
       - run: git log --pretty=%h -n1 > dist/REVISION.txt
       - name: Upload Build for next job
         uses: actions/upload-artifact@v4
