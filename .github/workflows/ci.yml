@@ -41,7 +41,7 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           DEBUG: true
           VOLTA_FEATURE_PNPM: 1
-        run: pnpm staging:deploy
+        run: node node_modules/puppeteer/install.mjs && pnpm staging:deploy
       - run: git log --pretty=%h -n1 > dist/REVISION.txt
       - name: Upload Build for next job
         uses: actions/upload-artifact@v4
