@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@babel/eslint-parser':
-        specifier: 7.28.0
-        version: 7.28.0(@babel/core@7.28.0)(eslint@9.34.0)
+        specifier: 7.28.4
+        version: 7.28.4(@babel/core@7.28.0)(eslint@9.34.0)
       '@babel/plugin-proposal-decorators':
         specifier: ^7.27.1
         version: 7.28.0(@babel/core@7.28.0)
@@ -233,8 +233,8 @@ packages:
     resolution: {integrity: sha512-UlLAnTPrFdNGoFtbSXwcGFQBtQZJCNjaN6hQNP3UPvuNXT1i82N26KL3dZeIpNalWywr9IuQuncaAfUaS1g6sQ==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/eslint-parser@7.28.0':
-    resolution: {integrity: sha512-N4ntErOlKvcbTt01rr5wj3y55xnIdx1ymrfIr8C2WnM1Y9glFgWaGDEULJIazOX3XM9NRzhfJ6zZnQ1sBNWU+w==}
+  '@babel/eslint-parser@7.28.4':
+    resolution: {integrity: sha512-Aa+yDiH87980jR6zvRfFuCR1+dLb00vBydhTL+zI992Rz/wQhSvuxjmOOuJOgO3XmakO6RykRGD2S1mq1AtgHA==}
     engines: {node: ^10.13.0 || ^12.13.0 || >=14.0.0}
     peerDependencies:
       '@babel/core': ^7.11.0
@@ -7735,7 +7735,7 @@ packages:
   puppeteer@21.11.0:
     resolution: {integrity: sha512-9jTHuYe22TD3sNxy0nEIzC7ZrlRnDgeX3xPkbS7PnbdwYjl2o/z/YuCrRBwezdKpbTDTJ4VqIggzNyeRcKq3cg==}
     engines: {node: '>=16.13.2'}
-    deprecated: < 24.9.0 is no longer supported
+    deprecated: < 24.10.2 is no longer supported
     hasBin: true
 
   puppeteer@24.17.0:
@@ -9609,7 +9609,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@babel/eslint-parser@7.28.0(@babel/core@7.28.0)(eslint@9.34.0)':
+  '@babel/eslint-parser@7.28.4(@babel/core@7.28.0)(eslint@9.34.0)':
     dependencies:
       '@babel/core': 7.28.0
       '@nicolo-ribaudo/eslint-scope-5-internals': 5.1.1-v1
@@ -16452,7 +16452,7 @@ snapshots:
   ember-eslint-parser@0.5.9(@babel/core@7.28.0)(eslint@9.34.0):
     dependencies:
       '@babel/core': 7.28.0
-      '@babel/eslint-parser': 7.28.0(@babel/core@7.28.0)(eslint@9.34.0)
+      '@babel/eslint-parser': 7.28.4(@babel/core@7.28.0)(eslint@9.34.0)
       '@glimmer/syntax': 0.92.3
       content-tag: 2.0.3
       eslint-scope: 7.2.2
