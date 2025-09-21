@@ -162,8 +162,8 @@ importers:
         specifier: 12.7.4
         version: 12.7.4(@babel/core@7.28.0)(eslint@9.35.0)
       eslint-plugin-n:
-        specifier: 17.23.0
-        version: 17.23.0(eslint@9.35.0)(typescript@4.9.5)
+        specifier: 17.23.1
+        version: 17.23.1(eslint@9.35.0)(typescript@4.9.5)
       eslint-plugin-qunit:
         specifier: ^8.1.2
         version: 8.2.5(eslint@9.35.0)
@@ -1205,12 +1205,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
-
-  '@eslint-community/eslint-utils@4.7.0':
-    resolution: {integrity: sha512-dyybb3AcajC7uha6CvhdVRJqaKyn7w2YKqKyAN37NKYgZT36w+iRb0Dymmc5qEJ549c/S31cMMSFd75bteCpCw==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    peerDependencies:
-      eslint: ^6.0.0 || ^7.0.0 || >=8.0.0
 
   '@eslint-community/eslint-utils@4.9.0':
     resolution: {integrity: sha512-ayVFHdtZ+hsq1t2Dy24wCmGXGe4q9Gu3smhLYALJrr473ZH27MsnSL+LKUlimp4BWJqMDMLmPpx/Q9R3OAlL4g==}
@@ -4701,8 +4695,8 @@ packages:
     peerDependencies:
       eslint: '>=8'
 
-  eslint-plugin-n@17.23.0:
-    resolution: {integrity: sha512-aPePGxUr5LezcXmMRBF83eK1MmqUYY1NdLdHC+jdpfc5b98eL7yDXY20gXJ6DcTxrHBhrLsfYYqo7J+m0h9YXQ==}
+  eslint-plugin-n@17.23.1:
+    resolution: {integrity: sha512-68PealUpYoHOBh332JLLD9Sj7OQUDkFpmcfqt8R9sySfFSeuGJjMTJQvCRRB96zO3A/PELRLkPrzsHmzEFQQ5A==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=8.23.0'
@@ -12167,11 +12161,6 @@ snapshots:
   '@esbuild/win32-x64@0.25.10':
     optional: true
 
-  '@eslint-community/eslint-utils@4.7.0(eslint@9.35.0)':
-    dependencies:
-      eslint: 9.35.0
-      eslint-visitor-keys: 3.4.3
-
   '@eslint-community/eslint-utils@4.9.0(eslint@9.35.0)':
     dependencies:
       eslint: 9.35.0
@@ -16973,14 +16962,14 @@ snapshots:
 
   eslint-plugin-es-x@7.8.0(eslint@9.35.0):
     dependencies:
-      '@eslint-community/eslint-utils': 4.7.0(eslint@9.35.0)
+      '@eslint-community/eslint-utils': 4.9.0(eslint@9.35.0)
       '@eslint-community/regexpp': 4.12.1
       eslint: 9.35.0
       eslint-compat-utils: 0.5.1(eslint@9.35.0)
 
-  eslint-plugin-n@17.23.0(eslint@9.35.0)(typescript@4.9.5):
+  eslint-plugin-n@17.23.1(eslint@9.35.0)(typescript@4.9.5):
     dependencies:
-      '@eslint-community/eslint-utils': 4.7.0(eslint@9.35.0)
+      '@eslint-community/eslint-utils': 4.9.0(eslint@9.35.0)
       enhanced-resolve: 5.18.1
       eslint: 9.35.0
       eslint-plugin-es-x: 7.8.0(eslint@9.35.0)
