@@ -189,8 +189,8 @@ importers:
         specifier: ^2.0.5
         version: 2.0.5(prettier@3.6.2)
       puppeteer:
-        specifier: 24.22.0
-        version: 24.22.0(typescript@4.9.5)
+        specifier: 24.22.2
+        version: 24.22.2(typescript@4.9.5)
       qunit:
         specifier: 2.24.1
         version: 2.24.1
@@ -7753,8 +7753,8 @@ packages:
     resolution: {integrity: sha512-ArbnyA3U5SGHokEvkfWjW+O8hOxV1RSJxOgriX/3A4xZRqixt9ZFHD0yPgZQF05Qj0oAqi8H/7stDorjoHY90Q==}
     engines: {node: '>=16.13.2'}
 
-  puppeteer-core@24.22.0:
-    resolution: {integrity: sha512-oUeWlIg0pMz8YM5pu0uqakM+cCyYyXkHBxx9di9OUELu9X9+AYrNGGRLK9tNME3WfN3JGGqQIH3b4/E9LGek/w==}
+  puppeteer-core@24.22.2:
+    resolution: {integrity: sha512-J1WBOWE2AU57ntwH8EJe10xlpfdimMjmYDDVHna2iiBn85FemU7H6s46Thn+wb7VKqN+YeyYhSjDNE0+R8phoQ==}
     engines: {node: '>=18'}
 
   puppeteer@21.11.0:
@@ -7763,8 +7763,8 @@ packages:
     deprecated: < 24.10.2 is no longer supported
     hasBin: true
 
-  puppeteer@24.22.0:
-    resolution: {integrity: sha512-QabGIvu7F0hAMiKGHZCIRHMb6UoH0QAJA2OaqxEU2tL5noXPrxUcotg2l3ttOA4p1PFnVIGkr6PXRAWlM2evVQ==}
+  puppeteer@24.22.2:
+    resolution: {integrity: sha512-tsjIR24nAp/LfEhnBLw11yc0LxzwmB67obPrgqpDZxhub4i5nHxn9pKezcm46d583gdhotSETSA3q3Hbj+ZdNQ==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -20558,7 +20558,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  puppeteer-core@24.22.0:
+  puppeteer-core@24.22.2:
     dependencies:
       '@puppeteer/browsers': 2.10.10
       chromium-bidi: 8.0.0(devtools-protocol@0.0.1495869)
@@ -20585,13 +20585,13 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  puppeteer@24.22.0(typescript@4.9.5):
+  puppeteer@24.22.2(typescript@4.9.5):
     dependencies:
       '@puppeteer/browsers': 2.10.10
       chromium-bidi: 8.0.0(devtools-protocol@0.0.1495869)
       cosmiconfig: 9.0.0(typescript@4.9.5)
       devtools-protocol: 0.0.1495869
-      puppeteer-core: 24.22.0
+      puppeteer-core: 24.22.2
       typed-query-selector: 2.12.0
     transitivePeerDependencies:
       - bare-buffer
