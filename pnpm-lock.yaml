@@ -82,7 +82,7 @@ importers:
         version: 3.3.3(ember-cli@6.7.0(ejs@3.1.10)(handlebars@4.7.8)(underscore@1.13.7))
       ember-cli-deprecation-workflow:
         specifier: ^3.3.0
-        version: 3.3.0(ember-source@6.7.0(@glimmer/component@2.0.0)(rsvp@4.8.5))
+        version: 3.4.0(ember-source@6.7.0(@glimmer/component@2.0.0)(rsvp@4.8.5))
       ember-cli-htmlbars:
         specifier: 6.3.0
         version: 6.3.0
@@ -4393,11 +4393,11 @@ packages:
     peerDependencies:
       ember-cli: ^3.2.0 || >=4.0.0
 
-  ember-cli-deprecation-workflow@3.3.0:
-    resolution: {integrity: sha512-AZTOv+xftPXNov+X7k/JZFMd5/Suzkuvg5Zc1W3MoJb+kjIwW/3sieBOXEbt7aMq9Px4ixb9FSrFPNlzggV4qA==}
+  ember-cli-deprecation-workflow@3.4.0:
+    resolution: {integrity: sha512-Ksrmib4mjD4xa0dqFgxJLBwkSp9EVYH6jSqe2NpODlBKEAZhsVzQj5wKPnC1dXfK3Erq/r1Fh3q4g46FZiCUiw==}
     engines: {node: '>= 18'}
     peerDependencies:
-      ember-source: '>= 4.0.0'
+      ember-source: '>= 3.28.0'
 
   ember-cli-get-component-path-option@1.0.0:
     resolution: {integrity: sha512-k47TDwcJ2zPideBCZE8sCiShSxQSpebY2BHcX2DdipMmBox5gsfyVrbKJWIHeSTTKyEUgmBIvQkqTOozEziCZA==}
@@ -9694,26 +9694,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@babel/core@7.28.4(supports-color@8.1.1)':
-    dependencies:
-      '@babel/code-frame': 7.27.1
-      '@babel/generator': 7.28.3
-      '@babel/helper-compilation-targets': 7.27.2
-      '@babel/helper-module-transforms': 7.28.3(@babel/core@7.28.4(supports-color@8.1.1))(supports-color@8.1.1)
-      '@babel/helpers': 7.28.4
-      '@babel/parser': 7.28.4
-      '@babel/template': 7.27.2
-      '@babel/traverse': 7.28.4(supports-color@8.1.1)
-      '@babel/types': 7.28.4
-      '@jridgewell/remapping': 2.3.5
-      convert-source-map: 2.0.0
-      debug: 4.4.3(supports-color@8.1.1)
-      gensync: 1.0.0-beta.2
-      json5: 2.2.3
-      semver: 6.3.1
-    transitivePeerDependencies:
-      - supports-color
-
   '@babel/eslint-parser@7.28.4(@babel/core@7.28.4)(eslint@9.36.0)':
     dependencies:
       '@babel/core': 7.28.4
@@ -9725,7 +9705,7 @@ snapshots:
   '@babel/generator@7.28.0':
     dependencies:
       '@babel/parser': 7.28.4
-      '@babel/types': 7.28.4
+      '@babel/types': 7.28.2
       '@jridgewell/gen-mapping': 0.3.12
       '@jridgewell/trace-mapping': 0.3.29
       jsesc: 3.1.0
@@ -10054,15 +10034,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@babel/helper-module-transforms@7.28.3(@babel/core@7.28.4(supports-color@8.1.1))(supports-color@8.1.1)':
-    dependencies:
-      '@babel/core': 7.28.4(supports-color@8.1.1)
-      '@babel/helper-module-imports': 7.27.1(supports-color@8.1.1)
-      '@babel/helper-validator-identifier': 7.27.1
-      '@babel/traverse': 7.28.4(supports-color@8.1.1)
-    transitivePeerDependencies:
-      - supports-color
-
   '@babel/helper-module-transforms@7.28.3(@babel/core@7.28.4)':
     dependencies:
       '@babel/core': 7.28.4
@@ -10189,12 +10160,12 @@ snapshots:
   '@babel/helpers@7.27.1':
     dependencies:
       '@babel/template': 7.27.2
-      '@babel/types': 7.28.4
+      '@babel/types': 7.28.0
 
   '@babel/helpers@7.28.2':
     dependencies:
       '@babel/template': 7.27.2
-      '@babel/types': 7.28.4
+      '@babel/types': 7.28.2
 
   '@babel/helpers@7.28.4':
     dependencies:
@@ -12870,9 +12841,9 @@ snapshots:
 
   '@embroider/babel-loader-9@3.1.2(@embroider/core@4.2.3)(supports-color@8.1.1)(webpack@5.102.0(esbuild@0.25.10))':
     dependencies:
-      '@babel/core': 7.28.4(supports-color@8.1.1)
+      '@babel/core': 7.27.1(supports-color@8.1.1)
       '@embroider/core': 4.2.3
-      babel-loader: 9.2.1(@babel/core@7.28.4(supports-color@8.1.1))(webpack@5.102.0(esbuild@0.25.10))
+      babel-loader: 9.2.1(@babel/core@7.27.1(supports-color@8.1.1))(webpack@5.102.0(esbuild@0.25.10))
     transitivePeerDependencies:
       - supports-color
       - webpack
@@ -13493,7 +13464,7 @@ snapshots:
   '@jridgewell/gen-mapping@0.3.12':
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.4
-      '@jridgewell/trace-mapping': 0.3.31
+      '@jridgewell/trace-mapping': 0.3.29
 
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:
@@ -13504,7 +13475,7 @@ snapshots:
     dependencies:
       '@jridgewell/set-array': 1.2.1
       '@jridgewell/sourcemap-codec': 1.5.0
-      '@jridgewell/trace-mapping': 0.3.31
+      '@jridgewell/trace-mapping': 0.3.25
 
   '@jridgewell/remapping@2.3.5':
     dependencies:
@@ -15134,9 +15105,9 @@ snapshots:
       schema-utils: 2.7.1
       webpack: 5.102.0(esbuild@0.25.10)
 
-  babel-loader@9.2.1(@babel/core@7.28.4(supports-color@8.1.1))(webpack@5.102.0(esbuild@0.25.10)):
+  babel-loader@9.2.1(@babel/core@7.27.1(supports-color@8.1.1))(webpack@5.102.0(esbuild@0.25.10)):
     dependencies:
-      '@babel/core': 7.28.4(supports-color@8.1.1)
+      '@babel/core': 7.27.1(supports-color@8.1.1)
       find-cache-dir: 4.0.0
       schema-utils: 4.3.2
       webpack: 5.102.0(esbuild@0.25.10)
@@ -17185,10 +17156,10 @@ snapshots:
       resolve: 1.22.10
       semver: 5.7.2
 
-  ember-cli-deprecation-workflow@3.3.0(ember-source@6.7.0(@glimmer/component@2.0.0)(rsvp@4.8.5)):
+  ember-cli-deprecation-workflow@3.4.0(ember-source@6.7.0(@glimmer/component@2.0.0)(rsvp@4.8.5)):
     dependencies:
-      '@babel/core': 7.27.1
-      ember-cli-babel: 8.2.0(@babel/core@7.27.1)
+      '@babel/core': 7.28.4
+      ember-cli-babel: 8.2.0(@babel/core@7.28.4)
       ember-source: 6.7.0(@glimmer/component@2.0.0)(rsvp@4.8.5)
     transitivePeerDependencies:
       - supports-color
