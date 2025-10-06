@@ -47,7 +47,7 @@
     "broccoli-funnel": "3.0.8",
     "broccoli-merge-trees": "4.2.0",
     "comlink": "4.4.2",
-    "ember-auto-import": "2.10.1",
+    "ember-auto-import": "2.11.0",
     "ember-cli": "6.7.0",
     "ember-cli-app-version": "7.0.0",
     "ember-cli-babel": "8.2.0",
