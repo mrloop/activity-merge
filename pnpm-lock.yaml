@@ -34,7 +34,7 @@ importers:
         version: 1.19.1
       '@embroider/webpack':
         specifier: 4.1.1
-        version: 4.1.1(@embroider/core@4.2.4)(webpack@5.102.0(esbuild@0.25.10))
+        version: 4.1.1(@embroider/core@4.2.4)(webpack@5.102.1(esbuild@0.25.10))
       '@eslint/compat':
         specifier: ^1.2.9
         version: 1.4.0(eslint@9.37.0)
@@ -67,7 +67,7 @@ importers:
         version: 4.4.2
       ember-auto-import:
         specifier: 2.11.1
-        version: 2.11.1(webpack@5.102.0(esbuild@0.25.10))
+        version: 2.11.1(webpack@5.102.1(esbuild@0.25.10))
       ember-cli:
         specifier: 6.7.1
         version: 6.7.1(ejs@3.1.10)(handlebars@4.7.8)(underscore@1.13.7)
@@ -109,7 +109,7 @@ importers:
         version: 3.0.1(ember-source@6.7.0(@glimmer/component@2.0.0)(rsvp@4.8.5))
       ember-metrics:
         specifier: 2.0.0
-        version: 2.0.0(@ember/string@4.0.1)(ember-source@6.7.0(@glimmer/component@2.0.0)(rsvp@4.8.5))(webpack@5.102.0(esbuild@0.25.10))
+        version: 2.0.0(@ember/string@4.0.1)(ember-source@6.7.0(@glimmer/component@2.0.0)(rsvp@4.8.5))(webpack@5.102.1(esbuild@0.25.10))
       ember-metrics-simple-analytics:
         specifier: 1.0.0
         version: 1.0.0
@@ -199,10 +199,10 @@ importers:
         version: 3.5.0
       string-replace-loader:
         specifier: 3.2.0
-        version: 3.2.0(webpack@5.102.0(esbuild@0.25.10))
+        version: 3.2.0(webpack@5.102.1(esbuild@0.25.10))
       webpack:
-        specifier: 5.102.0
-        version: 5.102.0(esbuild@0.25.10)
+        specifier: 5.102.1
+        version: 5.102.1(esbuild@0.25.10)
 
 packages:
 
@@ -2325,9 +2325,6 @@ packages:
   '@types/node@22.15.21':
     resolution: {integrity: sha512-EV/37Td6c+MgKAbkcLG6vqZ2zEYHD7bvSrzqqs2RIhbA6w3x+Dqz8MZM3sP6kGTeLrdoOgKZe+Xja7tUB2DNkQ==}
 
-  '@types/node@24.5.2':
-    resolution: {integrity: sha512-FYxk1I7wPv3K2XBaoyH2cTnocQEu8AOZ60hPbsyukMPLv5/5qr7V1i8PLHdl6Zf87I+xZXFvPCXYjiTFq+YSDQ==}
-
   '@types/node@24.6.2':
     resolution: {integrity: sha512-d2L25Y4j+W3ZlNAeMKcy7yDsK425ibcAOO2t7aPTz6gNMH0z2GThtwENCDc0d/Pw9wgyRqE5Px1wkV7naz8ang==}
 
@@ -3003,6 +3000,10 @@ packages:
     resolution: {integrity: sha512-5T6P4xPgpp0YDFvSWwEZ4NoE3aM4QBQXDzmVbraCkFj8zHM+mba8SyqB5DbZWyR7mYHo6Y7BdQo3MoA4m0TeQg==}
     engines: {node: '>=0.10.0'}
 
+  baseline-browser-mapping@2.8.16:
+    resolution: {integrity: sha512-OMu3BGQ4E7P1ErFsIPpbJh0qvDudM/UuJeHgkAvfWe+0HFJCXh+t/l8L6fVLR55RI/UbKrVLnAXZSVwd9ysWYw==}
+    hasBin: true
+
   baseline-browser-mapping@2.8.8:
     resolution: {integrity: sha512-be0PUaPsQX/gPWWgFsdD+GFzaoig5PXaUC1xLkQiYdDnANU8sMnHoQd8JhbJQuvTWrWLyeFN9Imb5Qtfvr4RrQ==}
     hasBin: true
@@ -3245,6 +3246,11 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
 
+  browserslist@4.26.3:
+    resolution: {integrity: sha512-lAUU+02RFBuCKQPj/P6NgjlbCnLBMp4UtgTx7vNHd3XSIJF87s9a5rA3aH2yw3GS9DqZAUbOtZdCCiZeVRqt0w==}
+    engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
+    hasBin: true
+
   bser@2.1.1:
     resolution: {integrity: sha512-gQxTNE/GAfIIrmHLUE3oJyp5FO6HRBfhjnw4/wMmA63ZGDJnWBmgY/lyQBpnDUkGmAhbSe39tx2d/iTOAfglwQ==}
 
@@ -3356,6 +3362,9 @@ packages:
 
   caniuse-lite@1.0.30001745:
     resolution: {integrity: sha512-ywt6i8FzvdgrrrGbr1jZVObnVv6adj+0if2/omv9cmR2oiZs30zL4DIyaptKcbOrBdOIc74QTMoJvSE2QHh5UQ==}
+
+  caniuse-lite@1.0.30001749:
+    resolution: {integrity: sha512-0rw2fJOmLfnzCRbkm8EyHL8SvI2Apu5UbnQuTsJ0ClgrH8hcwFooJ1s5R0EP8o8aVrFu8++ae29Kt9/gZAZp/Q==}
 
   capture-exit@2.0.0:
     resolution: {integrity: sha512-PiT/hQmTonHhl/HFGN+Lx3JJUznrVYJ3+AQsnthneZbvW7x+f08Tk7yLJTLEOUvBTbduLeeBkxEaYXUOUrRq6g==}
@@ -8202,6 +8211,10 @@ packages:
     resolution: {integrity: sha512-Gn/JaSk/Mt9gYubxTtSn/QCV4em9mpAPiR1rqy/Ocu19u/G9J5WWdNoUT4SiV6mFC3y6cxyFcFwdzPM3FgxGAQ==}
     engines: {node: '>= 10.13.0'}
 
+  schema-utils@4.3.3:
+    resolution: {integrity: sha512-eflK8wEtyOE6+hsaRVPxvUKYCpRgzLqDTb8krvAsRIwOGlHoSgYLgBXoubGgLd2fT41/OUYdb48v4k4WWHQurA==}
+    engines: {node: '>= 10.13.0'}
+
   seek-bzip@1.0.6:
     resolution: {integrity: sha512-e1QtP3YL5tWww8uKaOCQ18UxIT2laNBXHjV/S2WYCiK4udiv8lkG89KRIoCjUagnAmCBurjF4zEVX2ByBbnCjQ==}
     hasBin: true
@@ -9057,9 +9070,6 @@ packages:
   undici-types@6.21.0:
     resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
 
-  undici-types@7.12.0:
-    resolution: {integrity: sha512-goOacqME2GYyOZZfb5Lgtu+1IDmAlAEu5xnD3+xTzS10hT0vzpf0SPjkXwAw9Jm+4n/mQGDP3LO8CPbYROeBfQ==}
-
   undici-types@7.13.0:
     resolution: {integrity: sha512-Ov2Rr9Sx+fRgagJ5AX0qvItZG/JKKoBRAVITs1zk7IqZGTJUwgUr7qoYBpWwakpWilTZFM98rG/AFRocu10iIQ==}
 
@@ -9274,8 +9284,8 @@ packages:
     resolution: {integrity: sha512-yd1RBzSGanHkitROoPFd6qsrxt+oFhg/129YzheDGqeustzX0vTZJZsSsQjVQC4yzBQ56K55XU8gaNCtIzOnTg==}
     engines: {node: '>=10.13.0'}
 
-  webpack@5.102.0:
-    resolution: {integrity: sha512-hUtqAR3ZLVEYDEABdBioQCIqSoguHbFn1K7WlPPWSuXmx0031BD73PSE35jKyftdSh4YLDoQNgK4pqBt5Q82MA==}
+  webpack@5.102.1:
+    resolution: {integrity: sha512-7h/weGm9d/ywQ6qzJ+Xy+r9n/3qgp/thalBbpOi5i223dPXKi04IBtqPN9nTd+jBc7QKfvDbaBnFipYp4sJAUQ==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     peerDependencies:
@@ -12671,11 +12681,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@embroider/babel-loader-9@3.1.2(@embroider/core@4.2.4)(supports-color@8.1.1)(webpack@5.102.0(esbuild@0.25.10))':
+  '@embroider/babel-loader-9@3.1.2(@embroider/core@4.2.4)(supports-color@8.1.1)(webpack@5.102.1(esbuild@0.25.10))':
     dependencies:
       '@babel/core': 7.28.4(supports-color@8.1.1)
       '@embroider/core': 4.2.4
-      babel-loader: 9.2.1(@babel/core@7.28.4(supports-color@8.1.1))(webpack@5.102.0(esbuild@0.25.10))
+      babel-loader: 9.2.1(@babel/core@7.28.4(supports-color@8.1.1))(webpack@5.102.1(esbuild@0.25.10))
     transitivePeerDependencies:
       - supports-color
       - webpack
@@ -12769,10 +12779,10 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@embroider/hbs-loader@3.0.4(@embroider/core@4.2.4)(webpack@5.102.0(esbuild@0.25.10))':
+  '@embroider/hbs-loader@3.0.4(@embroider/core@4.2.4)(webpack@5.102.1(esbuild@0.25.10))':
     dependencies:
       '@embroider/core': 4.2.4
-      webpack: 5.102.0(esbuild@0.25.10)
+      webpack: 5.102.1(esbuild@0.25.10)
 
   '@embroider/macros@1.19.1':
     dependencies:
@@ -12844,32 +12854,32 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@embroider/webpack@4.1.1(@embroider/core@4.2.4)(webpack@5.102.0(esbuild@0.25.10))':
+  '@embroider/webpack@4.1.1(@embroider/core@4.2.4)(webpack@5.102.1(esbuild@0.25.10))':
     dependencies:
       '@babel/core': 7.27.1(supports-color@8.1.1)
       '@babel/preset-env': 7.27.2(@babel/core@7.27.1(supports-color@8.1.1))(supports-color@8.1.1)
-      '@embroider/babel-loader-9': 3.1.2(@embroider/core@4.2.4)(supports-color@8.1.1)(webpack@5.102.0(esbuild@0.25.10))
+      '@embroider/babel-loader-9': 3.1.2(@embroider/core@4.2.4)(supports-color@8.1.1)(webpack@5.102.1(esbuild@0.25.10))
       '@embroider/core': 4.2.4
-      '@embroider/hbs-loader': 3.0.4(@embroider/core@4.2.4)(webpack@5.102.0(esbuild@0.25.10))
+      '@embroider/hbs-loader': 3.0.4(@embroider/core@4.2.4)(webpack@5.102.1(esbuild@0.25.10))
       '@embroider/shared-internals': 2.9.1(supports-color@8.1.1)
       '@types/supports-color': 8.1.3
       assert-never: 1.4.0
-      babel-loader: 8.4.1(@babel/core@7.27.1(supports-color@8.1.1))(webpack@5.102.0(esbuild@0.25.10))
-      css-loader: 5.2.7(webpack@5.102.0(esbuild@0.25.10))
+      babel-loader: 8.4.1(@babel/core@7.27.1(supports-color@8.1.1))(webpack@5.102.1(esbuild@0.25.10))
+      css-loader: 5.2.7(webpack@5.102.1(esbuild@0.25.10))
       csso: 4.2.0
       debug: 4.4.1(supports-color@8.1.1)
       escape-string-regexp: 4.0.0
       fs-extra: 9.1.0
       jsdom: 25.0.1(supports-color@8.1.1)
       lodash: 4.17.21
-      mini-css-extract-plugin: 2.9.2(webpack@5.102.0(esbuild@0.25.10))
+      mini-css-extract-plugin: 2.9.2(webpack@5.102.1(esbuild@0.25.10))
       semver: 7.7.2
       source-map-url: 0.4.1
-      style-loader: 2.0.0(webpack@5.102.0(esbuild@0.25.10))
+      style-loader: 2.0.0(webpack@5.102.1(esbuild@0.25.10))
       supports-color: 8.1.1
       terser: 5.39.2
-      thread-loader: 3.0.4(webpack@5.102.0(esbuild@0.25.10))
-      webpack: 5.102.0(esbuild@0.25.10)
+      thread-loader: 3.0.4(webpack@5.102.1(esbuild@0.25.10))
+      webpack: 5.102.1(esbuild@0.25.10)
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -14356,10 +14366,6 @@ snapshots:
     dependencies:
       undici-types: 6.21.0
 
-  '@types/node@24.5.2':
-    dependencies:
-      undici-types: 7.12.0
-
   '@types/node@24.6.2':
     dependencies:
       undici-types: 7.13.0
@@ -14913,30 +14919,30 @@ snapshots:
 
   babel-import-util@3.0.1: {}
 
-  babel-loader@8.4.1(@babel/core@7.27.1(supports-color@8.1.1))(webpack@5.102.0(esbuild@0.25.10)):
+  babel-loader@8.4.1(@babel/core@7.27.1(supports-color@8.1.1))(webpack@5.102.1(esbuild@0.25.10)):
     dependencies:
       '@babel/core': 7.27.1(supports-color@8.1.1)
       find-cache-dir: 3.3.2
       loader-utils: 2.0.4
       make-dir: 3.1.0
       schema-utils: 2.7.1
-      webpack: 5.102.0(esbuild@0.25.10)
+      webpack: 5.102.1(esbuild@0.25.10)
 
-  babel-loader@8.4.1(@babel/core@7.28.4)(webpack@5.102.0(esbuild@0.25.10)):
+  babel-loader@8.4.1(@babel/core@7.28.4)(webpack@5.102.1(esbuild@0.25.10)):
     dependencies:
       '@babel/core': 7.28.4
       find-cache-dir: 3.3.2
       loader-utils: 2.0.4
       make-dir: 3.1.0
       schema-utils: 2.7.1
-      webpack: 5.102.0(esbuild@0.25.10)
+      webpack: 5.102.1(esbuild@0.25.10)
 
-  babel-loader@9.2.1(@babel/core@7.28.4(supports-color@8.1.1))(webpack@5.102.0(esbuild@0.25.10)):
+  babel-loader@9.2.1(@babel/core@7.28.4(supports-color@8.1.1))(webpack@5.102.1(esbuild@0.25.10)):
     dependencies:
       '@babel/core': 7.28.4(supports-color@8.1.1)
       find-cache-dir: 4.0.0
       schema-utils: 4.3.2
-      webpack: 5.102.0(esbuild@0.25.10)
+      webpack: 5.102.1(esbuild@0.25.10)
 
   babel-plugin-debug-macros@0.3.4(@babel/core@7.27.1):
     dependencies:
@@ -15185,6 +15191,8 @@ snapshots:
       isobject: 3.0.1
       mixin-deep: 1.3.2
       pascalcase: 0.1.1
+
+  baseline-browser-mapping@2.8.16: {}
 
   baseline-browser-mapping@2.8.8: {}
 
@@ -15773,6 +15781,14 @@ snapshots:
       node-releases: 2.0.21
       update-browserslist-db: 1.1.3(browserslist@4.26.2)
 
+  browserslist@4.26.3:
+    dependencies:
+      baseline-browser-mapping: 2.8.16
+      caniuse-lite: 1.0.30001749
+      electron-to-chromium: 1.5.227
+      node-releases: 2.0.21
+      update-browserslist-db: 1.1.3(browserslist@4.26.3)
+
   bser@2.1.1:
     dependencies:
       node-int64: 0.4.0
@@ -15903,6 +15919,8 @@ snapshots:
   caniuse-lite@1.0.30001718: {}
 
   caniuse-lite@1.0.30001745: {}
+
+  caniuse-lite@1.0.30001749: {}
 
   capture-exit@2.0.0:
     dependencies:
@@ -16355,7 +16373,7 @@ snapshots:
 
   crypto-random-string@2.0.0: {}
 
-  css-loader@5.2.7(webpack@5.102.0(esbuild@0.25.10)):
+  css-loader@5.2.7(webpack@5.102.1(esbuild@0.25.10)):
     dependencies:
       icss-utils: 5.1.0(postcss@8.5.3)
       loader-utils: 2.0.4
@@ -16367,7 +16385,7 @@ snapshots:
       postcss-value-parser: 4.2.0
       schema-utils: 3.3.0
       semver: 7.7.2
-      webpack: 5.102.0(esbuild@0.25.10)
+      webpack: 5.102.1(esbuild@0.25.10)
 
   css-tree@1.1.3:
     dependencies:
@@ -16758,7 +16776,7 @@ snapshots:
 
   elegant-spinner@1.0.1: {}
 
-  ember-auto-import@2.11.1(webpack@5.102.0(esbuild@0.25.10)):
+  ember-auto-import@2.11.1(webpack@5.102.1(esbuild@0.25.10)):
     dependencies:
       '@babel/core': 7.28.4
       '@babel/plugin-proposal-class-properties': 7.18.6(@babel/core@7.28.4)
@@ -16768,7 +16786,7 @@ snapshots:
       '@babel/preset-env': 7.28.3(@babel/core@7.28.4)
       '@embroider/macros': 1.19.1
       '@embroider/shared-internals': 2.9.1
-      babel-loader: 8.4.1(@babel/core@7.28.4)(webpack@5.102.0(esbuild@0.25.10))
+      babel-loader: 8.4.1(@babel/core@7.28.4)(webpack@5.102.1(esbuild@0.25.10))
       babel-plugin-ember-modules-api-polyfill: 3.5.0
       babel-plugin-ember-template-compilation: 2.4.1
       babel-plugin-htmlbars-inline-precompile: 5.3.1
@@ -16778,7 +16796,7 @@ snapshots:
       broccoli-merge-trees: 4.2.0
       broccoli-plugin: 4.0.7
       broccoli-source: 3.0.1
-      css-loader: 5.2.7(webpack@5.102.0(esbuild@0.25.10))
+      css-loader: 5.2.7(webpack@5.102.1(esbuild@0.25.10))
       debug: 4.4.3(supports-color@9.4.0)
       fs-extra: 10.1.0
       fs-tree-diff: 2.0.1
@@ -16786,14 +16804,14 @@ snapshots:
       is-subdir: 1.2.0
       js-string-escape: 1.0.1
       lodash: 4.17.21
-      mini-css-extract-plugin: 2.9.2(webpack@5.102.0(esbuild@0.25.10))
+      mini-css-extract-plugin: 2.9.2(webpack@5.102.1(esbuild@0.25.10))
       minimatch: 3.1.2
       parse5: 6.0.1
       pkg-entry-points: 1.1.1
       resolve: 1.22.10
       resolve-package-path: 4.0.3
       semver: 7.7.2
-      style-loader: 2.0.0(webpack@5.102.0(esbuild@0.25.10))
+      style-loader: 2.0.0(webpack@5.102.1(esbuild@0.25.10))
       typescript-memoize: 1.1.1
       walk-sync: 3.0.0
     transitivePeerDependencies:
@@ -17291,11 +17309,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  ember-metrics@2.0.0(@ember/string@4.0.1)(ember-source@6.7.0(@glimmer/component@2.0.0)(rsvp@4.8.5))(webpack@5.102.0(esbuild@0.25.10)):
+  ember-metrics@2.0.0(@ember/string@4.0.1)(ember-source@6.7.0(@glimmer/component@2.0.0)(rsvp@4.8.5))(webpack@5.102.1(esbuild@0.25.10)):
     dependencies:
       '@ember/string': 4.0.1
       broccoli-funnel: 3.0.8
-      ember-auto-import: 2.11.1(webpack@5.102.0(esbuild@0.25.10))
+      ember-auto-import: 2.11.1(webpack@5.102.1(esbuild@0.25.10))
       ember-cli-babel: 7.26.11
       ember-cli-typescript: 5.3.0
       ember-source: 6.7.0(@glimmer/component@2.0.0)(rsvp@4.8.5)
@@ -19483,7 +19501,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 24.5.2
+      '@types/node': 24.6.2
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -20169,11 +20187,11 @@ snapshots:
 
   mimic-response@2.1.0: {}
 
-  mini-css-extract-plugin@2.9.2(webpack@5.102.0(esbuild@0.25.10)):
+  mini-css-extract-plugin@2.9.2(webpack@5.102.1(esbuild@0.25.10)):
     dependencies:
       schema-utils: 4.3.2
       tapable: 2.2.2
-      webpack: 5.102.0(esbuild@0.25.10)
+      webpack: 5.102.1(esbuild@0.25.10)
 
   minimatch@10.0.3:
     dependencies:
@@ -21820,6 +21838,13 @@ snapshots:
       ajv-formats: 2.1.1(ajv@8.17.1)
       ajv-keywords: 5.1.0(ajv@8.17.1)
 
+  schema-utils@4.3.3:
+    dependencies:
+      '@types/json-schema': 7.0.15
+      ajv: 8.17.1
+      ajv-formats: 2.1.1(ajv@8.17.1)
+      ajv-keywords: 5.1.0(ajv@8.17.1)
+
   seek-bzip@1.0.6:
     dependencies:
       commander: 2.20.3
@@ -22206,10 +22231,10 @@ snapshots:
 
   strict-uri-encode@1.1.0: {}
 
-  string-replace-loader@3.2.0(webpack@5.102.0(esbuild@0.25.10)):
+  string-replace-loader@3.2.0(webpack@5.102.1(esbuild@0.25.10)):
     dependencies:
       schema-utils: 4.3.2
-      webpack: 5.102.0(esbuild@0.25.10)
+      webpack: 5.102.1(esbuild@0.25.10)
 
   string-similarity@4.0.4: {}
 
@@ -22337,11 +22362,11 @@ snapshots:
 
   strnum@1.1.2: {}
 
-  style-loader@2.0.0(webpack@5.102.0(esbuild@0.25.10)):
+  style-loader@2.0.0(webpack@5.102.1(esbuild@0.25.10)):
     dependencies:
       loader-utils: 2.0.4
       schema-utils: 3.3.0
-      webpack: 5.102.0(esbuild@0.25.10)
+      webpack: 5.102.1(esbuild@0.25.10)
 
   styled_string@0.0.1: {}
 
@@ -22488,14 +22513,14 @@ snapshots:
       ansi-escapes: 4.3.2
       supports-hyperlinks: 2.3.0
 
-  terser-webpack-plugin@5.3.14(esbuild@0.25.10)(webpack@5.102.0(esbuild@0.25.10)):
+  terser-webpack-plugin@5.3.14(esbuild@0.25.10)(webpack@5.102.1(esbuild@0.25.10)):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.31
       jest-worker: 27.5.1
-      schema-utils: 4.3.2
+      schema-utils: 4.3.3
       serialize-javascript: 6.0.2
       terser: 5.39.2
-      webpack: 5.102.0(esbuild@0.25.10)
+      webpack: 5.102.1(esbuild@0.25.10)
     optionalDependencies:
       esbuild: 0.25.10
 
@@ -22605,14 +22630,14 @@ snapshots:
 
   textextensions@2.6.0: {}
 
-  thread-loader@3.0.4(webpack@5.102.0(esbuild@0.25.10)):
+  thread-loader@3.0.4(webpack@5.102.1(esbuild@0.25.10)):
     dependencies:
       json-parse-better-errors: 1.0.2
       loader-runner: 4.3.0
       loader-utils: 2.0.4
       neo-async: 2.6.2
       schema-utils: 3.3.0
-      webpack: 5.102.0(esbuild@0.25.10)
+      webpack: 5.102.1(esbuild@0.25.10)
 
   through2-filter@3.0.0:
     dependencies:
@@ -22918,8 +22943,6 @@ snapshots:
 
   undici-types@6.21.0: {}
 
-  undici-types@7.12.0: {}
-
   undici-types@7.13.0: {}
 
   unicode-canonical-property-names-ecmascript@2.0.1: {}
@@ -22978,6 +23001,12 @@ snapshots:
   update-browserslist-db@1.1.3(browserslist@4.26.2):
     dependencies:
       browserslist: 4.26.2
+      escalade: 3.2.0
+      picocolors: 1.1.1
+
+  update-browserslist-db@1.1.3(browserslist@4.26.3):
+    dependencies:
+      browserslist: 4.26.3
       escalade: 3.2.0
       picocolors: 1.1.1
 
@@ -23133,7 +23162,7 @@ snapshots:
 
   webpack-sources@3.3.3: {}
 
-  webpack@5.102.0(esbuild@0.25.10):
+  webpack@5.102.1(esbuild@0.25.10):
     dependencies:
       '@types/eslint-scope': 3.7.7
       '@types/estree': 1.0.8
@@ -23143,7 +23172,7 @@ snapshots:
       '@webassemblyjs/wasm-parser': 1.14.1
       acorn: 8.15.0
       acorn-import-phases: 1.0.3(acorn@8.15.0)
-      browserslist: 4.26.2
+      browserslist: 4.26.3
       chrome-trace-event: 1.0.4
       enhanced-resolve: 5.18.1
       es-module-lexer: 1.7.0
@@ -23155,9 +23184,9 @@ snapshots:
       loader-runner: 4.3.0
       mime-types: 2.1.35
       neo-async: 2.6.2
-      schema-utils: 4.3.2
+      schema-utils: 4.3.3
       tapable: 2.3.0
-      terser-webpack-plugin: 5.3.14(esbuild@0.25.10)(webpack@5.102.0(esbuild@0.25.10))
+      terser-webpack-plugin: 5.3.14(esbuild@0.25.10)(webpack@5.102.1(esbuild@0.25.10))
       watchpack: 2.4.4
       webpack-sources: 3.3.3
     transitivePeerDependencies:
