@@ -189,8 +189,8 @@ importers:
         specifier: ^2.0.5
         version: 2.0.5(prettier@3.6.2)
       puppeteer:
-        specifier: 24.26.0
-        version: 24.26.0(typescript@4.9.5)
+        specifier: 24.26.1
+        version: 24.26.1(typescript@4.9.5)
       qunit:
         specifier: 2.24.2
         version: 2.24.2
@@ -7752,8 +7752,8 @@ packages:
     resolution: {integrity: sha512-ArbnyA3U5SGHokEvkfWjW+O8hOxV1RSJxOgriX/3A4xZRqixt9ZFHD0yPgZQF05Qj0oAqi8H/7stDorjoHY90Q==}
     engines: {node: '>=16.13.2'}
 
-  puppeteer-core@24.26.0:
-    resolution: {integrity: sha512-l3aMYhTdSzazZ14rfpNAPGhnYHsd8mwduqybhu5aO/OR+d24P/V/eo8XTB3GB2yX2ZWf9GLAVcx8nnVPFZpP/A==}
+  puppeteer-core@24.26.1:
+    resolution: {integrity: sha512-YHZdo3chJ5b9pTYVnuDuoI3UX/tWJFJyRZvkLbThGy6XeHWC+0KI8iN0UMCkvde5l/YOk3huiVZ/PvwgSbwdrA==}
     engines: {node: '>=18'}
 
   puppeteer@21.11.0:
@@ -7762,8 +7762,8 @@ packages:
     deprecated: < 24.15.0 is no longer supported
     hasBin: true
 
-  puppeteer@24.26.0:
-    resolution: {integrity: sha512-5F4A3dGeuw0jJOR3hGV969TO8oi+JG2TzqxAFvH+gxzxh0ILZmiFskWPlhcWQh5s9HAtgZyktOBDqs6zOi7IKA==}
+  puppeteer@24.26.1:
+    resolution: {integrity: sha512-3RG2UqclzMFolM2fS4bN8t5/EjZ0VwEoAGVxG8PMGeprjLzj+x0U4auH7MQ4B6ftW+u1JUnTTN8ab4ABPdl4mA==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -13597,7 +13597,7 @@ snapshots:
     dependencies:
       '@types/decompress': 4.2.7
       '@types/got': 9.6.12
-      '@types/node': 24.6.2
+      '@types/node': 24.8.1
 
   '@types/eslint-scope@3.7.7':
     dependencies:
@@ -13660,7 +13660,7 @@ snapshots:
 
   '@types/http-proxy@1.17.16':
     dependencies:
-      '@types/node': 24.6.2
+      '@types/node': 24.8.1
 
   '@types/istanbul-lib-coverage@2.0.6': {}
 
@@ -13695,7 +13695,7 @@ snapshots:
 
   '@types/node-fetch@2.6.12':
     dependencies:
-      '@types/node': 24.6.2
+      '@types/node': 24.8.1
       form-data: 4.0.2
 
   '@types/node@16.18.126': {}
@@ -20568,7 +20568,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  puppeteer-core@24.26.0:
+  puppeteer-core@24.26.1:
     dependencies:
       '@puppeteer/browsers': 2.10.12
       chromium-bidi: 10.5.1(devtools-protocol@0.0.1508733)
@@ -20595,13 +20595,13 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  puppeteer@24.26.0(typescript@4.9.5):
+  puppeteer@24.26.1(typescript@4.9.5):
     dependencies:
       '@puppeteer/browsers': 2.10.12
       chromium-bidi: 10.5.1(devtools-protocol@0.0.1508733)
       cosmiconfig: 9.0.0(typescript@4.9.5)
       devtools-protocol: 0.0.1508733
-      puppeteer-core: 24.26.0
+      puppeteer-core: 24.26.1
       typed-query-selector: 2.12.0
     transitivePeerDependencies:
       - bare-buffer
