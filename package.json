@@ -70,7 +70,7 @@
     "ember-service-worker": "9.0.1",
     "ember-service-worker-asset-cache": "0.6.4",
     "ember-service-worker-index": "0.7.2",
-    "ember-source": "6.8.2",
+    "ember-source": "6.9.0",
     "ember-template-imports": "4.3.0",
     "ember-template-lint": "7.9.3",
     "ember-test-selectors": "7.1.0",
