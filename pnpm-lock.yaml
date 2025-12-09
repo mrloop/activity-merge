@@ -48,8 +48,8 @@ importers:
         specifier: 1.1.2
         version: 1.1.2
       '@sports-alliance/sports-lib':
-        specifier: 5.4.24
-        version: 5.4.24
+        specifier: 6.0.3
+        version: 6.0.3
       '@xmldom/xmldom':
         specifier: 0.9.8
         version: 0.9.8
@@ -2205,8 +2205,8 @@ packages:
   '@socket.io/component-emitter@3.1.2':
     resolution: {integrity: sha512-9BCxFwvbGg/RsZK9tjXd8s4UcwR0MWeFQ1XEKIQVVvAGJyINdrqKMcTRyLoK8Rse1GjzLV9cwjWV1olXRWEXVA==}
 
-  '@sports-alliance/sports-lib@5.4.24':
-    resolution: {integrity: sha512-h3UePKudUtEWg1PJkVqk0tiKPVctUV8REuz5v/X9uPpRPFXhTMTiNf7BtVAKY9ZyNTqhsyNuzVVPH/XLVqI8qw==}
+  '@sports-alliance/sports-lib@6.0.3':
+    resolution: {integrity: sha512-P/2UQlvUZsExBsPpiI2doLZx86yZtIw7sguyqyjtPo4oJ9hQJEuIUAFHOQeB+uWQvq+Ppp9i4AtKEBH3z4aNhg==}
 
   '@szmarczak/http-timer@1.1.2':
     resolution: {integrity: sha512-XIB2XbzHTN6ieIjfIMV9hlVcfPU26s2vafYWQcZHWXHOxiaRZYEDKEwdl129Zyg50+foYV2jCgtrqSA6qNuNSA==}
@@ -3293,6 +3293,9 @@ packages:
 
   buffer@5.7.1:
     resolution: {integrity: sha512-EHcyIPBQ4BSGlvjB16k5KgAJ27CIsHY/2JBmCRReo48y9rQ3MaUzWX3KVlBa4U7MyX02HdVj0K7C3WaB3ju7FQ==}
+
+  buffer@6.0.3:
+    resolution: {integrity: sha512-FTiCpNxtwiZZHEZbcbTIcZjERVICn9yq/pDFkTl95/AxzD1naBctN7YO68riM/gLSDY7sdrMby8hofADYuuqOA==}
 
   builtin-modules@3.3.0:
     resolution: {integrity: sha512-zhaCDicdLuWN5UbN5IMnFqNMhNfo919sH85y2/ea+5Yg9TsTkeZxpL+JLbp6cgYFS4sRLp3YV4S6yDuqVWHYOw==}
@@ -5122,8 +5125,8 @@ packages:
   fireworm@0.7.2:
     resolution: {integrity: sha512-GjebTzq+NKKhfmDxjKq3RXwQcN9xRmZWhnnuC9L+/x5wBQtR0aaQM50HsjrzJ2wc28v1vSdfOpELok0TKR4ddg==}
 
-  fit-file-parser@1.21.0:
-    resolution: {integrity: sha512-O/P/7wSX0IOpAnZZscYuKgQykuUZs8fPzU3Uv9TpX65Ged70y5/g0jtWkJ+xyFo46q/MJcjsXQNdTvebXLYETg==}
+  fit-file-parser@2.0.5:
+    resolution: {integrity: sha512-8jD+DJ2CX10HS1MMXjocPaNHnuSrBEtYSONup6XhB6drsW3lpyVbfnc/EOP2J09ToNrsMKkxdawMnca+p9cGtQ==}
 
   fixturify-project@1.10.0:
     resolution: {integrity: sha512-L1k9uiBQuN0Yr8tA9Noy2VSQ0dfg0B8qMdvT7Wb5WQKc7f3dn3bzCbSrqlb+etLW+KDV4cBC7R1OvcMg3kcxmA==}
@@ -13362,10 +13365,10 @@ snapshots:
 
   '@socket.io/component-emitter@3.1.2': {}
 
-  '@sports-alliance/sports-lib@5.4.24':
+  '@sports-alliance/sports-lib@6.0.3':
     dependencies:
       fast-xml-parser: 3.21.1
-      fit-file-parser: 1.21.0
+      fit-file-parser: 2.0.5
       geolib: 3.3.4
       gpx-builder: 3.8.0
       kalmanjs: 1.1.0
@@ -14928,6 +14931,11 @@ snapshots:
   buffer-from@1.1.2: {}
 
   buffer@5.7.1:
+    dependencies:
+      base64-js: 1.5.1
+      ieee754: 1.2.1
+
+  buffer@6.0.3:
     dependencies:
       base64-js: 1.5.1
       ieee754: 1.2.1
@@ -17348,9 +17356,9 @@ snapshots:
       lodash.flatten: 3.0.2
       minimatch: 3.1.2
 
-  fit-file-parser@1.21.0:
+  fit-file-parser@2.0.5:
     dependencies:
-      buffer: 5.7.1
+      buffer: 6.0.3
 
   fixturify-project@1.10.0:
     dependencies:
