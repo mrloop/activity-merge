@@ -41,7 +41,7 @@
     "@eslint/js": "^9.28.0",
     "@glimmer/component": "2.0.0",
     "@glimmer/tracking": "1.1.2",
-    "@sports-alliance/sports-lib": "5.4.24",
+    "@sports-alliance/sports-lib": "6.1.14",
     "@xmldom/xmldom": "0.9.8",
     "broccoli-asset-rev": "3.0.0",
     "broccoli-funnel": "3.0.8",
