@@ -28,7 +28,7 @@
     "staging:delete": "DEBUG=netlify-git-branch:* netlify-git-branch delete activity-merge"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "7.28.5",
+    "@babel/eslint-parser": "7.28.6",
     "@babel/plugin-proposal-decorators": "^7.27.1",
     "@ember/optional-features": "2.3.0",
     "@ember/string": "4.0.1",
