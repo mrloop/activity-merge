@@ -92,7 +92,7 @@
     "qunit": "2.25.0",
     "qunit-dom": "3.5.0",
     "string-replace-loader": "3.3.0",
-    "webpack": "5.103.0"
+    "webpack": "5.104.1"
   },
   "engines": {
     "node": "10.* || >= 12"
