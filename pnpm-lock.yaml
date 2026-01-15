@@ -198,8 +198,8 @@ importers:
         specifier: 3.5.0
         version: 3.5.0
       string-replace-loader:
-        specifier: 3.2.0
-        version: 3.2.0(webpack@5.103.0(esbuild@0.27.2))
+        specifier: 3.3.0
+        version: 3.3.0(webpack@5.103.0(esbuild@0.27.2))
       webpack:
         specifier: 5.103.0
         version: 5.103.0(esbuild@0.27.2)
@@ -8561,10 +8561,6 @@ packages:
     resolution: {integrity: sha512-pN/yOAvcC+5rQ5nERGuwrjLlYvLTbCibnZ1I7B1LaiAz9BRBlE9GMgE/eqV30P7aJQUf7Ddimy/RsbYO/GrVGg==}
     engines: {node: '>= 10.13.0'}
 
-  schema-utils@4.3.2:
-    resolution: {integrity: sha512-Gn/JaSk/Mt9gYubxTtSn/QCV4em9mpAPiR1rqy/Ocu19u/G9J5WWdNoUT4SiV6mFC3y6cxyFcFwdzPM3FgxGAQ==}
-    engines: {node: '>= 10.13.0'}
-
   schema-utils@4.3.3:
     resolution: {integrity: sha512-eflK8wEtyOE6+hsaRVPxvUKYCpRgzLqDTb8krvAsRIwOGlHoSgYLgBXoubGgLd2fT41/OUYdb48v4k4WWHQurA==}
     engines: {node: '>= 10.13.0'}
@@ -8879,8 +8875,8 @@ packages:
     resolution: {integrity: sha512-R3f198pcvnB+5IpnBlRkphuE9n46WyVl8I39W/ZUTZLz4nqSP/oLYUrcnJrw462Ds8he4YKMov2efsTIw1BDGQ==}
     engines: {node: '>=0.10.0'}
 
-  string-replace-loader@3.2.0:
-    resolution: {integrity: sha512-q7+F4DC6MAKkszF3ZQEuZ3dDH25wXPxFA0maTLk3TOTAYPLDgwqCeCKIvOd8xJhYYYl+EXusYRCyKIJliT/olg==}
+  string-replace-loader@3.3.0:
+    resolution: {integrity: sha512-AZ3y7ktSHhd/Ebipczkp6vdfp01d2kQVwFujCGAgmogTB8t4dRhbsRGDKnyZAYqBbIA9QW7+D/IsACVJOOpcBg==}
     engines: {node: '>=4'}
     peerDependencies:
       webpack: ^5
@@ -22486,13 +22482,6 @@ snapshots:
       ajv: 6.12.6
       ajv-keywords: 3.5.2(ajv@6.12.6)
 
-  schema-utils@4.3.2:
-    dependencies:
-      '@types/json-schema': 7.0.15
-      ajv: 8.17.1
-      ajv-formats: 2.1.1(ajv@8.17.1)
-      ajv-keywords: 5.1.0(ajv@8.17.1)
-
   schema-utils@4.3.3:
     dependencies:
       '@types/json-schema': 7.0.15
@@ -22888,9 +22877,9 @@ snapshots:
 
   strict-uri-encode@1.1.0: {}
 
-  string-replace-loader@3.2.0(webpack@5.103.0(esbuild@0.27.2)):
+  string-replace-loader@3.3.0(webpack@5.103.0(esbuild@0.27.2)):
     dependencies:
-      schema-utils: 4.3.2
+      schema-utils: 4.3.3
       webpack: 5.103.0(esbuild@0.27.2)
 
   string-similarity@4.0.4: {}
