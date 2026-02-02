@@ -44,7 +44,7 @@ jobs:
         run: pnpm staging:deploy
       - run: git log --pretty=%h -n1 > dist/REVISION.txt
       - name: Upload Build for next job
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         if: github.ref == 'refs/heads/main'
         with:
           name: prod-build
@@ -61,7 +61,7 @@ jobs:
       - name: Install netlify-cli
         run: npm install -g netlify-cli
       - name: Download Build
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           name: prod-build
           path: dist
