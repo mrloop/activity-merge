@@ -48,8 +48,8 @@ importers:
         specifier: 1.1.2
         version: 1.1.2
       '@sports-alliance/sports-lib':
-        specifier: 5.4.24
-        version: 5.4.24
+        specifier: 8.0.10
+        version: 8.0.10
       '@xmldom/xmldom':
         specifier: 0.9.8
         version: 0.9.8
@@ -2599,8 +2599,8 @@ packages:
   '@socket.io/component-emitter@3.1.2':
     resolution: {integrity: sha512-9BCxFwvbGg/RsZK9tjXd8s4UcwR0MWeFQ1XEKIQVVvAGJyINdrqKMcTRyLoK8Rse1GjzLV9cwjWV1olXRWEXVA==}
 
-  '@sports-alliance/sports-lib@5.4.24':
-    resolution: {integrity: sha512-h3UePKudUtEWg1PJkVqk0tiKPVctUV8REuz5v/X9uPpRPFXhTMTiNf7BtVAKY9ZyNTqhsyNuzVVPH/XLVqI8qw==}
+  '@sports-alliance/sports-lib@8.0.10':
+    resolution: {integrity: sha512-yN0eC4Z0z/7UIj4YGVGTgV1I8OON9pGRtZ4QUWhI2Tclf8UMbiqxXOkV9nSBxwTt1mV9Yyfbh7MHMWgswruyCA==}
 
   '@szmarczak/http-timer@1.1.2':
     resolution: {integrity: sha512-XIB2XbzHTN6ieIjfIMV9hlVcfPU26s2vafYWQcZHWXHOxiaRZYEDKEwdl129Zyg50+foYV2jCgtrqSA6qNuNSA==}
@@ -3707,6 +3707,9 @@ packages:
 
   buffer@5.7.1:
     resolution: {integrity: sha512-EHcyIPBQ4BSGlvjB16k5KgAJ27CIsHY/2JBmCRReo48y9rQ3MaUzWX3KVlBa4U7MyX02HdVj0K7C3WaB3ju7FQ==}
+
+  buffer@6.0.3:
+    resolution: {integrity: sha512-FTiCpNxtwiZZHEZbcbTIcZjERVICn9yq/pDFkTl95/AxzD1naBctN7YO68riM/gLSDY7sdrMby8hofADYuuqOA==}
 
   builtin-modules@3.3.0:
     resolution: {integrity: sha512-zhaCDicdLuWN5UbN5IMnFqNMhNfo919sH85y2/ea+5Yg9TsTkeZxpL+JLbp6cgYFS4sRLp3YV4S6yDuqVWHYOw==}
@@ -5414,8 +5417,8 @@ packages:
   fast-uri@3.0.6:
     resolution: {integrity: sha512-Atfo14OibSv5wAp4VWNsFYE1AchQRTv9cBGWET4pZWHzYshFSS9NQI6I57rdKn9croWVMbYFbLhJ+yJvmZIIHw==}
 
-  fast-xml-parser@3.21.1:
-    resolution: {integrity: sha512-FTFVjYoBOZTJekiUsawGsSYV9QL0A+zDYCRj7y34IO6Jg+2IMYEtQa+bbictpdpV8dHxXywqU7C0gRDEOFtBFg==}
+  fast-xml-parser@5.3.4:
+    resolution: {integrity: sha512-EFd6afGmXlCx8H8WTZHhAoDaWaGyuIBoZJ2mknrNxug+aZKjkp0a0dlars9Izl+jF+7Gu1/5f/2h68cQpe0IiA==}
     hasBin: true
 
   fastq@1.19.1:
@@ -5612,8 +5615,8 @@ packages:
   fireworm@0.7.2:
     resolution: {integrity: sha512-GjebTzq+NKKhfmDxjKq3RXwQcN9xRmZWhnnuC9L+/x5wBQtR0aaQM50HsjrzJ2wc28v1vSdfOpELok0TKR4ddg==}
 
-  fit-file-parser@1.21.0:
-    resolution: {integrity: sha512-O/P/7wSX0IOpAnZZscYuKgQykuUZs8fPzU3Uv9TpX65Ged70y5/g0jtWkJ+xyFo46q/MJcjsXQNdTvebXLYETg==}
+  fit-file-parser@2.3.2:
+    resolution: {integrity: sha512-PWl1Qd1iHCweWCGdodbstl+g+Th7drHTKyKmR6FI/+U6huE/+dj0ZOG9vVEToOO1jLIoVCd2nA97Z0KMEudj+w==}
 
   fixturify-project@1.10.0:
     resolution: {integrity: sha512-L1k9uiBQuN0Yr8tA9Noy2VSQ0dfg0B8qMdvT7Wb5WQKc7f3dn3bzCbSrqlb+etLW+KDV4cBC7R1OvcMg3kcxmA==}
@@ -5905,6 +5908,7 @@ packages:
 
   glob@10.5.0:
     resolution: {integrity: sha512-DfXN8DfhJ7NH3Oe7cFmu3NCu1wKbkReJ8TorzSAFbSKrlNaQSKfIzqYqVY8zlbs2NLBbWpRiU52GX2PbaBVNkg==}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
 
   glob@13.0.0:
@@ -5913,20 +5917,21 @@ packages:
 
   glob@5.0.15:
     resolution: {integrity: sha512-c9IPMazfRITpmAAKi22dK1VKxGDX9ehhqfABDriL/lzO92xcUKEJPQHrVA/2YHSNFB4iFlykVmWvwo48nr3OxA==}
-    deprecated: Glob versions prior to v9 are no longer supported
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
-    deprecated: Glob versions prior to v9 are no longer supported
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   glob@8.1.0:
     resolution: {integrity: sha512-r8hpEjiQEYlF2QU0df3dS+nxxSIreXQS1qRhMJM0Q5NDdR386C7jb7Hwwod8Fgiuex+k0GFjgft18yvxm5XoCQ==}
     engines: {node: '>=12'}
-    deprecated: Glob versions prior to v9 are no longer supported
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   glob@9.3.5:
     resolution: {integrity: sha512-e1LleDykUz2Iu+MTYdkSsuWX8lvAjAcs0Xef0lNIu0S2wOAzuTxCJtcd9S3cijlwYF18EsU3rzb8jPVobxDh9Q==}
     engines: {node: '>=16 || 14 >=14.17'}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   global-cache-dir@2.0.0:
     resolution: {integrity: sha512-30pvU3e8muclEhc9tt+jRMaywOS3QfNdURflJ5Zv0bohjhcVQpBe5bwRHghGSJORLOKW81/n+3iJvHRHs+/S1Q==}
@@ -9299,8 +9304,8 @@ packages:
   strip-test-selectors@0.1.0:
     resolution: {integrity: sha512-wkVYph30L7wYkMf5EypfTqhY4qZwmQ0hpFOTksaXne49YbUr2jenJl5w5yj9IWx3ojtoH9BGAQ7cShnYEzbs5g==}
 
-  strnum@1.1.2:
-    resolution: {integrity: sha512-vrN+B7DBIoTTZjnPNewwhx6cBA/H+IS7rfW68n7XxC1y7uoiGQBxaKzqucGUgavX15dJgiGztLJ8vxuEzwqBdA==}
+  strnum@2.1.2:
+    resolution: {integrity: sha512-l63NF9y/cLROq/yqKXSLtcMeeyOfnSQlfMSlzFt/K73oIaD8DGaQWd7Z34X9GPiKqP5rbSh84Hl4bOlLcjiSrQ==}
 
   stubborn-fs@2.0.0:
     resolution: {integrity: sha512-Y0AvSwDw8y+nlSNFXMm2g6L51rBGdAQT20J3YSOqxC53Lo3bjWRtr2BKcfYoAf352WYpsZSTURrA0tqhfgudPA==}
@@ -9401,7 +9406,7 @@ packages:
   tar@6.2.1:
     resolution: {integrity: sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A==}
     engines: {node: '>=10'}
-    deprecated: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exhorbitant rates) by contacting i@izs.me
+    deprecated: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   temp-dir@2.0.0:
     resolution: {integrity: sha512-aoBAniQmmwtcKp/7BzsH8Cxzv8OL736p7v1ihGb5e9DJ9kTwGWHrQrVB5+lfVDzfGrdRzXch+ig7LHaY1JTOrg==}
@@ -15222,10 +15227,10 @@ snapshots:
 
   '@socket.io/component-emitter@3.1.2': {}
 
-  '@sports-alliance/sports-lib@5.4.24':
+  '@sports-alliance/sports-lib@8.0.10':
     dependencies:
-      fast-xml-parser: 3.21.1
-      fit-file-parser: 1.21.0
+      fast-xml-parser: 5.3.4
+      fit-file-parser: 2.3.2
       geolib: 3.3.4
       gpx-builder: 3.8.0
       kalmanjs: 1.1.0
@@ -16870,6 +16875,11 @@ snapshots:
   buffer-from@1.1.2: {}
 
   buffer@5.7.1:
+    dependencies:
+      base64-js: 1.5.1
+      ieee754: 1.2.1
+
+  buffer@6.0.3:
     dependencies:
       base64-js: 1.5.1
       ieee754: 1.2.1
@@ -19164,9 +19174,9 @@ snapshots:
 
   fast-uri@3.0.6: {}
 
-  fast-xml-parser@3.21.1:
+  fast-xml-parser@5.3.4:
     dependencies:
-      strnum: 1.1.2
+      strnum: 2.1.2
 
   fastq@1.19.1:
     dependencies:
@@ -19390,9 +19400,9 @@ snapshots:
       lodash.flatten: 3.0.2
       minimatch: 3.1.2
 
-  fit-file-parser@1.21.0:
+  fit-file-parser@2.3.2:
     dependencies:
-      buffer: 5.7.1
+      buffer: 6.0.3
 
   fixturify-project@1.10.0:
     dependencies:
@@ -23652,7 +23662,7 @@ snapshots:
 
   strip-test-selectors@0.1.0: {}
 
-  strnum@1.1.2: {}
+  strnum@2.1.2: {}
 
   stubborn-fs@2.0.0:
     dependencies:
