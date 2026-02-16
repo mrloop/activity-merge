@@ -34,7 +34,8 @@ async function test(startServerFn, testSelector) {
     let { serverProcess, port } = await startServerFn();
     server = serverProcess;
     const browser = await puppeteer.launch({
-      args: [process.env.CI ? '--no-sandbox' : null],
+      headless: 'new',
+      args: [process.env.CI ? '--no-sandbox' : null].filter(Boolean),
     });
     const page = await browser.newPage();
     await page.goto(`http://localhost:${port}`);
