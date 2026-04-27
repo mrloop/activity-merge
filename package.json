@@ -39,7 +39,7 @@
     "@embroider/webpack": "4.1.2",
     "@eslint/compat": "^1.2.9",
     "@eslint/js": "^9.28.0",
-    "@glimmer/component": "2.0.0",
+    "@glimmer/component": "2.1.1",
     "@glimmer/tracking": "1.1.2",
     "@sports-alliance/sports-lib": "5.4.24",
     "@xmldom/xmldom": "0.9.10",
